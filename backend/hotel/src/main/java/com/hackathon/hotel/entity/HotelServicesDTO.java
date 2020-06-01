@@ -6,16 +6,15 @@ import lombok.NoArgsConstructor;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import java.util.List;
+import java.util.Map;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EntityScan
-public class HotelDTO {
+public class HotelServicesDTO {
 
-    private Long hotelId;
-    private String hotemName;
-    private Long hotelLevel;
-    private String hotelLocation;
-    private List<HotelServicesDTO> listOfServices;
+    private Long serviceId;
+    private String serviceName;
+    private Map<String,List<String>> subMenu;
 }
