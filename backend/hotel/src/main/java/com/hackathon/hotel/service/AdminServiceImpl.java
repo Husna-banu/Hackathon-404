@@ -1,7 +1,6 @@
 package com.hackathon.hotel.service;
 
 import com.hackathon.hotel.beans.Admin;
-import com.hackathon.hotel.beans.Hotel;
 import com.hackathon.hotel.repository.AdminDAO;
 import com.hackathon.hotel.resource.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
