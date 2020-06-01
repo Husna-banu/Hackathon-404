@@ -11,8 +11,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @EntityScan
 public class AdminDTO {
 
-    private Long adminId;
-    private String adminName;
+	private String adminName;
     private String adminLastName;
     private String adminPosition;
     private Long adminSalary;

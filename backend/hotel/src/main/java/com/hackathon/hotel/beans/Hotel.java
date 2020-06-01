@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Hotel {
 
-    private Long hotelId;
+	private Long hotelId;
     private String hotemName;
     private Long hotelLevel;
     private String hotelLocation;

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class User {
 
-    private String userid;
+	private String userid;
     private String password;
     private Long userTotalBalance;
 

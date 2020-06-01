@@ -9,12 +9,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Admin {
 
-    private Long adminId;
+	private Long adminId;
     private String adminName;
     private String adminLastName;
     private String adminPosition;
     private Long adminSalary;
     private Long adminAge;
-
 
 }
