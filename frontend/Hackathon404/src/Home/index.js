@@ -7,7 +7,7 @@ import styles  from './style';
 export default function Home({navigation}) {
   return (
     <View style={commonStyles.container}>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="dark-content" backgroundColor="skyblue" />
       <SafeAreaView>
         <View style={commonStyles.header}>
           <Text style={commonStyles.heading}>Welcome to Home Page</Text>
