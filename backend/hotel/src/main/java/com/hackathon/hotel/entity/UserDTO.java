@@ -11,8 +11,9 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @EntityScan
 public class UserDTO {
 
-	private String userid;
+	private String userId;
     private String password;
+    private String userType;
     private Long userTotalBalance;
 
 }

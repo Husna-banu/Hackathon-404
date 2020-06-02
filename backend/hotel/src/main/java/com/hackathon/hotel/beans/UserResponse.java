@@ -7,12 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class UserResponse extends User {
 
-    private String userId;
-    private String password;
-    private String userType;
-    private Long userTotalBalance;
-
-
+    private String status;
+    private String message;
 }
