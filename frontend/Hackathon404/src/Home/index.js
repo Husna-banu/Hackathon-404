@@ -1,20 +1,29 @@
 import React from 'react';
 import {View, Text, Button, StatusBar, SafeAreaView} from 'react-native';
 
+import commonStyles  from '../commonStyles';
+import styles  from './style';
+
 export default function Home({navigation}) {
   return (
-    <View>
+    <View style={commonStyles.container}>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <Text>Welcome to Home Page</Text>
-        <Button
-          title="Go to Login"
-          onPress={() => navigation.navigate('Login')}
-        />
-        <Button
-          title="Go to Login"
-          onPress={() => navigation.navigate('Login')}
-        />
+        <View style={commonStyles.header}>
+          <Text style={commonStyles.heading}>Welcome to Home Page</Text>
+        </View>
+        <View style={commonStyles.content}>
+          <View style={styles.buttons}>
+            <Button
+              title="Hotel"
+              onPress={() => navigation.navigate('Login')}
+            />
+            <Button
+              title="Guest"
+              onPress={() => navigation.navigate('Login')}
+            />
+          </View>
+        </View>
       </SafeAreaView>
     </View>
   );
