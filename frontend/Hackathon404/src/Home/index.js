@@ -16,7 +16,7 @@ export default function Home({navigation}) {
           <View style={styles.buttons}>
             <Button
               title="Hotel"
-              onPress={() => navigation.navigate('Login')}
+              onPress={() => navigation.navigate('AdminLogin')}
             />
             <Button
               title="Guest"

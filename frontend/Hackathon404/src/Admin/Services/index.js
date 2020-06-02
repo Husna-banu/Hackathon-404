@@ -2,20 +2,38 @@ import React, { useState, useEffect } from 'react';
 import {View, Text, StatusBar, SafeAreaView, FlatList, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
-import commonStyle from '../commonStyles';
+import commonStyle from '../../commonStyles';
 
 export default function Login({route, navigation}) {
-  const [stateData, setStateData] = useState({});
+  const [stateData, setStateData] = useState({
+    hotelName: '',
+    hotelId: 0,
+    listOfServices: [],
+  });
   useEffect(() => {
-    const { hotelId, listOfServices } = route.params;
-    setStateData((state) => listOfServices);
+    const { hotelId } = route.params;
+    fetch('https://backendproject5.herokuapp.com/fetchHotelDetails')
+    .then(result => result.json())
+    .then(lists => {
+      lists.forEach((list) => {
+        if (list.hotelId === hotelId) {
+          setStateData((state) => ({
+            ...state,
+            hotelName: list.hotemName,
+            hotelId: list.hotelId,
+            listOfServices: list.listOfServices,
+          }));
+        }
+      });
+    })
+    .catch(err => console.log(err));
   }, []);
   const backToPage = () => {
     navigation.goBack();
   };
   const serviceDetails = (serviceId, serviceName) => {
     if (serviceId && serviceName) {
-      navigation.navigate('ServiceDetails', { serviceId: serviceId, serviceName: serviceName });
+      navigation.navigate('AdminServiceDetails', { serviceId: serviceId, serviceName: serviceName });
     }
   };
   const renderItem = ({ item }) => {
@@ -37,7 +55,7 @@ export default function Login({route, navigation}) {
         </View>
         <View style={commonStyle.content}>
           <FlatList
-            data={stateData}
+            data={stateData.listOfServices}
             renderItem={renderItem}
             keyExtractor={item => item.serviceId.toString()}
           />
