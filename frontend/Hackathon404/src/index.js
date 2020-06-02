@@ -6,6 +6,10 @@ import Home from './Home';
 import Login from './Login';
 import Dashboard from './Dashboard';
 import ServiceDetails from './ServiceDetails';
+import AdminLogin from './Admin/Login';
+import AdminDashboard from './Admin/Dashboard';
+import AdminService from './Admin/Services';
+import AdminServiceDetails from './Admin/ServiceDetails';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +26,10 @@ export default function AppRoute() {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Dashborad" component={Dashboard} />
         <Stack.Screen name="ServiceDetails" component={ServiceDetails} />
+        <Stack.Screen name="AdminLogin" component={AdminLogin} />
+        <Stack.Screen name="AdminDashboard" component={AdminDashboard} />
+        <Stack.Screen name="AdminService" component={AdminService} />
+        <Stack.Screen name="AdminServiceDetails" component={AdminServiceDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   );

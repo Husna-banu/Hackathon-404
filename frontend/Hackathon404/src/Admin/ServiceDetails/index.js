@@ -3,7 +3,7 @@ import {View, Text, StatusBar, SafeAreaView, FlatList, TouchableOpacity, Button}
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import styles from './style';
-import commonStyle from '../commonStyles';
+import commonStyle from '../../commonStyles';
 
 export default function Login({route, navigation}) {
   const [stateData, setStateData] = useState({
@@ -58,10 +58,6 @@ export default function Login({route, navigation}) {
         <View style={commonStyle.header}>
           <Icon name="arrow-left" style={commonStyle.backButton} size={20} onPress={backToPage} />
           <Text style={commonStyle.heading}>{stateData.serviceDetails.serviceName} Services</Text>
-          <View style={styles.cartIconView}>
-            <Icon name="shopping-cart" style={styles.cartIconStyle} size={20} onPress={backToPage} />
-            <Text style={styles.cartCountStyle}>{stateData.cartCount}</Text>
-          </View>
         </View>
         <View style={commonStyle.content}>
           <FlatList
