@@ -11,6 +11,10 @@ export default function Home({navigation}) {
           title="Go to Login"
           onPress={() => navigation.navigate('Login')}
         />
+        <Button
+          title="Go to Login"
+          onPress={() => navigation.navigate('Login')}
+        />
       </SafeAreaView>
     </View>
   );
