@@ -8,6 +8,8 @@ import com.hackathon.hotel.resource.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,7 +37,7 @@ public class HotelServiceImpl implements HotelService {
     public HotelServicesVO fetchServiceDetails(String serviceName){
 
         HotelServicesDTO hotelServicesDTO = hotelDAO.getServiceDetails(serviceName);
-        return new HotelServicesVO(hotelServicesDTO.getServiceId(),hotelServicesDTO.getServiceName(),hotelServicesDTO.getCapacity(),hotelServicesDTO.getAvailableSpace(),hotelServicesDTO.getSubMenu());
+        return new HotelServicesVO(hotelServicesDTO.getServiceId(),hotelServicesDTO.getServiceName(),hotelServicesDTO.getCapacity(),hotelServicesDTO.getAvailableSpace(), hotelServicesDTO.getSubMenu().entrySet().toArray());
 
     }
 

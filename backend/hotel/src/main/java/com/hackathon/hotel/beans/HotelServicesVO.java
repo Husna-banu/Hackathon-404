@@ -16,6 +16,6 @@ public class HotelServicesVO {
     private String serviceName;
     private String capacity;
     private String availableSpace;
-    private Map<String,List<String>> subMenu;
+    private Object[] subMenu;
 
 }
