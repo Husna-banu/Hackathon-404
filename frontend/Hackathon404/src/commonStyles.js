@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'flex-start',
     alignContent: 'center',
-    top: 40,
+    top: (Platform.OS === 'ios' ? 40 : 0),
     backgroundColor: '#fff',
   },
   heading: {
