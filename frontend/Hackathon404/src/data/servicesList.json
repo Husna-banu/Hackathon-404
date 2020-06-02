@@ -1,0 +1,159 @@
+[{
+  "serviceId": 123,
+  "serviceName": "Retaurent",
+  "subMenu": [{
+    "itemName": "Snacks",
+    "itemList": [
+      "Non-Veg",
+      "Veg"
+    ]},{
+    "itemName": "Veg",
+    "itemList": [
+      "Plain Rice",
+      "Daal Fry",
+      "Veg Kofta",
+      "Jeera Rice",
+      "Plain Paratha",
+      "Paneer Makhni",
+      "Jeera Aloo",
+      "Aloo Gobi"
+    ]},{
+    "itemName": "Thali",
+    "itemList": [
+      "Non-Veg",
+      "Veg"
+    ]},{
+    "itemName": "Drinks",
+    "itemList": [
+      "Soft",
+      "Hard"
+    ]},{
+    "itemName": "Non-Veg",
+    "itemList": [
+      "Mixed Fried Rice",
+      "Egg Fried Rice",
+      "Cicken Masala",
+      "Butter Chicken",
+      "Mutton Roganjosh",
+      "Mutton Kurma"
+    ]}
+  ]
+},{
+  "serviceId": 234,
+  "serviceName": "Spa",
+  "capacity": "10",
+  "availableSpace": "2",
+  "subMenu": [{
+    "Hair": [
+      "Wash",
+      "Straightening",
+      "Curling",
+      "Styling",
+      "Spa"
+    ],
+    "Hands": [
+      "Massage",
+      "Waxing",
+      "Detan",
+      "Spa",
+      "Manicure"
+    ],
+    "Legs": [
+      "Massage",
+      "Waxing",
+      "Detan",
+      "Spa",
+      "Pedicure"
+    ],
+    "Face": [
+      "Eye Brow",
+      "Waxing",
+      "Facial",
+      "Massage"
+    ],
+    "Body": [
+      "Full Body Massage",
+      "Sona",
+      "Jacuzzi",
+      "Waxing"
+    ]
+  }]
+},{
+  "serviceId": 345,
+  "serviceName": "Laundry",
+  "capacity": "80",
+  "availableSpace": "79",
+  "subMenu": [{
+    "Ironing": [
+      "Shirt",
+      "T-Shirt",
+      "Trouser",
+      "Jeanse"
+    ],
+    "Washing": [
+      "Shirt",
+      "T-Shirt",
+      "Trouser",
+      "Jeanse"
+    ]
+  }]
+},{
+  "serviceId": 456,
+  "serviceName": "Room Cleaning",
+  "capacity": "10.15 A.M.",
+  "availableSpace": "",
+  "subMenu": {
+    "Room": [
+      "Yes",
+      "No"
+    ],
+    "Wash Room": [
+      "Yes",
+      "No"
+    ]
+  }
+},{
+  "serviceId": 567,
+  "serviceName": "Emergency Service",
+  "capacity": "",
+  "availableSpace": "",
+  "subMenu": {
+    "Ambulance": [
+      "Yes",
+      "No"
+    ],
+    "Medical": [
+      "Yes",
+      "No"
+    ],
+    "Departmental": [
+      "Yes",
+      "No"
+    ]
+  }
+},{
+  "serviceId": 678,
+  "serviceName": "Room Maintenance",
+  "capacity": "",
+  "availableSpace": "",
+  "subMenu": {
+    "Water": [
+      "Cold",
+      "Hot",
+      "Normal"
+    ],
+    "Towel": [
+      "Normal",
+      "Wet"
+    ],
+    "Electricity": [
+      "Fan",
+      "AC",
+      "Light"
+    ],
+    "Paper": [
+      "Plain",
+      "Wet"
+    ]
+  }
+}]

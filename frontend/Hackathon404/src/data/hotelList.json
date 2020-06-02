@@ -1,0 +1,173 @@
+[
+  {
+    "hotelId": 1234,
+    "hotelName": "Hotel Hastinapur",
+    "hotelLevel": 5,
+    "hotelLocation": "India",
+    "listOfServices": [{
+      "serviceId": 123,
+      "serviceName": "Retaurent",
+      "capacity": "50",
+      "availableSpace": "45",
+      "subMenu": null
+    },{
+      "serviceId": 234,
+      "serviceName": "Spa",
+      "capacity": "10",
+      "availableSpace": "2",
+      "subMenu": null
+    },{
+      "serviceId": 345,
+      "serviceName": "Laundry",
+      "capacity": "80",
+      "availableSpace": "79",
+      "subMenu": null
+    },{
+      "serviceId": 456,
+      "serviceName": "Room Cleaning",
+      "capacity": "10.15 A.M.",
+      "availableSpace": "",
+      "subMenu": null
+    },{
+      "serviceId": 567,
+      "serviceName": "Emergency Service",
+      "capacity": "",
+      "availableSpace": "",
+      "subMenu": null
+    },{
+      "serviceId": 678,
+      "serviceName": "Room Maintenance",
+      "capacity": "",
+      "availableSpace": "",
+      "subMenu": null
+    }]
+  },
+  {
+    "hotelId": 2345,
+    "hotelName": "Hotel Gandhar",
+    "hotelLevel": 3,
+    "hotelLocation": "India",
+    "listOfServices": [{
+      "serviceId": 123,
+      "serviceName": "Retaurent",
+      "capacity": "50",
+      "availableSpace": "45",
+      "subMenu": null
+    },{
+      "serviceId": 234,
+      "serviceName": "Spa",
+      "capacity": "10",
+      "availableSpace": "2",
+      "subMenu": null
+    },{
+      "serviceId": 345,
+      "serviceName": "Laundry",
+      "capacity": "80",
+      "availableSpace": "79",
+      "subMenu": null
+    },{
+      "serviceId": 456,
+      "serviceName": "Room Cleaning",
+      "capacity": "10.15 A.M.",
+      "availableSpace": "",
+      "subMenu": null
+    },{
+      "serviceId": 567,
+      "serviceName": "Emergency Service",
+      "capacity": "",
+      "availableSpace": "",
+      "subMenu": null
+    },{
+      "serviceId": 678,
+      "serviceName": "Room Maintenance",
+      "capacity": "",
+      "availableSpace": "",
+      "subMenu": null
+    }]
+  },
+  {
+    "hotelId": 3456,
+    "hotelName": "Hotel Indraprastha",
+    "hotelLevel": 4,
+    "hotelLocation": "India",
+    "listOfServices": [{
+      "serviceId": 123,
+      "serviceName": "Retaurent",
+      "capacity": "50",
+      "availableSpace": "45",
+      "subMenu": null
+    },{
+      "serviceId": 234,
+      "serviceName": "Spa",
+      "capacity": "10",
+      "availableSpace": "2",
+      "subMenu": null
+    },{
+      "serviceId": 345,
+      "serviceName": "Laundry",
+      "capacity": "80",
+      "availableSpace": "79",
+      "subMenu": null
+    },{
+      "serviceId": 456,
+      "serviceName": "Room Cleaning",
+      "capacity": "10.15 A.M.",
+      "availableSpace": "",
+      "subMenu": null
+    },{
+      "serviceId": 567,
+      "serviceName": "Emergency Service",
+      "capacity": "",
+      "availableSpace": "",
+      "subMenu": null
+    },{
+      "serviceId": 678,
+      "serviceName": "Room Maintenance",
+      "capacity": "",
+      "availableSpace": "",
+      "subMenu": null
+    }]
+  },{
+    "hotelId": 4567,
+    "hotelName": "Hotel Gokul",
+    "hotelLevel": 5,
+    "hotelLocation": "India",
+    "listOfServices": [{
+      "serviceId": 123,
+      "serviceName": "Retaurent",
+      "capacity": "50",
+      "availableSpace": "45",
+      "subMenu": null
+    },{
+      "serviceId": 234,
+      "serviceName": "Spa",
+      "capacity": "10",
+      "availableSpace": "2",
+      "subMenu": null
+    },{
+      "serviceId": 345,
+      "serviceName": "Laundry",
+      "capacity": "80",
+      "availableSpace": "79",
+      "subMenu": null
+    },{
+      "serviceId": 456,
+      "serviceName": "Room Cleaning",
+      "capacity": "10.15 A.M.",
+      "availableSpace": "",
+      "subMenu": null
+    },{
+      "serviceId": 567,
+      "serviceName": "Emergency Service",
+      "capacity": "",
+      "availableSpace": "",
+      "subMenu": null
+    },{
+      "serviceId": 678,
+      "serviceName": "Room Maintenance",
+      "capacity": "",
+      "availableSpace": "",
+      "subMenu": null
+    }]
+  }
+]
