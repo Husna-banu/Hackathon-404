@@ -35,7 +35,7 @@ public class HotelServiceImpl implements HotelService {
     public HotelServicesVO fetchServiceDetails(String serviceName){
 
         HotelServicesDTO hotelServicesDTO = hotelDAO.getServiceDetails(serviceName);
-        return new HotelServicesVO(hotelServicesDTO.getServiceId(),hotelServicesDTO.getServiceName(),hotelServicesDTO.getSubMenu());
+        return new HotelServicesVO(hotelServicesDTO.getServiceId(),hotelServicesDTO.getServiceName(),hotelServicesDTO.getCapacity(),hotelServicesDTO.getAvailableSpace(),hotelServicesDTO.getSubMenu());
 
     }
 

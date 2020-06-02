@@ -20,12 +20,12 @@ public class HotelDAOImpl implements HotelDAO {
 
         List<HotelServicesDTO> hotelServices = new ArrayList<>();
 
-        hotelServices.add(new HotelServicesDTO(123L,"Retaurent",null));
-        hotelServices.add(new HotelServicesDTO(234L,"Spa",null));
-        hotelServices.add(new HotelServicesDTO(345L,"Laundry",null));
-        hotelServices.add(new HotelServicesDTO(456L,"Room Cleaning",null));
-        hotelServices.add(new HotelServicesDTO(567L,"Emergency Service",null));
-        hotelServices.add(new HotelServicesDTO(678L,"Room Maintenance",null));
+        hotelServices.add(new HotelServicesDTO(123L,"Retaurent","50","45",null));
+        hotelServices.add(new HotelServicesDTO(234L,"Spa","10","2",null));
+        hotelServices.add(new HotelServicesDTO(345L,"Laundry","80","79",null));
+        hotelServices.add(new HotelServicesDTO(456L,"Room Cleaning","10.15 A.M.","",null));
+        hotelServices.add(new HotelServicesDTO(567L,"Emergency Service","","",null));
+        hotelServices.add(new HotelServicesDTO(678L,"Room Maintenance","","",null));
 
         allHotelList.add(new HotelDTO(1234L,"Hotel Hastinapur",5L,"India",hotelServices));
         allHotelList.add(new HotelDTO(2345L,"Hotel Gandhar",3L,"India",hotelServices));
@@ -48,7 +48,7 @@ public class HotelDAOImpl implements HotelDAO {
             subMenu.put("Thali",new ArrayList(Arrays.asList("Non-Veg","Veg")));
             subMenu.put("Snacks",new ArrayList(Arrays.asList("Non-Veg","Veg")));
             subMenu.put("Drinks",new ArrayList(Arrays.asList("Soft","Hard")));
-            hotelServicesDTO = new HotelServicesDTO(123L,"Retaurent",subMenu);
+            hotelServicesDTO = new HotelServicesDTO(123L,"Retaurent","50","45",subMenu);
 
         }
         if(("Spa").equalsIgnoreCase(serviceName)){
@@ -59,7 +59,7 @@ public class HotelDAOImpl implements HotelDAO {
             subMenu.put("Face",new ArrayList(Arrays.asList("Eye Brow","Waxing","Facial","Massage")));
             subMenu.put("Hands",new ArrayList(Arrays.asList("Massage","Waxing","Detan","Spa","Manicure")));
             subMenu.put("Legs",new ArrayList(Arrays.asList("Massage","Waxing","Detan","Spa","Pedicure")));
-            hotelServicesDTO = new HotelServicesDTO(234L,"Spa",subMenu);
+            hotelServicesDTO = new HotelServicesDTO(234L,"Spa","10","2",subMenu);
 
         }
         if(("Laundry").equalsIgnoreCase(serviceName)){
@@ -68,7 +68,7 @@ public class HotelDAOImpl implements HotelDAO {
             subMenu.put("Washing",new ArrayList(Arrays.asList("Shirt","T-Shirt","Trouser","Jeanse")));
             subMenu.put("Ironing",new ArrayList(Arrays.asList("Shirt","T-Shirt","Trouser","Jeanse")));
 
-            hotelServicesDTO = new HotelServicesDTO(345L,"Laundry",subMenu);
+            hotelServicesDTO = new HotelServicesDTO(345L,"Laundry","80","79",subMenu);
 
         }
         if(("Room Cleaning").equalsIgnoreCase(serviceName)){
@@ -77,7 +77,7 @@ public class HotelDAOImpl implements HotelDAO {
             subMenu.put("Wash Room",new ArrayList(Arrays.asList("Yes","No")));
             subMenu.put("Room",new ArrayList(Arrays.asList("Yes","No")));
 
-            hotelServicesDTO =  new HotelServicesDTO(456L,"Room Cleaning",subMenu);
+            hotelServicesDTO =  new HotelServicesDTO(456L,"Room Cleaning","10.15 A.M.","",subMenu);
 
         }
         if(("Emergency Service").equalsIgnoreCase(serviceName)){
@@ -87,7 +87,7 @@ public class HotelDAOImpl implements HotelDAO {
             subMenu.put("Departmental",new ArrayList(Arrays.asList("Yes","No")));
             subMenu.put("Ambulance",new ArrayList(Arrays.asList("Yes","No")));
 
-            hotelServicesDTO = new HotelServicesDTO(567L,"Emergency Service",subMenu);
+            hotelServicesDTO = new HotelServicesDTO(567L,"Emergency Service","","",subMenu);
 
         }
         if(("Room Maintenance").equalsIgnoreCase(serviceName)){
@@ -98,7 +98,7 @@ public class HotelDAOImpl implements HotelDAO {
             subMenu.put("Towel",new ArrayList(Arrays.asList("Normal","Wet")));
             subMenu.put("Electricity",new ArrayList(Arrays.asList("Fan","AC","Light")));
 
-            hotelServicesDTO = new HotelServicesDTO(678L,"Room Maintenance",subMenu);
+            hotelServicesDTO = new HotelServicesDTO(678L,"Room Maintenance","","",subMenu);
 
         }
 

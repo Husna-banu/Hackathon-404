@@ -16,5 +16,7 @@ public class HotelServicesDTO {
 
     private Long serviceId;
     private String serviceName;
+    private String capacity;
+    private String availableSpace;
     private Map<String,List<String>> subMenu;
 }
