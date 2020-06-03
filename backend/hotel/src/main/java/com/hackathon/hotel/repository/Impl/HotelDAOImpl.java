@@ -20,7 +20,7 @@ public class HotelDAOImpl implements HotelDAO {
 
         List<HotelServicesDTO> hotelServices = new ArrayList<>();
 
-        hotelServices.add(new HotelServicesDTO(123L,"Retaurent","50","45",null));
+        hotelServices.add(new HotelServicesDTO(123L,"Restaurant","50","45",null));
         hotelServices.add(new HotelServicesDTO(234L,"Spa","10","2",null));
         hotelServices.add(new HotelServicesDTO(345L,"Laundry","80","79",null));
         hotelServices.add(new HotelServicesDTO(456L,"Room Cleaning","10.15 A.M.","",null));
@@ -39,64 +39,185 @@ public class HotelDAOImpl implements HotelDAO {
     public HotelServicesDTO getServiceDetails(String serviceName) {
 
         HotelServicesDTO hotelServicesDTO = new HotelServicesDTO();
+        Map<String, Object[]> subMenu = new HashMap<>();
+        Map<String,String> map = new HashMap<>();
 
-        if(("Retaurent").equalsIgnoreCase(serviceName)){
+        if(("Restaurant").equalsIgnoreCase(serviceName)){
 
-            Map<String,List<String>> subMenu = new HashMap<>();
-            subMenu.put("Veg",new ArrayList(Arrays.asList("Plain Rice","Daal Fry","Veg Kofta","Jeera Rice","Plain Paratha","Paneer Makhni","Jeera Aloo","Aloo Gobi")));
-            subMenu.put("Non-Veg",new ArrayList(Arrays.asList("Mixed Fried Rice","Egg Fried Rice","Cicken Masala","Butter Chicken","Mutton Roganjosh","Mutton Kurma")));
-            subMenu.put("Thali",new ArrayList(Arrays.asList("Non-Veg","Veg")));
-            subMenu.put("Snacks",new ArrayList(Arrays.asList("Non-Veg","Veg")));
-            subMenu.put("Drinks",new ArrayList(Arrays.asList("Soft","Hard")));
-            hotelServicesDTO = new HotelServicesDTO(123L,"Retaurent","50","45",subMenu);
+            map = new HashMap<>();
+            map.put("Plain Rice","$70");
+            map.put("Daal Fry","$ 90");
+            map.put("Veg Kofta","$ 120");
+            map.put("Jeera Rice","$ 100");
+            map.put("Plain Paratha","$ 45");
+            map.put("Paneer Makhni","$ 165");
+            map.put("Jeera Aloo","$ 80");
+            map.put("Aloo Gobi","$ 95");
+
+            subMenu.put("Veg",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Mixed Fried Rice","$170");
+            map.put("Egg Fried Rice","$ 190");
+            map.put("Cicken Masala","$ 220");
+            map.put("Butter Chicken","$ 400");
+            map.put("Mutton Roganjosh","$ 450");
+            map.put("Mutton Kurma","$ 465");
+
+            subMenu.put("Non-Veg",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Non-Veg","$ 170");
+            map.put("Veg","$ 90");
+
+            subMenu.put("Thali",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Non-Veg","$ 270");
+            map.put("Veg","$ 190");
+
+            subMenu.put("Snacks",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Soft","Starting $ 45");
+            map.put("Hard","Starting $ 390");
+
+            subMenu.put("Drinks",map.entrySet().toArray());
+
+            hotelServicesDTO = new HotelServicesDTO(123L,"Restaurant","50","45",subMenu);
 
         }
         if(("Spa").equalsIgnoreCase(serviceName)){
+            subMenu = new HashMap<>();
 
-            Map<String,List<String>> subMenu = new HashMap<>();
-            subMenu.put("Hair",new ArrayList(Arrays.asList("Wash","Straightening","Curling","Styling","Spa")));
-            subMenu.put("Body",new ArrayList(Arrays.asList("Full Body Massage","Sona","Jacuzzi","Waxing")));
-            subMenu.put("Face",new ArrayList(Arrays.asList("Eye Brow","Waxing","Facial","Massage")));
-            subMenu.put("Hands",new ArrayList(Arrays.asList("Massage","Waxing","Detan","Spa","Manicure")));
-            subMenu.put("Legs",new ArrayList(Arrays.asList("Massage","Waxing","Detan","Spa","Pedicure")));
+            map = new HashMap<>();
+            map.put("Wash","Starting $ 200");
+            map.put("Straightening","Starting $ 800");
+            map.put("Curling","Starting $ 400");
+            map.put("Spa","Starting $ 1200");
+
+            subMenu.put("Hair",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Full Body Massage","Starting $ 1500");
+            map.put("Sona","Starting $ 850");
+
+            map.put("Jacuzzi","Starting $ 1150");
+            map.put("Waxing","Starting $ 400");
+
+            subMenu.put("Body",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Eye Brow","$ 45");
+            map.put("Waxing","Starting $ 390");
+            map.put("Facial","Starting $ 250");
+            map.put("Massage","Starting $ 1200");
+
+            subMenu.put("Face",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Massage","Starting $ 400");
+            map.put("Waxing","Starting $ 390");
+            map.put("Manicure","Starting $ 450");
+            map.put("Detan","Starting $ 390");
+            map.put("Spa","Starting $ 800");
+
+            subMenu.put("Hands",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Massage","Starting $ 400");
+            map.put("Waxing","Starting $ 390");
+            map.put("Pedicure","Starting $ 450");
+            map.put("Detan","Starting $ 390");
+            map.put("Spa","Starting $ 800");
+
+            subMenu.put("Legs",map.entrySet().toArray());
             hotelServicesDTO = new HotelServicesDTO(234L,"Spa","10","2",subMenu);
 
         }
         if(("Laundry").equalsIgnoreCase(serviceName)){
 
-            Map<String,List<String>> subMenu = new HashMap<>();
-            subMenu.put("Washing",new ArrayList(Arrays.asList("Shirt","T-Shirt","Trouser","Jeanse")));
-            subMenu.put("Ironing",new ArrayList(Arrays.asList("Shirt","T-Shirt","Trouser","Jeanse")));
+            subMenu = new HashMap<>();
+            map = new HashMap<>();
+            map.put("Shirt","$ 50");
+            map.put("T-Shirt","$ 59");
+            map.put("Trouser","$ 55");
+            map.put("Jeanse","$ 59");
+            subMenu.put("Washing",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Shirt","$ 40");
+            map.put("T-Shirt","$ 39");
+            map.put("Trouser","$ 45");
+            map.put("Jeanse","$ 39");
+            subMenu.put("Ironing",map.entrySet().toArray());
 
             hotelServicesDTO = new HotelServicesDTO(345L,"Laundry","80","79",subMenu);
 
         }
         if(("Room Cleaning").equalsIgnoreCase(serviceName)){
 
-            Map<String,List<String>> subMenu = new HashMap<>();
-            subMenu.put("Wash Room",new ArrayList(Arrays.asList("Yes","No")));
-            subMenu.put("Room",new ArrayList(Arrays.asList("Yes","No")));
+            subMenu = new HashMap<>();
+            map = new HashMap<>();
+            map.put("Yes","Free");
+            map.put("No","Free");
+            subMenu.put("Wash Room",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Yes","Free");
+            map.put("No","Free");
+            subMenu.put("Room",map.entrySet().toArray());
 
             hotelServicesDTO =  new HotelServicesDTO(456L,"Room Cleaning","10.15 A.M.","",subMenu);
 
         }
         if(("Emergency Service").equalsIgnoreCase(serviceName)){
 
-            Map<String,List<String>> subMenu = new HashMap<>();
-            subMenu.put("Medical",new ArrayList(Arrays.asList("Yes","No")));
-            subMenu.put("Departmental",new ArrayList(Arrays.asList("Yes","No")));
-            subMenu.put("Ambulance",new ArrayList(Arrays.asList("Yes","No")));
+            subMenu = new HashMap<>();
+            map = new HashMap<>();
+            map.put("Yes","Doctor Charges");
+            map.put("No","");
+            subMenu.put("Medical",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Yes","Starting $ 200");
+            map.put("No","");
+            subMenu.put("Departmental",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Yes","Starting $ 900");
+            map.put("No","");
+            subMenu.put("Ambulance",map.entrySet().toArray());
 
             hotelServicesDTO = new HotelServicesDTO(567L,"Emergency Service","","",subMenu);
 
         }
         if(("Room Maintenance").equalsIgnoreCase(serviceName)){
 
-            Map<String,List<String>> subMenu = new HashMap<>();
-            subMenu.put("Water",new ArrayList(Arrays.asList("Cold","Hot","Normal")));
-            subMenu.put("Paper",new ArrayList(Arrays.asList("Plain","Wet")));
-            subMenu.put("Towel",new ArrayList(Arrays.asList("Normal","Wet")));
-            subMenu.put("Electricity",new ArrayList(Arrays.asList("Fan","AC","Light")));
+            subMenu = new HashMap<>();
+            map = new HashMap<>();
+            map.put("Cold","Free");
+            map.put("Hot","Free");
+            map.put("Normal","Free");
+            map.put("Packaged Cold","& 45");
+            map.put("Packaged Normal","$ 40");
+            subMenu.put("Water",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Plain","Free");
+            map.put("Wet","Free");
+            subMenu.put("Paper",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Normal","Free");
+            map.put("Wet","Free");
+            subMenu.put("Towel",map.entrySet().toArray());
+
+            map = new HashMap<>();
+            map.put("Fan","Free");
+            map.put("AC","Free");
+            map.put("Light","Free");
+            subMenu.put("Electricity",map.entrySet().toArray());
 
             hotelServicesDTO = new HotelServicesDTO(678L,"Room Maintenance","","",subMenu);
 
