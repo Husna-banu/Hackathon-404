@@ -39,12 +39,12 @@ export default function Login({route, navigation}) {
     );
   };
   const renderItem = ({ item, index }) => {
-    console.log(item, index);
+    const itemName = Object.keys(item)[0];
     return (
       <View style={styles.servicesListStyle}>
-        <Text style={styles.itemNameStyle}>{item.itemName}</Text>
+        <Text style={styles.itemNameStyle}>{itemName}</Text>
         <FlatList
-          data={item.itemList}
+          data={item[itemName]}
           renderItem={renderItemList}
           keyExtractor={(item, index) => index.toString()}
         />
