@@ -6,61 +6,71 @@ import commonStyle from '../commonStyles';
 import styles from './style';
 
 export default function Order({ route, navigation }) {
-    const [stateData, setStateData] = useState({
-        itemArray: [],
-        itemCount: 0,
-        hideCart: true
+    const [volatile, setVolatile] = useState({
+        cartCount: 0,
+        hideCart: true,
+        itemArray: []
     })
     const backToPage = () => {
         navigation.goBack();
     };
     useEffect(() => {
         const { itemArray, itemCount } = route.params;
-        setStateData((state) => ({
+        setVolatile((state) => ({
             ...state,
+            cartCount: itemCount,
+            hideCart: itemCount ? true : false,
             itemArray: Array.from(new Set(itemArray)),
-            itemCount: itemCount,
-            hideCart: itemCount ? true : false
         }));
-
     }, [])
-    const handlePress = () => false
-    const incrementCart = () => {
-        setStateData((state) => ({
+
+    const incrementCart = (i) => {
+        setVolatile((state) => ({
             ...state,
-            itemCount: stateData && stateData.itemCount + 1
+            cartCount: volatile && volatile.cartCount + 1
         }));
     }
-    const decrementCart = () => {
-        setStateData((state) => ({
+    const decrementCart = (i) => {
+        setVolatile((state) => ({
             ...state,
-            itemCount: stateData && stateData.itemCount > 0 && stateData.itemCount - 1
+            cartCount: volatile && volatile.cartCount > 0 && volatile.cartCount - 1
         }));
     }
     const orderStatus = () => {
         navigation.navigate('OrderStatus');
     }
     const deleteAll = () => {
-        setStateData((state) => ({
+        setVolatile((state) => ({
             ...state,
-            itemCount: 0,
-            itemArray: [],
-            hideCart: false
+            cartCount: 0,
+            hideCart: false,
+            itemArray: []
         }));
     }
-    const renderItem = (item) => {
-        for (var i in item) {
-            return (<View style={commonStyle.cartBody}>
-                <Text style={styles.cartWidth}>{i}</Text>
-                <Text style={{ color: 'blue', marginRight: 20, marginTop: 10 }}>{item[i]}</Text>
-                <View style={commonStyle.cartBody}>
-                    <Text style={styles.cartButton} onPress={(event) => decrementCart()}>-</Text>
-                    <Text style={{ padding: 5 }}>{stateData.itemCount}</Text>
-                    <Text style={styles.cartButton} onPress={(event) => incrementCart()}>+</Text>
+    const deleteCart = (event, i) => {
+        event.preventDefault();
+        const data = (volatile.itemArray).slice();
+        data.splice(i, 1);
+        setVolatile((state) => ({
+            ...state,
+            itemArray: data,
+        }));
+    }
+    const renderItem = (item, index) => {
+        return (<View style={commonStyle.cartBody}>
+            {Object.keys(item).map((key, i) => (<View style={commonStyle.cartBody}><Text style={styles.cartWidth} > {key}</Text>
+                < Text style={{ color: 'blue', marginRight: 20, marginTop: 10 }}>{item[key]}</Text>
+                < View style={commonStyle.cartBody} >
+                    <Text style={styles.cartButton} onPress={(event) => decrementCart(index)}>-</Text>
+                    <Text style={{ padding: 5 }}>{volatile.cartCount}</Text>
+                    <Text style={styles.cartButton} onPress={(event) => incrementCart(index)}>+</Text>
                 </View>
-                <AntIcon style={{ marginLeft: 10, marginTop: 10 }} name="delete" size={20} onPress={deleteAll} />
-            </View>)
-        }
+                <AntIcon style={{ marginLeft: 10, marginTop: 10 }} name="delete" size={20} onPress={(event) => deleteCart(event, index)} /></View>))}
+        </View >)
+
+    }
+    const logout = () => {
+        navigation.navigate('Login');
     }
     return (
         <View style={commonStyle.container}>
@@ -69,15 +79,15 @@ export default function Order({ route, navigation }) {
                 <View style={commonStyle.header}>
                     <Icon name="arrow-left" style={commonStyle.backButton} size={20} onPress={backToPage} />
                     <Text style={commonStyle.heading}>Your Cart</Text>
-
+                    <AntIcon style={{ marginLeft: 200 }} name="logout" size={20} onPress={logout} />
                 </View>
-                {stateData.hideCart ? (<View><TouchableOpacity>
+                {volatile.hideCart ? (<View><TouchableOpacity>
                     <Text style={styles.textInput} onPress={orderStatus}>
                         Proceed to Order
             </Text>
                 </TouchableOpacity>
-                    {stateData.itemArray.map((item, index) => (
-                        renderItem(item)
+                    {volatile.itemArray.map((item, index) => (
+                        renderItem(item, index)
                     ))}
                     <TouchableOpacity>
                         <View style={{ flexDirection: 'row' }}>
