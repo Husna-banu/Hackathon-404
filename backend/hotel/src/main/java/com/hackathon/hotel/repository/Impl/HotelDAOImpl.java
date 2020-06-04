@@ -45,42 +45,42 @@ public class HotelDAOImpl implements HotelDAO {
         if(("Restaurant").equalsIgnoreCase(serviceName)){
 
             map = new HashMap<>();
-            map.put("Plain Rice","$70");
-            map.put("Daal Fry","$ 90");
-            map.put("Veg Kofta","$ 120");
-            map.put("Jeera Rice","$ 100");
-            map.put("Plain Paratha","$ 45");
-            map.put("Paneer Makhni","$ 165");
-            map.put("Jeera Aloo","$ 80");
-            map.put("Aloo Gobi","$ 95");
+            map.put("Plain Rice","70");
+            map.put("Daal Fry","90");
+            map.put("Veg Kofta","120");
+            map.put("Jeera Rice","100");
+            map.put("Plain Paratha","45");
+            map.put("Paneer Makhni","165");
+            map.put("Jeera Aloo","80");
+            map.put("Aloo Gobi","95");
 
             subMenu.put("Veg",map.entrySet().toArray());
 
             map = new HashMap<>();
-            map.put("Mixed Fried Rice","$170");
-            map.put("Egg Fried Rice","$ 190");
-            map.put("Cicken Masala","$ 220");
-            map.put("Butter Chicken","$ 400");
-            map.put("Mutton Roganjosh","$ 450");
-            map.put("Mutton Kurma","$ 465");
+            map.put("Mixed Fried Rice","170");
+            map.put("Egg Fried Rice","190");
+            map.put("Cicken Masala","220");
+            map.put("Butter Chicken","400");
+            map.put("Mutton Roganjosh","450");
+            map.put("Mutton Kurma","465");
 
             subMenu.put("Non-Veg",map.entrySet().toArray());
 
             map = new HashMap<>();
-            map.put("Non-Veg","$ 170");
-            map.put("Veg","$ 90");
+            map.put("Non-Veg","170");
+            map.put("Veg","90");
 
             subMenu.put("Thali",map.entrySet().toArray());
 
             map = new HashMap<>();
-            map.put("Non-Veg","$ 270");
-            map.put("Veg","$ 190");
+            map.put("Non-Veg","270");
+            map.put("Veg","190");
 
             subMenu.put("Snacks",map.entrySet().toArray());
 
             map = new HashMap<>();
-            map.put("Soft","Starting $ 45");
-            map.put("Hard","Starting $ 390");
+            map.put("Soft","45");
+            map.put("Hard","390");
 
             subMenu.put("Drinks",map.entrySet().toArray());
 
@@ -91,45 +91,45 @@ public class HotelDAOImpl implements HotelDAO {
             subMenu = new HashMap<>();
 
             map = new HashMap<>();
-            map.put("Wash","Starting $ 200");
-            map.put("Straightening","Starting $ 800");
-            map.put("Curling","Starting $ 400");
-            map.put("Spa","Starting $ 1200");
+            map.put("Wash","200");
+            map.put("Straightening","800");
+            map.put("Curling","400");
+            map.put("Spa","1200");
 
             subMenu.put("Hair",map.entrySet().toArray());
 
             map = new HashMap<>();
-            map.put("Full Body Massage","Starting $ 1500");
-            map.put("Sona","Starting $ 850");
+            map.put("Full Body Massage","1500");
+            map.put("Sona","850");
 
-            map.put("Jacuzzi","Starting $ 1150");
-            map.put("Waxing","Starting $ 400");
+            map.put("Jacuzzi","1150");
+            map.put("Waxing","400");
 
             subMenu.put("Body",map.entrySet().toArray());
 
             map = new HashMap<>();
-            map.put("Eye Brow","$ 45");
-            map.put("Waxing","Starting $ 390");
-            map.put("Facial","Starting $ 250");
-            map.put("Massage","Starting $ 1200");
+            map.put("Eye Brow","45");
+            map.put("Waxing","390");
+            map.put("Facial","250");
+            map.put("Massage","1200");
 
             subMenu.put("Face",map.entrySet().toArray());
 
             map = new HashMap<>();
-            map.put("Massage","Starting $ 400");
-            map.put("Waxing","Starting $ 390");
-            map.put("Manicure","Starting $ 450");
-            map.put("Detan","Starting $ 390");
-            map.put("Spa","Starting $ 800");
+            map.put("Massage","400");
+            map.put("Waxing","390");
+            map.put("Manicure","450");
+            map.put("Detan","390");
+            map.put("Spa","800");
 
             subMenu.put("Hands",map.entrySet().toArray());
 
             map = new HashMap<>();
-            map.put("Massage","Starting $ 400");
-            map.put("Waxing","Starting $ 390");
-            map.put("Pedicure","Starting $ 450");
-            map.put("Detan","Starting $ 390");
-            map.put("Spa","Starting $ 800");
+            map.put("Massage","400");
+            map.put("Waxing","390");
+            map.put("Pedicure","450");
+            map.put("Detan","390");
+            map.put("Spa","800");
 
             subMenu.put("Legs",map.entrySet().toArray());
             hotelServicesDTO = new HotelServicesDTO(234L,"Spa","10","2",subMenu);
@@ -139,17 +139,17 @@ public class HotelDAOImpl implements HotelDAO {
 
             subMenu = new HashMap<>();
             map = new HashMap<>();
-            map.put("Shirt","$ 50");
-            map.put("T-Shirt","$ 59");
-            map.put("Trouser","$ 55");
-            map.put("Jeanse","$ 59");
+            map.put("Shirt","50");
+            map.put("T-Shirt","59");
+            map.put("Trouser","55");
+            map.put("Jeanse","59");
             subMenu.put("Washing",map.entrySet().toArray());
 
             map = new HashMap<>();
-            map.put("Shirt","$ 40");
-            map.put("T-Shirt","$ 39");
-            map.put("Trouser","$ 45");
-            map.put("Jeanse","$ 39");
+            map.put("Shirt","40");
+            map.put("T-Shirt","39");
+            map.put("Trouser","45");
+            map.put("Jeanse","39");
             subMenu.put("Ironing",map.entrySet().toArray());
 
             hotelServicesDTO = new HotelServicesDTO(345L,"Laundry","80","79",subMenu);
@@ -180,12 +180,12 @@ public class HotelDAOImpl implements HotelDAO {
             subMenu.put("Medical",map.entrySet().toArray());
 
             map = new HashMap<>();
-            map.put("Yes","Starting $ 200");
+            map.put("Yes","200");
             map.put("No","");
             subMenu.put("Departmental",map.entrySet().toArray());
 
             map = new HashMap<>();
-            map.put("Yes","Starting $ 900");
+            map.put("Yes","900");
             map.put("No","");
             subMenu.put("Ambulance",map.entrySet().toArray());
 
@@ -199,8 +199,8 @@ public class HotelDAOImpl implements HotelDAO {
             map.put("Cold","Free");
             map.put("Hot","Free");
             map.put("Normal","Free");
-            map.put("Packaged Cold","& 45");
-            map.put("Packaged Normal","$ 40");
+            map.put("Packaged Cold","45");
+            map.put("Packaged Normal","40");
             subMenu.put("Water",map.entrySet().toArray());
 
             map = new HashMap<>();
