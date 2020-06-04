@@ -11,7 +11,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
 import commonStyle from '../commonStyles';
 
-export default function Login({route, navigation}) {
+export default function Dashboard({route, navigation}) {
   const [stateData, setStateData] = useState({});
   useEffect(() => {
     const {listOfServices} = route.params;

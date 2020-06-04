@@ -25,7 +25,6 @@ export default function Login({route, navigation}) {
     )
       .then(result => result.json())
       .then(lists => {
-        console.log('lists', lists);
         setStateData(state => ({
           ...state,
           serviceDetails: lists,

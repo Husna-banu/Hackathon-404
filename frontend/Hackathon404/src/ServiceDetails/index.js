@@ -10,15 +10,17 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import styles from './style';
-import orderStyles from '../Order/style';
 import commonStyle from '../commonStyles';
-import {getFetch, postFetch} from '../utils/fetchAPI';
+import {getFetch} from '../utils/fetchAPI';
 
 export default function ServiceDetails({route, navigation}) {
   const [stateData, setStateData] = useState({
     cartCount: 0,
     serviceDetails: {},
+    itemArray: [],
+    hideCart: true,
   });
   const [theArray, setTheArray] = useState([]);
   useEffect(() => {
@@ -27,7 +29,6 @@ export default function ServiceDetails({route, navigation}) {
       `https://backendproject5.herokuapp.com/fetchServiceDetails?serviceName=${serviceName}`,
     )
       .then(lists => {
-        console.log('lists', lists);
         setStateData(state => ({
           ...state,
           serviceDetails: lists,
@@ -89,6 +90,9 @@ export default function ServiceDetails({route, navigation}) {
       itemCount: stateData.cartCount,
     });
   };
+  const logout = () => {
+    navigation.navigate('Login');
+  };
   return (
     <View style={commonStyle.container}>
       <StatusBar barStyle="dark-content" />
@@ -112,6 +116,12 @@ export default function ServiceDetails({route, navigation}) {
             />
             <Text style={styles.cartCountStyle}>{stateData.cartCount}</Text>
           </View>
+          <AntDesign
+            style={{marginLeft: 20}}
+            name="logout"
+            size={20}
+            onPress={logout}
+          />
         </View>
         <View style={commonStyle.content}>
           <FlatList
