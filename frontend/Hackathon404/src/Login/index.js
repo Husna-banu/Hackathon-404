@@ -3,19 +3,22 @@ import {View, Text, TextInput, StatusBar, SafeAreaView, Button} from 'react-nati
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
 import commonStyle from '../commonStyles';
+import {getFetch , postFetch}from '../utils/fetchAPI';
 
 export default function Login({navigation}) {
   const [stateData, setStateData] = useState({
     emailId: '',
+    password: '',
     hotelName: '',
     hotelId: 0,
-    listOfServices: []
+    listOfServices: [],
+    passwordError: false,
+    emailIdError: false,
   });
 
   useEffect(() => {
-    fetch('https://backendproject5.herokuapp.com/fetchHotelDetails')
-    .then(result => result.json())
-    .then(lists => {
+     getFetch('http://backendproject5.herokuapp.com/fetchHotelDetails').then((lists)=>{
+      console.log(lists);
       lists.forEach((list) => {
         if (list.hotelId === 1234) {
           setStateData((state) => ({
@@ -29,27 +32,38 @@ export default function Login({navigation}) {
     })
     .catch(err => console.log(err));
   }, []);
-  const onChangeText = (text) => {
+
+  const onChangeText = (text, name) => {
+    const nameField = `${name}Error`;
     if (text === '') {
       setStateData((state) => ({
         ...state,
-        emailIdError: true,
+        [nameField]: true,
       }));
     } else {
       setStateData((state) => ({
         ...state,
-        emailIdError: false,
+        [nameField]: false,
       }));
     }
-    setStateData((state) => ({ ...state, emailId: text }));
+    setStateData((state) => ({ ...state, [name]: text }));
   };
-  const login = () => {
+
+  const _login = () => {
     if (stateData.emailId === '') {
       setStateData((state) => ({
         ...state,
         emailIdError: true,
       }));
     } else {
+      const body = {
+                    userId:stateData.emailId,
+                    password:stateData.password
+                    };
+
+       postFetch('http://backendproject5.herokuapp.com/fetchUserDetailsById',body).then((response)=>{
+                    console.log('response',response);
+       })
       setStateData((state) => ({
         ...state,
         emailIdError: false,
@@ -69,20 +83,32 @@ export default function Login({navigation}) {
           <Text style={commonStyle.heading}>Login</Text>
         </View>
         <View style={commonStyle.content}>
-          <Text style={styles.hotelName}>{stateData.hotelName}</Text>
           <View style={styles.emailContainer}>
-            <Text style={styles.inputTitle}>Please enter your email address: </Text>
+            <Text style={styles.inputTitle}>Email address/Username: </Text>
             <TextInput
               style={styles.textInput}
-              onChangeText={onChangeText}
+              onChangeText={(text) => onChangeText(text, 'emailId')}
               value={stateData.emailId}
-              placeholder="Email Address"
+              placeholder="Email Address/User name"
             />
             {stateData.emailIdError && (
               <Text style={styles.errorMsg}>Please enter email address</Text>
             )}
           </View>
-          <Button title="Login" onPress={() => login()} style={{ paddingTop: 10 }} />
+          <View style={styles.emailContainer}>
+            <Text style={styles.inputTitle}>Password: </Text>
+            <TextInput
+              style={styles.textInput}
+              onChangeText={(text) => onChangeText(text, 'password')}
+              value={stateData.password}
+              placeholder="Password"
+              secureTextEntry={true}
+            />
+            {stateData.passwordError && (
+              <Text style={styles.errorMsg}>Please enter password address</Text>
+            )}
+          </View>
+          <Button title="Login" onPress={() => _login()} style={{ paddingTop: 10 }} />
         </View>
       </SafeAreaView>
     </View>
