@@ -29,9 +29,10 @@ import AppNavigator from '../../src';
 import renderer from 'react-test-renderer';
 
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+fetch = jest.fn(() => Promise.resolve());
 
 it('renders correctly', async () => {
-  const container = await renderer.create(<AppNavigator />);
+  const container = renderer.create(<AppNavigator />);
 
   expect(container).toMatchSnapshot();
 });

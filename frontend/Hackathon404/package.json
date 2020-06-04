@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "test": "npm run lint && jest",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-gesture-handler": "^1.6.1",
+    "react-native-ibm-mobilefirst": "^8.0.2020032412",
     "react-native-reanimated": "^1.9.0",
     "react-native-safe-area-context": "^3.0.2",
     "react-native-screens": "^2.8.0",
@@ -25,6 +26,7 @@
     "@babel/core": "7.10.2",
     "@babel/runtime": "7.10.2",
     "@react-native-community/eslint-config": "0.0.5",
+    "@testing-library/react": "^10.1.0",
     "babel-jest": "24.9.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
