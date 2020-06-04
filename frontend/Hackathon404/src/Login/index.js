@@ -14,6 +14,7 @@ export default function Login({navigation}) {
     listOfServices: [],
     passwordError: false,
     emailIdError: false,
+    loginError: false,
   });
 
   useEffect(() => {
@@ -55,7 +56,12 @@ export default function Login({navigation}) {
         ...state,
         emailIdError: true,
       }));
-    } else {
+    } else if(stateData.password === ''){
+      setStateData((state) => ({
+        ...state,
+        passwordError: true,
+      }));
+    }else {
       const body = {
                     userId:stateData.emailId,
                     password:stateData.password
@@ -63,12 +69,23 @@ export default function Login({navigation}) {
 
        postFetch('http://backendproject5.herokuapp.com/fetchUserDetailsById',body).then((response)=>{
                     console.log('response',response);
+                    if(response.status === 'Failed'){
+                      setStateData((state) => ({
+                        ...state,
+                        loginError: true,
+                      }));
+                    }
+                    else{
+                      switch(response.userType){
+                        case 'HOTEL_ADMIN' : navigation.navigate('AdminDashboard', {hotelId: stateData.hotelId,  listOfServices: stateData.listOfServices});
+                                            break;
+                        case 'GUEST' : navigation.navigate('Dashborad', {hotelId: stateData.hotelId, listOfServices: stateData.listOfServices});
+                                      break;            
+                        case 'SUPER_ADMIN' :navigation.navigate('Dashborad', {hotelId: stateData.hotelId, listOfServices: stateData.listOfServices});
+                                            break;
+                      }
+                    }
        })
-      setStateData((state) => ({
-        ...state,
-        emailIdError: false,
-      }));
-      navigation.navigate('Dashborad', {hotelId: stateData.hotelId, listOfServices: stateData.listOfServices});
     }
   };
   const backToPage = () => {
@@ -108,6 +125,9 @@ export default function Login({navigation}) {
               <Text style={styles.errorMsg}>Please enter password address</Text>
             )}
           </View>
+          {stateData.loginError && (
+              <Text style={styles.errorMsg}>Please enter valid email address/password</Text>
+            )}
           <Button title="Login" onPress={() => _login()} style={{ paddingTop: 10 }} />
         </View>
       </SafeAreaView>
