@@ -1,5 +1,4 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   textInput: {
@@ -24,7 +23,7 @@ const styles = StyleSheet.create({
   },
   errorMsg: {
     color: 'red',
-  }
+  },
 });
 
 export default styles;

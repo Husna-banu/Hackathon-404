@@ -1,12 +1,11 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   buttons: {
     justifyContent: 'space-around',
     alignItems: 'center',
     flexDirection: 'row',
-    padding: 60
+    padding: 60,
   },
 });
 

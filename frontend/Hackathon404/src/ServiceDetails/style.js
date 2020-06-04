@@ -1,5 +1,4 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   servicesListStyle: {
@@ -27,9 +26,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   addCartButton: {
-    fontWeight: "600",
+    fontWeight: '600',
     paddingLeft: 20,
-    color: '#147ACB'
+    color: '#147ACB',
+    marginTop: 5,
+    fontSize: 12,
   },
   cartIconView: {
     flexDirection: 'row',
@@ -43,15 +44,14 @@ const styles = StyleSheet.create({
     right: 0,
     paddingLeft: 80,
   },
-  cartCountStyle:{
+  cartCountStyle: {
     position: 'absolute',
     width: 20,
     height: 20,
     textAlign: 'center',
     right: -20,
     top: -10,
-
-  }
+  },
 });
 
 export default styles;

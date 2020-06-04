@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, Text, Button, StatusBar, SafeAreaView} from 'react-native';
 
-import commonStyles  from '../commonStyles';
-import styles  from './style';
+import commonStyles from '../commonStyles';
+import styles from './style';
 
 export default function Home({navigation}) {
   return (
