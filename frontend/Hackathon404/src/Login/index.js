@@ -1,16 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  StatusBar,
-  SafeAreaView,
-  Button,
-} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import styles from './style';
-import commonStyle from '../commonStyles';
 import {getFetch, postFetch} from '../utils/fetchAPI';
+import LoginComponent from './loginComponent';
 
 export default function Login({navigation}) {
   const [stateData, setStateData] = useState({
@@ -114,56 +104,15 @@ export default function Login({navigation}) {
     navigation.goBack();
   };
   return (
-    <View style={commonStyle.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="skyblue" />
-      <SafeAreaView>
-        <View style={commonStyle.header}>
-          <Icon
-            name="arrow-left"
-            style={commonStyle.backButton}
-            size={20}
-            onPress={backToPage}
-          />
-          <Text style={commonStyle.heading}>Login</Text>
-        </View>
-        <View style={commonStyle.content}>
-          <View style={styles.emailContainer}>
-            <Text style={styles.inputTitle}>Email address/Username: </Text>
-            <TextInput
-              style={styles.textInput}
-              onChangeText={text => onChangeText(text, 'emailId')}
-              value={stateData.emailId}
-              placeholder="Email Address/User name"
-            />
-            {stateData.emailIdError && (
-              <Text style={styles.errorMsg}>Please enter email address</Text>
-            )}
-          </View>
-          <View style={styles.emailContainer}>
-            <Text style={styles.inputTitle}>Password: </Text>
-            <TextInput
-              style={styles.textInput}
-              onChangeText={text => onChangeText(text, 'password')}
-              value={stateData.password}
-              placeholder="Password"
-              secureTextEntry={true}
-            />
-            {stateData.passwordError && (
-              <Text style={styles.errorMsg}>Please enter password address</Text>
-            )}
-          </View>
-          {stateData.loginError && (
-            <Text style={styles.errorMsg}>
-              Please enter valid email address/password
-            </Text>
-          )}
-          <Button
-            title="Login"
-            onPress={() => _login()}
-            style={{paddingTop: 10}}
-          />
-        </View>
-      </SafeAreaView>
-    </View>
+    <LoginComponent
+      onChangeText={onChangeText}
+      backToPage={backToPage}
+      _login={_login}
+      emailIdError={stateData.emailIdError}
+      passwordError={stateData.passwordError}
+      loginError={stateData.loginError}
+      emailId={setStateData.emailId}
+      password={stateData.password}
+    />
   );
 }
