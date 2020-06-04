@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {View, Text, StatusBar, SafeAreaView, FlatList, TouchableOpacity} from 'react-native';
+import { View, Text, StatusBar, SafeAreaView, FlatList, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
 import commonStyle from '../commonStyles';
 
-export default function Login({route, navigation}) {
+export default function Dashboard({ route, navigation }) {
   const [stateData, setStateData] = useState({});
   useEffect(() => {
     const { hotelId, listOfServices } = route.params;

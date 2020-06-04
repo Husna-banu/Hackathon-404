@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import {View, Text, StatusBar, SafeAreaView, FlatList, TouchableOpacity} from 'react-native';
+import { View, Text, StatusBar, SafeAreaView, FlatList, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import styles from './style';
 import commonStyle from '../../commonStyles';
 
-export default function Login({route, navigation}) {
+export default function Login({ route, navigation }) {
   const [stateData, setStateData] = useState({
     hotelName: '',
     hotelId: 0,
@@ -13,20 +14,20 @@ export default function Login({route, navigation}) {
   useEffect(() => {
     const { hotelId } = route.params;
     fetch('https://backendproject5.herokuapp.com/fetchHotelDetails')
-    .then(result => result.json())
-    .then(lists => {
-      lists.forEach((list) => {
-        if (list.hotelId === hotelId) {
-          setStateData((state) => ({
-            ...state,
-            hotelName: list.hotemName,
-            hotelId: list.hotelId,
-            listOfServices: list.listOfServices,
-          }));
-        }
-      });
-    })
-    .catch(err => console.log(err));
+      .then(result => result.json())
+      .then(lists => {
+        lists.forEach((list) => {
+          if (list.hotelId === hotelId) {
+            setStateData((state) => ({
+              ...state,
+              hotelName: list.hotemName,
+              hotelId: list.hotelId,
+              listOfServices: list.listOfServices,
+            }));
+          }
+        });
+      })
+      .catch(err => console.log(err));
   }, []);
   const backToPage = () => {
     navigation.goBack();
@@ -52,6 +53,7 @@ export default function Login({route, navigation}) {
         <View style={commonStyle.header}>
           <Icon name="arrow-left" style={commonStyle.backButton} size={20} onPress={backToPage} />
           <Text style={commonStyle.heading}>Services List</Text>
+          <AntDesign style={{ marginLeft: 20 }} name="logout" size={20} />
         </View>
         <View style={commonStyle.content}>
           <FlatList

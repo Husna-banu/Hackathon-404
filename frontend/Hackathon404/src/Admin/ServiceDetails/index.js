@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import {View, Text, StatusBar, SafeAreaView, FlatList, TouchableOpacity, Button} from 'react-native';
+import { View, Text, StatusBar, SafeAreaView, FlatList, TouchableOpacity, Button } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import styles from './style';
 import commonStyle from '../../commonStyles';
 
-export default function Login({route, navigation}) {
+export default function Login({ route, navigation }) {
   const [stateData, setStateData] = useState({
     cartCount: 0,
     serviceDetails: {},
@@ -13,16 +13,15 @@ export default function Login({route, navigation}) {
   useEffect(() => {
     const { serviceId, serviceName } = route.params;
     fetch(`https://backendproject5.herokuapp.com/fetchServiceDetails?serviceName=${serviceName}`)
-    .then(result => result.json())
-    .then(lists => {
-      console.log('lists', lists);
-      setStateData((state) => ({
-        ...state,
-        serviceDetails: lists,
-      }));
-    })
-    .catch(err => console.log(err));
-    
+      .then(result => result.json())
+      .then(lists => {
+        setStateData((state) => ({
+          ...state,
+          serviceDetails: lists,
+        }));
+      })
+      .catch(err => console.log(err));
+
   }, []);
   const backToPage = () => {
     navigation.goBack();

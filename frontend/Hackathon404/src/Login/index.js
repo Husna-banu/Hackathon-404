@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import {View, Text, TextInput, StatusBar, SafeAreaView, Button} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import styles from './style';
-import commonStyle from '../commonStyles';
+import { getFetch, postFetch } from '../utils/fetchAPI';
+import LoginComponent from './loginComponent';
 
-export default function Login({navigation}) {
+export default function Login({ navigation }) {
   const [stateData, setStateData] = useState({
     emailId: '',
+    password: '',
     hotelName: '',
     hotelId: 0,
-    listOfServices: []
+    listOfServices: [],
+    passwordError: false,
+    emailIdError: false,
+    loginError: false,
   });
 
   useEffect(() => {
-    fetch('https://backendproject5.herokuapp.com/fetchHotelDetails')
-    .then(result => result.json())
-    .then(lists => {
+    getFetch('http://backendproject5.herokuapp.com/fetchHotelDetails').then((lists) => {
+      console.log(lists);
       lists.forEach((list) => {
         if (list.hotelId === 1234) {
           setStateData((state) => ({
@@ -27,64 +28,76 @@ export default function Login({navigation}) {
         }
       });
     })
-    .catch(err => console.log(err));
+      .catch(err => console.log(err));
   }, []);
-  const onChangeText = (text) => {
+
+  const onChangeText = (text, name) => {
+    const nameField = `${name}Error`;
     if (text === '') {
       setStateData((state) => ({
         ...state,
-        emailIdError: true,
+        [nameField]: true,
       }));
     } else {
       setStateData((state) => ({
         ...state,
-        emailIdError: false,
+        [nameField]: false,
       }));
     }
-    setStateData((state) => ({ ...state, emailId: text }));
+    setStateData((state) => ({ ...state, [name]: text }));
   };
-  const login = () => {
+
+  const _login = () => {
     if (stateData.emailId === '') {
       setStateData((state) => ({
         ...state,
         emailIdError: true,
       }));
-    } else {
+    } else if (stateData.password === '') {
       setStateData((state) => ({
         ...state,
-        emailIdError: false,
+        passwordError: true,
       }));
-      navigation.navigate('Dashborad', {hotelId: stateData.hotelId, listOfServices: stateData.listOfServices});
+    } else {
+      const body = {
+        userId: stateData.emailId,
+        password: stateData.password
+      };
+
+      postFetch('http://backendproject5.herokuapp.com/fetchUserDetailsById', body).then((response) => {
+        console.log('response', response);
+        if (response.status === 'Failed') {
+          setStateData((state) => ({
+            ...state,
+            loginError: true,
+          }));
+        }
+        else {
+          switch (response.userType) {
+            case 'HOTEL_ADMIN': navigation.navigate('AdminDashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+              break;
+            case 'GUEST': navigation.navigate('Dashborad', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+              break;
+            case 'SUPER_ADMIN': navigation.navigate('Dashborad', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+              break;
+          }
+        }
+      })
     }
   };
   const backToPage = () => {
     navigation.goBack();
   };
   return (
-    <View style={commonStyle.container}>
-      <StatusBar barStyle="dark-content" backgroundColor='skyblue' />
-      <SafeAreaView>
-        <View style={commonStyle.header}>
-          <Icon name="arrow-left" style={commonStyle.backButton} size={20} onPress={backToPage}/>
-          <Text style={commonStyle.heading}>Login</Text>
-        </View>
-        <View style={commonStyle.content}>
-          <Text style={styles.hotelName}>{stateData.hotelName}</Text>
-          <View style={styles.emailContainer}>
-            <Text style={styles.inputTitle}>Please enter your email address: </Text>
-            <TextInput
-              style={styles.textInput}
-              onChangeText={onChangeText}
-              value={stateData.emailId}
-              placeholder="Email Address"
-            />
-            {stateData.emailIdError && (
-              <Text style={styles.errorMsg}>Please enter email address</Text>
-            )}
-          </View>
-          <Button title="Login" onPress={() => login()} style={{ paddingTop: 10 }} />
-        </View>
-      </SafeAreaView>
-    </View>
-  );
+    <LoginComponent
+      onChangeText={onChangeText}
+      backToPage={backToPage}
+      _login={_login}
+      emailIdError={stateData.emailIdError}
+      passwordError={stateData.passwordError}
+      loginError={stateData.loginError}
+      emailId={setStateData.emailId}
+      password={stateData.password}
+    />
+  )
 }

@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    fontWeight: 'bold' ,
+    fontWeight: 'bold',
     paddingLeft: 10
   },
   header: {
@@ -29,9 +29,30 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     paddingLeft: 10
   },
+  cartBody: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignContent: 'center',
+    fontWeight: '700',
+    fontSize: 18,
+    marginBottom: 5,
+    marginTop: 20,
+  },
+  backButton: {
+    fontSize: 20,
+    paddingRight: 20,
+    paddingLeft: 10
+  },
   content: {
     padding: 20,
+  },
+  successMessage: {
+    textAlign: "center",
+    margin: 50,
+    fontSize: 20,
+    fontWeight: '700'
   }
 });
+
 
 export default styles;
