@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getFetch, postFetch } from '../utils/fetchAPI';
 import LoginComponent from './loginComponent';
+import { useAccessDispatch } from '../utils/AppContext/loginContext';
 
 export default function Login({ navigation }) {
   const [stateData, setStateData] = useState({
@@ -13,6 +14,7 @@ export default function Login({ navigation }) {
     emailIdError: false,
     loginError: false,
   });
+  const dispatch = useAccessDispatch();
 
   useEffect(() => {
     getFetch('http://hoteltel.mybluemix.net/fetchHotelDetails')
@@ -69,12 +71,14 @@ export default function Login({ navigation }) {
         body,
       ).then(response => {
         if (response.status === 'Failed') {
+          dispatch({ type: 'logout', payload: '' });
           setStateData((state) => ({
             ...state,
             loginError: true,
           }));
         }
         else {
+          dispatch({ type: 'login', payload: response.userId });
           setStateData((state) => ({
             ...state,
             emailId: '',
@@ -96,6 +100,7 @@ export default function Login({ navigation }) {
   const backToPage = () => {
     navigation.goBack();
   };
+
   return (
     <LoginComponent
       onChangeText={onChangeText}
