@@ -1,0 +1,6 @@
+applications:
+- name: Hackathon404
+  command: npm start
+  path: .
+  memory: 128M
+  instances: 1
