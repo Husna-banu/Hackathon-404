@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -12,29 +12,19 @@ import styles from './style';
 import commonStyle from '../../commonStyles';
 import Logout from '../../components/Logout';
 
-export default function Login({route, navigation}) {
+export default function Login({ route, navigation }) {
   const [stateData, setStateData] = useState({
     hotelName: '',
     hotelId: 0,
     listOfServices: [],
   });
   useEffect(() => {
-    const {hotelId} = route.params;
-    fetch('https://backendproject5.herokuapp.com/fetchHotelDetails')
-      .then(result => result.json())
-      .then(lists => {
-        lists.forEach(list => {
-          if (list.hotelId === hotelId) {
-            setStateData(state => ({
-              ...state,
-              hotelName: list.hotemName,
-              hotelId: list.hotelId,
-              listOfServices: list.listOfServices,
-            }));
-          }
-        });
-      })
-      .catch(err => console.log(err));
+    const { hotelId, listOfServices } = route.params;
+    setStateData(state => ({
+      ...state,
+      hotelId: hotelId,
+      listOfServices: listOfServices,
+    }));
   }, [route.params]);
   const backToPage = () => {
     navigation.goBack();
@@ -47,7 +37,7 @@ export default function Login({route, navigation}) {
       });
     }
   };
-  const renderItem = ({item}) => {
+  const renderItem = ({ item }) => {
     return (
       <TouchableOpacity
         onPress={() => serviceDetails(item.serviceId, item.serviceName)}>

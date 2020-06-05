@@ -15,7 +15,7 @@ export default function Login({ navigation }) {
   });
 
   useEffect(() => {
-    getFetch('http://backendproject5.herokuapp.com/fetchHotelDetails')
+    getFetch('http://hoteltel.mybluemix.net/fetchHotelDetails')
       .then(lists => {
         lists.forEach(list => {
           if (list.hotelId === 1234) {
@@ -65,7 +65,7 @@ export default function Login({ navigation }) {
       };
 
       postFetch(
-        'http://backendproject5.herokuapp.com/fetchUserDetailsById',
+        'http://hoteltel.mybluemix.net/fetchUserDetailsById',
         body,
       ).then(response => {
         if (response.status === 'Failed') {

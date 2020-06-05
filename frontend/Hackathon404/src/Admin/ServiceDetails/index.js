@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -13,18 +13,16 @@ import EntypoIcon from 'react-native-vector-icons/Entypo';
 import styles from './style';
 import commonStyle from '../../commonStyles';
 import Logout from '../../components/Logout';
+import { getFetch } from '../../utils/fetchAPI';
 
-export default function Login({route, navigation}) {
+export default function Login({ route, navigation }) {
   const [stateData, setStateData] = useState({
     cartCount: 0,
     serviceDetails: {},
   });
   useEffect(() => {
-    const {serviceName} = route.params;
-    fetch(
-      `https://backendproject5.herokuapp.com/fetchServiceDetails?serviceName=${serviceName}`,
-    )
-      .then(result => result.json())
+    const { serviceName } = route.params;
+    getFetch(`http://hoteltel.mybluemix.net/fetchServiceDetails?serviceName=${serviceName}`)
       .then(lists => {
         setStateData(state => ({
           ...state,
@@ -36,7 +34,7 @@ export default function Login({route, navigation}) {
   const backToPage = () => {
     navigation.goBack();
   };
-  const renderItemList = ({item}) => {
+  const renderItemList = ({ item }) => {
     for (var i in item) {
       return (
         <View style={styles.listItemStyle}>
@@ -46,15 +44,15 @@ export default function Login({route, navigation}) {
             size={20}
           />
           <View style={styles.listItemContentStyle}>
-            <Text style={{width: 240}}>{i}</Text>
-            <Text style={{width: 80, fontWeight: '700'}}>Rs {item[i]}</Text>
+            <Text style={{ width: 240 }}>{i}</Text>
+            <Text style={{ width: 80, fontWeight: '700' }}>Rs {item[i]}</Text>
           </View>
         </View>
       );
     }
   };
 
-  const renderItem = ({item, index}) => {
+  const renderItem = ({ item, index }) => {
     const itemName = Object.keys(item)[0];
     return (
       <View style={styles.servicesListStyle}>

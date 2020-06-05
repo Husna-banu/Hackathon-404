@@ -20,22 +20,12 @@ export default function Covid9Info({ route, navigation }) {
         listOfServices: '',
     });
     useEffect(() => {
-        const { hotelId } = route.params;
-        fetch('https://backendproject5.herokuapp.com/fetchHotelDetails')
-            .then(result => result.json())
-            .then(lists => {
-                lists.forEach(list => {
-                    if (list.hotelId === hotelId) {
-                        setStateData(state => ({
-                            ...state,
-                            hotelName: list.hotemName,
-                            hotelId: list.hotelId,
-                            listOfServices: list.listOfServices,
-                        }));
-                    }
-                });
-            })
-            .catch(err => console.log(err));
+        const { hotelId, listOfServices } = route.params;
+        setStateData(state => ({
+            ...state,
+            hotelId: hotelId,
+            listOfServices: listOfServices,
+        }));
     }, [route.params]);
     const backToPage = () => {
         navigation.goBack();

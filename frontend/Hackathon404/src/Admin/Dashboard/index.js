@@ -35,10 +35,11 @@ export default function Dashboard({ route, navigation }) {
     ],
   });
   useEffect(() => {
-    const { hotelId } = route.params;
+    const { hotelId, listOfServices } = route.params;
     setStateData(state => ({
       ...state,
       hotelId: hotelId,
+      listOfServices: listOfServices,
     }));
   }, [route.params]);
   const backToPage = () => {
@@ -46,7 +47,7 @@ export default function Dashboard({ route, navigation }) {
   };
   const serviceDetails = menuRouteName => {
     if (menuRouteName) {
-      navigation.navigate(menuRouteName, { hotelId: stateData.hotelId });
+      navigation.navigate(menuRouteName, { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
     }
   };
   const renderItem = ({ item }) => {
