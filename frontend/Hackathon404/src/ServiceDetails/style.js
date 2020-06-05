@@ -36,6 +36,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-end',
     textAlign: 'right',
+    marginRight: 40,
+    borderColor: 'red',
   },
   cartIconStyle: {
     textAlign: 'center',
@@ -43,6 +45,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     right: 0,
     paddingLeft: 80,
+    borderColor: 'red',
   },
   cartCountStyle: {
     position: 'absolute',
@@ -51,6 +54,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     right: -20,
     top: -10,
+    borderColor: 'red',
   },
 });
 

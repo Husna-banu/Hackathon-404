@@ -3,15 +3,14 @@ import {
   View,
   StatusBar,
   Text,
-  Button,
   SafeAreaView,
-  FlatList,
   TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import commonStyle from '../commonStyles';
 import styles from './style';
+import Logout from '../components/Logout';
 
 export default function Order({route, navigation}) {
   const [volatile, setVolatile] = useState({
@@ -31,6 +30,7 @@ export default function Order({route, navigation}) {
       itemArray: Array.from(new Set(itemArray)),
     }));
   }, [route.params]);
+
   const incrementCart = i => {
     setVolatile(state => ({
       ...state,
@@ -70,7 +70,7 @@ export default function Order({route, navigation}) {
           <View style={commonStyle.cartBody}>
             <Text style={styles.cartWidth}> {key}</Text>
             <Text style={{color: 'blue', marginRight: 20, marginTop: 10}}>
-              {item[key]}
+              Rs.{volatile.cartCount * parseInt(item[key])}
             </Text>
             <View style={commonStyle.cartBody}>
               <Text
@@ -96,9 +96,6 @@ export default function Order({route, navigation}) {
       </View>
     );
   };
-  const logout = () => {
-    navigation.navigate('Login');
-  };
   return (
     <View style={commonStyle.container}>
       <StatusBar barStyle="dark-content" />
@@ -111,12 +108,7 @@ export default function Order({route, navigation}) {
             onPress={backToPage}
           />
           <Text style={commonStyle.heading}>Your Cart</Text>
-          <AntIcon
-            style={{marginLeft: 200}}
-            name="logout"
-            size={20}
-            onPress={logout}
-          />
+          <Logout navigation={navigation} />
         </View>
         {volatile.hideCart ? (
           <View>

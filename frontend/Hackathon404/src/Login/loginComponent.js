@@ -28,12 +28,12 @@ const LoginComponent = props => {
       <StatusBar barStyle="dark-content" backgroundColor="skyblue" />
       <SafeAreaView>
         <View style={commonStyle.header}>
-          <Icon
+          {/* <Icon
             name="arrow-left"
             style={commonStyle.backButton}
             size={20}
             onPress={backToPage}
-          />
+          /> */}
           <Text style={commonStyle.heading}>Login</Text>
         </View>
         <View style={commonStyle.content}>

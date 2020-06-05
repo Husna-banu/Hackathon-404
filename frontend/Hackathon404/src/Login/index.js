@@ -17,7 +17,6 @@ export default function Login({navigation}) {
   useEffect(() => {
     getFetch('http://backendproject5.herokuapp.com/fetchHotelDetails')
       .then(lists => {
-        console.log(lists);
         lists.forEach(list => {
           if (list.hotelId === 1234) {
             setStateData(state => ({
@@ -69,31 +68,25 @@ export default function Login({navigation}) {
         'http://backendproject5.herokuapp.com/fetchUserDetailsById',
         body,
       ).then(response => {
-        console.log('response', response);
         if (response.status === 'Failed') {
-          setStateData(state => ({
+          setStateData((state) => ({
             ...state,
             loginError: true,
           }));
-        } else {
+        }
+        else {
+          setStateData((state) => ({
+            ...state,
+            emailId: '',
+            password: '',
+            loginError: false,
+          }));
           switch (response.userType) {
-            case 'HOTEL_ADMIN':
-              navigation.navigate('AdminDashboard', {
-                hotelId: stateData.hotelId,
-                listOfServices: stateData.listOfServices,
-              });
+            case 'HOTEL_ADMIN': navigation.navigate('AdminDashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
-            case 'GUEST':
-              navigation.navigate('Dashborad', {
-                hotelId: stateData.hotelId,
-                listOfServices: stateData.listOfServices,
-              });
+            case 'GUEST': navigation.navigate('Dashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
-            case 'SUPER_ADMIN':
-              navigation.navigate('Dashborad', {
-                hotelId: stateData.hotelId,
-                listOfServices: stateData.listOfServices,
-              });
+            case 'SUPER_ADMIN': navigation.navigate('Dashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
           }
         }
@@ -111,7 +104,7 @@ export default function Login({navigation}) {
       emailIdError={stateData.emailIdError}
       passwordError={stateData.passwordError}
       loginError={stateData.loginError}
-      emailId={setStateData.emailId}
+      emailId={stateData.emailId}
       password={stateData.password}
     />
   );

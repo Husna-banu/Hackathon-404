@@ -12,6 +12,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import styles from './style';
 import commonStyle from '../../commonStyles';
+import Logout from '../../components/Logout';
 
 export default function Login({route, navigation}) {
   const [stateData, setStateData] = useState({
@@ -19,7 +20,7 @@ export default function Login({route, navigation}) {
     serviceDetails: {},
   });
   useEffect(() => {
-    const {serviceId, serviceName} = route.params;
+    const {serviceName} = route.params;
     fetch(
       `https://backendproject5.herokuapp.com/fetchServiceDetails?serviceName=${serviceName}`,
     )
@@ -36,19 +37,23 @@ export default function Login({route, navigation}) {
     navigation.goBack();
   };
   const renderItemList = ({item}) => {
-    return (
-      <View style={styles.listItemStyle}>
-        <EntypoIcon
-          name="dot-single"
-          style={commonStyle.backButton}
-          size={20}
-        />
-        <View style={styles.listItemContentStyle}>
-          <Text style={styles.listItemNameStyle}>{item}</Text>
+    for (var i in item) {
+      return (
+        <View style={styles.listItemStyle}>
+          <EntypoIcon
+            name="dot-single"
+            style={commonStyle.backButton}
+            size={20}
+          />
+          <View style={styles.listItemContentStyle}>
+            <Text style={{width: 240}}>{i}</Text>
+            <Text style={{width: 80, fontWeight: '700'}}>Rs {item[i]}</Text>
+          </View>
         </View>
-      </View>
-    );
+      );
+    }
   };
+
   const renderItem = ({item, index}) => {
     const itemName = Object.keys(item)[0];
     return (
@@ -76,6 +81,7 @@ export default function Login({route, navigation}) {
           <Text style={commonStyle.heading}>
             {stateData.serviceDetails.serviceName} Services
           </Text>
+          <Logout navigation={navigation} />
         </View>
         <View style={commonStyle.content}>
           <FlatList

@@ -1,23 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {
   View,
   StatusBar,
   Text,
-  Box,
   SafeAreaView,
-  FlatList,
-  TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import commonStyle from '../commonStyles';
+import Logout from '../components/Logout';
 
 export default function OrderStatus({route, navigation}) {
   const backToPage = () => {
     navigation.goBack();
-  };
-  const logout = () => {
-    navigation.navigate('Login');
   };
   return (
     <View style={commonStyle.container}>
@@ -31,12 +25,7 @@ export default function OrderStatus({route, navigation}) {
             onPress={backToPage}
           />
           <Text style={commonStyle.heading}>Your Cart</Text>
-          <AntDesign
-            style={{marginLeft: 200}}
-            name="logout"
-            size={20}
-            onPress={logout}
-          />
+          <Logout navigation={navigation} />
         </View>
         <Text style={commonStyle.successMessage}>
           Order Placed Successfully

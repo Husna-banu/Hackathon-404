@@ -8,9 +8,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import styles from './style';
 import commonStyle from '../../commonStyles';
+import Logout from '../../components/Logout';
 
 export default function Login({route, navigation}) {
   const [stateData, setStateData] = useState({
@@ -69,7 +69,7 @@ export default function Login({route, navigation}) {
             onPress={backToPage}
           />
           <Text style={commonStyle.heading}>Services List</Text>
-          <AntDesign style={{marginLeft: 20}} name="logout" size={20} />
+          <Logout navigation={navigation} />
         </View>
         <View style={commonStyle.content}>
           <FlatList

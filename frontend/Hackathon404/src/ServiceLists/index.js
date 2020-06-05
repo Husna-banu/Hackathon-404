@@ -9,51 +9,50 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
-import commonStyle from '../../commonStyles';
-import Logout from '../../components/Logout';
+import commonStyle from '../commonStyles';
+import Logout from '../components/Logout';
 
-export default function Login({route, navigation}) {
+export default function ServiceLists({route, navigation}) {
   const [stateData, setStateData] = useState({
-    hotelId: 0,
-    menuList: [
-      {
-        menuName: 'Guest',
-        menuRouteName: '',
-      },
-      {
-        menuName: 'Services',
-        menuRouteName: 'AdminService',
-      },
-      {
-        menuName: 'Services Owner',
-        menuRouteName: '',
-      },
-      {
-        menuName: 'Order',
-        menuRouteName: '',
-      },
-    ],
+    hotelName: '',
+    hotelId: '',
+    listOfServices: '',
   });
   useEffect(() => {
     const {hotelId} = route.params;
-    setStateData(state => ({
-      ...state,
-      hotelId: hotelId,
-    }));
+    fetch('https://backendproject5.herokuapp.com/fetchHotelDetails')
+      .then(result => result.json())
+      .then(lists => {
+        lists.forEach(list => {
+          if (list.hotelId === hotelId) {
+            setStateData(state => ({
+              ...state,
+              hotelName: list.hotemName,
+              hotelId: list.hotelId,
+              listOfServices: list.listOfServices,
+            }));
+          }
+        });
+      })
+      .catch(err => console.log(err));
   }, [route.params]);
   const backToPage = () => {
     navigation.goBack();
   };
-  const serviceDetails = menuRouteName => {
-    if (menuRouteName) {
-      navigation.navigate(menuRouteName, {hotelId: stateData.hotelId});
+  const serviceDetails = (serviceId, serviceName) => {
+    if (serviceId && serviceName) {
+      navigation.navigate('ServiceDetails', {
+        serviceId: serviceId,
+        serviceName: serviceName,
+      });
     }
   };
   const renderItem = ({item}) => {
     return (
-      <TouchableOpacity onPress={() => serviceDetails(item.menuRouteName)}>
+      <TouchableOpacity
+        onPress={() => serviceDetails(item.serviceId, item.serviceName)}>
         <View style={styles.servicesListStyle}>
-          <Text style={styles.serviceNameStyle}>{item.menuName}</Text>
+          <Text style={styles.serviceNameStyle}>{item.serviceName}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -74,10 +73,9 @@ export default function Login({route, navigation}) {
         </View>
         <View style={commonStyle.content}>
           <FlatList
-            data={stateData.menuList}
+            data={stateData.listOfServices}
             renderItem={renderItem}
-            keyExtractor={(item, index) => index.toString()}
-            numColumns="2"
+            keyExtractor={item => item.serviceId.toString()}
           />
         </View>
       </SafeAreaView>

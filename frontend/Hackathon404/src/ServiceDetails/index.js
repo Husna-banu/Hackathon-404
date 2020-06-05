@@ -5,15 +5,13 @@ import {
   StatusBar,
   SafeAreaView,
   FlatList,
-  TouchableOpacity,
-  Button,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import styles from './style';
 import commonStyle from '../commonStyles';
 import {getFetch} from '../utils/fetchAPI';
+import Logout from '../components/Logout';
 
 export default function ServiceDetails({route, navigation}) {
   const [stateData, setStateData] = useState({
@@ -24,7 +22,7 @@ export default function ServiceDetails({route, navigation}) {
   });
   const [theArray, setTheArray] = useState([]);
   useEffect(() => {
-    const {serviceId, serviceName} = route.params;
+    const {serviceName} = route.params;
     getFetch(
       `https://backendproject5.herokuapp.com/fetchServiceDetails?serviceName=${serviceName}`,
     )
@@ -60,7 +58,7 @@ export default function ServiceDetails({route, navigation}) {
           />
           <View style={styles.listItemContentStyle}>
             <Text style={{width: 120}}>{i}</Text>
-            <Text style={{width: 80, fontWeight: '700'}}>{item[i]}</Text>
+            <Text style={{width: 80, fontWeight: '700'}}>Rs {item[i]}</Text>
             <Text
               style={styles.addCartButton}
               onPress={event => addToCart(event, item)}>
@@ -116,12 +114,7 @@ export default function ServiceDetails({route, navigation}) {
             />
             <Text style={styles.cartCountStyle}>{stateData.cartCount}</Text>
           </View>
-          <AntDesign
-            style={{marginLeft: 20}}
-            name="logout"
-            size={20}
-            onPress={logout}
-          />
+          <Logout navigation={navigation} />
         </View>
         <View style={commonStyle.content}>
           <FlatList

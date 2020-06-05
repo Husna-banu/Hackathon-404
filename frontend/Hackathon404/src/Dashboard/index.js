@@ -10,30 +10,54 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
 import commonStyle from '../commonStyles';
+import Logout from '../components/Logout';
 
-export default function Dashboard({route, navigation}) {
-  const [stateData, setStateData] = useState({});
+export default function Login({route, navigation}) {
+  const [stateData, setStateData] = useState({
+    hotelId: 0,
+    menuList: [
+      {
+        menuName: 'RoomArmour/HotelArmour',
+        menuRouteName: '',
+      },
+      {
+        menuName: 'SafeRooms / safEscapes',
+        menuRouteName: '',
+      },
+      {
+        menuName: 'HotelCierge',
+        menuRouteName: '',
+      },
+      {
+        menuName: 'SafeBliss',
+        menuRouteName: '',
+      },
+      {
+        menuName: 'Services',
+        menuRouteName: 'ServiceLists',
+      },
+    ],
+  });
   useEffect(() => {
-    const {listOfServices} = route.params;
-    setStateData(state => listOfServices);
+    const {hotelId} = route.params;
+    setStateData(state => ({
+      ...state,
+      hotelId: hotelId,
+    }));
   }, [route.params]);
   const backToPage = () => {
     navigation.goBack();
   };
-  const serviceDetails = (serviceId, serviceName) => {
-    if (serviceId && serviceName) {
-      navigation.navigate('ServiceDetails', {
-        serviceId: serviceId,
-        serviceName: serviceName,
-      });
+  const serviceDetails = menuRouteName => {
+    if (menuRouteName) {
+      navigation.navigate(menuRouteName, {hotelId: stateData.hotelId});
     }
   };
   const renderItem = ({item}) => {
     return (
-      <TouchableOpacity
-        onPress={() => serviceDetails(item.serviceId, item.serviceName)}>
+      <TouchableOpacity onPress={() => serviceDetails(item.menuRouteName)}>
         <View style={styles.servicesListStyle}>
-          <Text style={styles.serviceNameStyle}>{item.serviceName}</Text>
+          <Text style={styles.serviceNameStyle}>{item.menuName}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -50,12 +74,15 @@ export default function Dashboard({route, navigation}) {
             onPress={backToPage}
           />
           <Text style={commonStyle.heading}>Services List</Text>
+          <Logout navigation={navigation} />
         </View>
         <View style={commonStyle.content}>
           <FlatList
-            data={stateData}
+            data={stateData.menuList}
             renderItem={renderItem}
-            keyExtractor={item => item.serviceId.toString()}
+            keyExtractor={(item, index) => index.toString()}
+            // horizontal={true}
+            numColumns="2"
           />
         </View>
       </SafeAreaView>
