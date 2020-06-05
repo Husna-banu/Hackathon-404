@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -12,7 +12,7 @@ import styles from './style';
 import commonStyle from '../../commonStyles';
 import Logout from '../../components/Logout';
 
-export default function Login({route, navigation}) {
+export default function Dashboard({ route, navigation }) {
   const [stateData, setStateData] = useState({
     hotelId: 0,
     menuList: [
@@ -26,7 +26,7 @@ export default function Login({route, navigation}) {
       },
       {
         menuName: 'Services Owner',
-        menuRouteName: '',
+        menuRouteName: 'AdminServiceOwnerDetails',
       },
       {
         menuName: 'Order',
@@ -35,7 +35,7 @@ export default function Login({route, navigation}) {
     ],
   });
   useEffect(() => {
-    const {hotelId} = route.params;
+    const { hotelId } = route.params;
     setStateData(state => ({
       ...state,
       hotelId: hotelId,
@@ -46,10 +46,10 @@ export default function Login({route, navigation}) {
   };
   const serviceDetails = menuRouteName => {
     if (menuRouteName) {
-      navigation.navigate(menuRouteName, {hotelId: stateData.hotelId});
+      navigation.navigate(menuRouteName, { hotelId: stateData.hotelId });
     }
   };
-  const renderItem = ({item}) => {
+  const renderItem = ({ item }) => {
     return (
       <TouchableOpacity onPress={() => serviceDetails(item.menuRouteName)}>
         <View style={styles.servicesListStyle}>
