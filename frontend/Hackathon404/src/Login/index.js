@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import {getFetch, postFetch} from '../utils/fetchAPI';
+import React, { useState, useEffect } from 'react';
+import { getFetch, postFetch } from '../utils/fetchAPI';
 import LoginComponent from './loginComponent';
 
-export default function Login({navigation}) {
+export default function Login({ navigation }) {
   const [stateData, setStateData] = useState({
     emailId: '',
     password: '',
@@ -44,7 +44,7 @@ export default function Login({navigation}) {
         [nameField]: false,
       }));
     }
-    setStateData(state => ({...state, [name]: text}));
+    setStateData(state => ({ ...state, [name]: text }));
   };
 
   const _login = () => {
@@ -84,7 +84,7 @@ export default function Login({navigation}) {
           switch (response.userType) {
             case 'HOTEL_ADMIN': navigation.navigate('AdminDashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
-            case 'GUEST': navigation.navigate('Dashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+            case 'GUEST': navigation.navigate('Covid9Info', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
             case 'SUPER_ADMIN': navigation.navigate('Dashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;

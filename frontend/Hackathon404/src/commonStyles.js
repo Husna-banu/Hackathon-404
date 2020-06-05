@@ -1,4 +1,4 @@
-import {StyleSheet, Platform} from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -23,6 +23,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'skyblue',
     height: 50,
   },
+  covidhHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignContent: 'center',
+    backgroundColor: 'yellow',
+    height: 150,
+    marginBottom: 10
+  },
   backButton: {
     fontSize: 20,
     paddingRight: 20,
@@ -46,6 +54,29 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '700',
   },
+  servicesListStyle: {
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginBottom: 10,
+    padding: 10,
+    backgroundColor: '#CDE6FA',
+  },
+  fnBold: {
+    fontWeight: '800',
+  },
+  fnSize_12: {
+    fontSize: 12
+  },
+  fnSizePadding: {
+    fontSize: 18,
+    padding: 5
+  },
+  bgColor: {
+    height: '100 %',
+    backgroundColor: '#CDE6FA'
+  }
 });
 
 export default styles;
