@@ -1,10 +1,17 @@
 import React from 'react';
-import { View, Text, TextInput, StatusBar, SafeAreaView, Button } from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  StatusBar,
+  SafeAreaView,
+  Button,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
 import commonStyle from '../commonStyles';
 
-const LoginComponent = (props) => {
+const LoginComponent = props => {
   const {
     onChangeText,
     emailIdError,
@@ -13,15 +20,20 @@ const LoginComponent = (props) => {
     backToPage,
     emailId,
     password,
-    _login
+    _login,
   } = props;
 
   return (
     <View style={commonStyle.container}>
-      <StatusBar barStyle="dark-content" backgroundColor='skyblue' />
+      <StatusBar barStyle="dark-content" backgroundColor="skyblue" />
       <SafeAreaView>
         <View style={commonStyle.header}>
-          <Icon name="arrow-left" style={commonStyle.backButton} size={20} onPress={backToPage} />
+          {/* <Icon
+            name="arrow-left"
+            style={commonStyle.backButton}
+            size={20}
+            onPress={backToPage}
+          /> */}
           <Text style={commonStyle.heading}>Login</Text>
         </View>
         <View style={commonStyle.content}>
@@ -29,7 +41,7 @@ const LoginComponent = (props) => {
             <Text style={styles.inputTitle}>Email address/Username: </Text>
             <TextInput
               style={styles.textInput}
-              onChangeText={(text) => onChangeText(text, 'emailId')}
+              onChangeText={text => onChangeText(text, 'emailId')}
               value={emailId}
               placeholder="Email Address/User name"
             />
@@ -41,7 +53,7 @@ const LoginComponent = (props) => {
             <Text style={styles.inputTitle}>Password: </Text>
             <TextInput
               style={styles.textInput}
-              onChangeText={(text) => onChangeText(text, 'password')}
+              onChangeText={text => onChangeText(text, 'password')}
               value={password}
               placeholder="Password"
               secureTextEntry={true}
@@ -51,13 +63,19 @@ const LoginComponent = (props) => {
             )}
           </View>
           {loginError && (
-            <Text style={styles.errorMsg}>Please enter valid email address/password</Text>
+            <Text style={styles.errorMsg}>
+              Please enter valid email address/password
+            </Text>
           )}
-          <Button title="Login" onPress={() => _login()} style={{ paddingTop: 10 }} />
+          <Button
+            title="Login"
+            onPress={() => _login()}
+            style={{paddingTop: 10}}
+          />
         </View>
       </SafeAreaView>
     </View>
   );
-}
+};
 
 export default LoginComponent;

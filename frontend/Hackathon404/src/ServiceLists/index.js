@@ -9,14 +9,14 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
-import commonStyle from '../../commonStyles';
-import Logout from '../../components/Logout';
+import commonStyle from '../commonStyles';
+import Logout from '../components/Logout';
 
-export default function Login({route, navigation}) {
+export default function ServiceLists({route, navigation}) {
   const [stateData, setStateData] = useState({
     hotelName: '',
-    hotelId: 0,
-    listOfServices: [],
+    hotelId: '',
+    listOfServices: '',
   });
   useEffect(() => {
     const {hotelId} = route.params;
@@ -41,7 +41,7 @@ export default function Login({route, navigation}) {
   };
   const serviceDetails = (serviceId, serviceName) => {
     if (serviceId && serviceName) {
-      navigation.navigate('AdminServiceDetails', {
+      navigation.navigate('ServiceDetails', {
         serviceId: serviceId,
         serviceName: serviceName,
       });

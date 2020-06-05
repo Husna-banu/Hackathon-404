@@ -1,6 +1,4 @@
-
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   servicesListStyle: {
@@ -28,16 +26,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   addCartButton: {
-    fontWeight: "600",
+    fontWeight: '600',
     paddingLeft: 20,
     color: '#147ACB',
     marginTop: 5,
-    fontSize: 12
+    fontSize: 12,
   },
   cartIconView: {
     flexDirection: 'row',
     justifyContent: 'flex-end',
     textAlign: 'right',
+    marginRight: 40,
+    borderColor: 'red',
   },
   cartIconStyle: {
     textAlign: 'center',
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     right: 0,
     paddingLeft: 80,
+    borderColor: 'red',
   },
   cartCountStyle: {
     position: 'absolute',
@@ -53,8 +54,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     right: -20,
     top: -10,
-
-  }
+    borderColor: 'red',
+  },
 });
 
 export default styles;

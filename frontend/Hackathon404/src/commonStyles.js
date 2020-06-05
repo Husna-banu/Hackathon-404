@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet, Platform } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -6,7 +5,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignContent: 'center',
-    top: (Platform.OS === 'ios' ? 40 : 0),
+    top: Platform.OS === 'ios' ? 40 : 0,
     backgroundColor: '#fff',
   },
   heading: {
@@ -15,7 +14,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     fontWeight: 'bold',
-    paddingLeft: 10
+    paddingLeft: 10,
   },
   header: {
     flexDirection: 'row',
@@ -24,10 +23,18 @@ const styles = StyleSheet.create({
     backgroundColor: 'skyblue',
     height: 50,
   },
+  covidhHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignContent: 'center',
+    backgroundColor: 'yellow',
+    height: 150,
+    marginBottom: 10
+  },
   backButton: {
     fontSize: 20,
     paddingRight: 20,
-    paddingLeft: 10
+    paddingLeft: 10,
   },
   cartBody: {
     flexDirection: 'row',
@@ -38,21 +45,38 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     marginTop: 20,
   },
-  backButton: {
-    fontSize: 20,
-    paddingRight: 20,
-    paddingLeft: 10
-  },
   content: {
     padding: 20,
   },
   successMessage: {
-    textAlign: "center",
+    textAlign: 'center',
     margin: 50,
     fontSize: 20,
-    fontWeight: '700'
+    fontWeight: '700',
+  },
+  servicesListStyle: {
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginBottom: 10,
+    padding: 10,
+    backgroundColor: '#CDE6FA',
+  },
+  fnBold: {
+    fontWeight: '800',
+  },
+  fnSize_12: {
+    fontSize: 12
+  },
+  fnSizePadding: {
+    fontSize: 18,
+    padding: 5
+  },
+  bgColor: {
+    height: '100 %',
+    backgroundColor: '#CDE6FA'
   }
 });
-
 
 export default styles;

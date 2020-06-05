@@ -15,57 +15,59 @@ export default function Login({ navigation }) {
   });
 
   useEffect(() => {
-    getFetch('http://backendproject5.herokuapp.com/fetchHotelDetails').then((lists) => {
-      console.log(lists);
-      lists.forEach((list) => {
-        if (list.hotelId === 1234) {
-          setStateData((state) => ({
-            ...state,
-            hotelName: list.hotemName,
-            hotelId: list.hotelId,
-            listOfServices: list.listOfServices,
-          }));
-        }
-      });
-    })
+    getFetch('http://backendproject5.herokuapp.com/fetchHotelDetails')
+      .then(lists => {
+        lists.forEach(list => {
+          if (list.hotelId === 1234) {
+            setStateData(state => ({
+              ...state,
+              hotelName: list.hotemName,
+              hotelId: list.hotelId,
+              listOfServices: list.listOfServices,
+            }));
+          }
+        });
+      })
       .catch(err => console.log(err));
   }, []);
 
   const onChangeText = (text, name) => {
     const nameField = `${name}Error`;
     if (text === '') {
-      setStateData((state) => ({
+      setStateData(state => ({
         ...state,
         [nameField]: true,
       }));
     } else {
-      setStateData((state) => ({
+      setStateData(state => ({
         ...state,
         [nameField]: false,
       }));
     }
-    setStateData((state) => ({ ...state, [name]: text }));
+    setStateData(state => ({ ...state, [name]: text }));
   };
 
   const _login = () => {
     if (stateData.emailId === '') {
-      setStateData((state) => ({
+      setStateData(state => ({
         ...state,
         emailIdError: true,
       }));
     } else if (stateData.password === '') {
-      setStateData((state) => ({
+      setStateData(state => ({
         ...state,
         passwordError: true,
       }));
     } else {
       const body = {
         userId: stateData.emailId,
-        password: stateData.password
+        password: stateData.password,
       };
 
-      postFetch('http://backendproject5.herokuapp.com/fetchUserDetailsById', body).then((response) => {
-        console.log('response', response);
+      postFetch(
+        'http://backendproject5.herokuapp.com/fetchUserDetailsById',
+        body,
+      ).then(response => {
         if (response.status === 'Failed') {
           setStateData((state) => ({
             ...state,
@@ -73,16 +75,22 @@ export default function Login({ navigation }) {
           }));
         }
         else {
+          setStateData((state) => ({
+            ...state,
+            emailId: '',
+            password: '',
+            loginError: false,
+          }));
           switch (response.userType) {
             case 'HOTEL_ADMIN': navigation.navigate('AdminDashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
-            case 'GUEST': navigation.navigate('Dashborad', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+            case 'GUEST': navigation.navigate('Covid9Info', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
-            case 'SUPER_ADMIN': navigation.navigate('Dashborad', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+            case 'SUPER_ADMIN': navigation.navigate('Dashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
           }
         }
-      })
+      });
     }
   };
   const backToPage = () => {
@@ -96,8 +104,8 @@ export default function Login({ navigation }) {
       emailIdError={stateData.emailIdError}
       passwordError={stateData.passwordError}
       loginError={stateData.loginError}
-      emailId={setStateData.emailId}
+      emailId={stateData.emailId}
       password={stateData.password}
     />
-  )
+  );
 }
