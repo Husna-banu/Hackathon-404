@@ -27,15 +27,19 @@ export default function Login({ route, navigation }) {
     navigation.goBack();
   };
   const renderItemList = ({ item }) => {
-    return (
-      <View style={styles.listItemStyle}>
-        <EntypoIcon name="dot-single" style={commonStyle.backButton} size={20} />
-        <View style={styles.listItemContentStyle}>
-          <Text style={styles.listItemNameStyle}>{item}</Text>
-        </View>
-      </View>
-    );
+    for (var i in item) {
+      return (
+        <View style={styles.listItemStyle}>
+          <EntypoIcon name="dot-single" style={commonStyle.backButton} size={20} />
+          <View style={styles.listItemContentStyle}>
+            <Text style={{ width: 240 }}>{i}</Text>
+            <Text style={{ width: 80, fontWeight: '700' }}>{item[i]}</Text>
+          </View>
+        </View >
+      );
+    }
   };
+
   const renderItem = ({ item, index }) => {
     const itemName = Object.keys(item)[0];
     return (

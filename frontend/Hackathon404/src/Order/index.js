@@ -59,7 +59,7 @@ export default function Order({ route, navigation }) {
     const renderItem = (item, index) => {
         return (<View style={commonStyle.cartBody}>
             {Object.keys(item).map((key, i) => (<View style={commonStyle.cartBody}><Text style={styles.cartWidth} > {key}</Text>
-                < Text style={{ color: 'blue', marginRight: 20, marginTop: 10 }}>{item[key]}</Text>
+                < Text style={{ color: 'blue', marginRight: 20, marginTop: 10 }}>Rs.{volatile.cartCount * parseInt(item[key])}</Text>
                 < View style={commonStyle.cartBody} >
                     <Text style={styles.cartButton} onPress={(event) => decrementCart(index)}>-</Text>
                     <Text style={{ padding: 5 }}>{volatile.cartCount}</Text>
@@ -67,7 +67,6 @@ export default function Order({ route, navigation }) {
                 </View>
                 <AntIcon style={{ marginLeft: 10, marginTop: 10 }} name="delete" size={20} onPress={(event) => deleteCart(event, index)} /></View>))}
         </View >)
-
     }
     const logout = () => {
         navigation.navigate('Login');

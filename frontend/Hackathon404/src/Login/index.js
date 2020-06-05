@@ -16,7 +16,6 @@ export default function Login({ navigation }) {
 
   useEffect(() => {
     getFetch('http://backendproject5.herokuapp.com/fetchHotelDetails').then((lists) => {
-      console.log(lists);
       lists.forEach((list) => {
         if (list.hotelId === 1234) {
           setStateData((state) => ({
@@ -66,22 +65,23 @@ export default function Login({ navigation }) {
 
       postFetch('http://backendproject5.herokuapp.com/fetchUserDetailsById', body).then((response) => {
         console.log('response', response);
-        if (response.status === 'Failed') {
-          setStateData((state) => ({
-            ...state,
-            loginError: true,
-          }));
-        }
-        else {
-          switch (response.userType) {
-            case 'HOTEL_ADMIN': navigation.navigate('AdminDashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
-              break;
-            case 'GUEST': navigation.navigate('Dashborad', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
-              break;
-            case 'SUPER_ADMIN': navigation.navigate('Dashborad', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
-              break;
-          }
-        }
+        navigation.navigate('AdminDashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+        // if (response.status === 'Failed') {
+        //   setStateData((state) => ({
+        //     ...state,
+        //     loginError: true,
+        //   }));
+        // }
+        // else {
+        //   switch (response.userType) {
+        //     case 'HOTEL_ADMIN': navigation.navigate('AdminDashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+        //       break;
+        //     case 'GUEST': navigation.navigate('Dashborad', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+        //       break;
+        //     case 'SUPER_ADMIN': navigation.navigate('Dashborad', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+        //       break;
+        //   }
+        // }
       })
     }
   };
