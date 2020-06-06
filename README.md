@@ -29,7 +29,7 @@ Human beings by nature long for travel and discover new places. Hospitality indu
 
 ## Demo video
 
-[![Watch the video](safEscapes.mp4)
+[![Watch the video](safEscapes.png)](https://youtu.be/9xTgfTU7_sU)
 
 ## The architecture
 ![Architect](Architect.jpg)
