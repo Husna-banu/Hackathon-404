@@ -36,7 +36,7 @@ Human beings by nature long for travel and discover new places. Hospitality indu
 
 ## Project roadmap
 
-![Roadmap](roadmap.jpg)
+![Roadmap](roadmap.png)
 
 ## Getting started
 
