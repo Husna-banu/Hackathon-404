@@ -34,12 +34,12 @@ export default function ServiceDetails({route, navigation}) {
     let newTheArray = [...theArray];
     const newItem = {...cartitem};
     let match = 0;
-    newItem.cartCount = parseInt(newItem?.cartCount, 0) + 1;
+    newItem.cartCount = parseInt(newItem?.cartCount ?? 0, 0) + 1;
     if (newTheArray && newTheArray.length > 0) {
       newTheArray.forEach((item, index) => {
         if (Object.keys(item)[0] === Object.keys(cartitem)[0]) {
           newTheArray[index].cartCount =
-            parseInt(newTheArray[index].cartCount, 0) + 1;
+            parseInt(newTheArray?.[index]?.cartCount ?? 0, 0) + 1;
           match = match + 1;
         }
       });

@@ -109,7 +109,10 @@ exports[`renders correctly 1`] = `
               "color": undefined,
               "fontSize": 20,
             },
-            undefined,
+            Object {
+              "position": "absolute",
+              "right": 15,
+            },
             Object {
               "fontFamily": "anticon",
               "fontStyle": "normal",
@@ -127,6 +130,7 @@ exports[`renders correctly 1`] = `
         Object {
           "flex": 1,
           "marginBottom": 20,
+          "padding": 10,
         }
       }
     >

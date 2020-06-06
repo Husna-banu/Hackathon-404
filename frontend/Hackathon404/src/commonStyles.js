@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
   flatListContainerStyle: {
     flex: 1,
     marginBottom: 20,
+    padding: 10,
   },
 });
 

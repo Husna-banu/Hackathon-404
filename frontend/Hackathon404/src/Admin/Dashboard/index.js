@@ -7,7 +7,6 @@ import {
   FlatList,
   TouchableOpacity,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
 import commonStyle from '../../commonStyles';
 import Logout from '../../components/Logout';
@@ -42,9 +41,6 @@ export default function Dashboard({route, navigation}) {
       listOfServices: listOfServices,
     }));
   }, [route.params]);
-  const backToPage = () => {
-    navigation.goBack();
-  };
   const serviceDetails = menuRouteName => {
     if (menuRouteName) {
       navigation.navigate(menuRouteName, {
@@ -67,12 +63,6 @@ export default function Dashboard({route, navigation}) {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={commonStyle.safeAreaViewStyle}>
         <View style={commonStyle.header}>
-          <Icon
-            name="arrow-left"
-            style={commonStyle.backButton}
-            size={20}
-            onPress={backToPage}
-          />
           <Text style={commonStyle.heading}>Services List</Text>
           <Logout navigation={navigation} />
         </View>
