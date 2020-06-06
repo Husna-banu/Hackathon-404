@@ -19,7 +19,7 @@ Life for the hospitality industry has changed drastically due to the coronavirus
 
 ### How can technology help?
 
-Sustaining a hospitality business is all about the amazing guest experience and carving ‘brand identity’ in an ever-evolving market. . “Touchless Hospitality” will be the new order. Hotels will now be chosen basis the levels of safety and hygiene instead of the fancy perks. 
+Sustaining a hospitality business is all about the amazing guest experience and carving ‘brand identity’ in an ever-evolving market.“Touchless Hospitality” will be the new order. Hotels will now be chosen basis the levels of safety and hygiene instead of the fancy perks. 
 Automation in guest-facing hotel functionalities like mobile check-in, in-room smart hotel technology helps in adding the ‘wow’ factor in guest service delivery. It also influences your guest decision making- either they will think – ‘Never here again’ or they will think- ‘I am coming again.’
 
 
