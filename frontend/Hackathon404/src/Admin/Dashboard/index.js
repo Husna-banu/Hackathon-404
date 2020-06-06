@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -11,7 +11,7 @@ import styles from './style';
 import commonStyle from '../../commonStyles';
 import Logout from '../../components/Logout';
 
-export default function Dashboard({route, navigation}) {
+export default function Dashboard({ route, navigation }) {
   const [stateData, setStateData] = useState({
     hotelId: 0,
     menuList: [
@@ -34,7 +34,7 @@ export default function Dashboard({route, navigation}) {
     ],
   });
   useEffect(() => {
-    const {hotelId, listOfServices} = route.params;
+    const { hotelId, listOfServices } = route.params;
     setStateData(state => ({
       ...state,
       hotelId: hotelId,
@@ -49,7 +49,7 @@ export default function Dashboard({route, navigation}) {
       });
     }
   };
-  const renderItem = ({item}) => {
+  const renderItem = ({ item }) => {
     return (
       <TouchableOpacity onPress={() => serviceDetails(item.menuRouteName)}>
         <View style={styles.servicesListStyle}>
@@ -63,7 +63,7 @@ export default function Dashboard({route, navigation}) {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={commonStyle.safeAreaViewStyle}>
         <View style={commonStyle.header}>
-          <Text style={commonStyle.heading}>Services List</Text>
+          <Text style={commonStyle.heading}>Dashboard</Text>
           <Logout navigation={navigation} />
         </View>
         <View style={commonStyle.content}>

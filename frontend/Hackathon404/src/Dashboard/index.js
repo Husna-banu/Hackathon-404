@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -10,10 +10,10 @@ import {
 import styles from './style';
 import commonStyle from '../commonStyles';
 import Logout from '../components/Logout';
-import {useAccessState} from '../utils/AppContext/loginContext';
+import { useAccessState } from '../utils/AppContext/loginContext';
 
-export default function Login({route, navigation}) {
-  const {loginName} = useAccessState();
+export default function Login({ route, navigation }) {
+  const { loginName } = useAccessState();
   const indexOfAt = loginName.indexOf('@');
   const guestName = loginName.substring(0, indexOfAt);
   const [stateData, setStateData] = useState({
@@ -46,7 +46,7 @@ export default function Login({route, navigation}) {
     ],
   });
   useEffect(() => {
-    const {hotelId, listOfServices} = route.params;
+    const { hotelId, listOfServices } = route.params;
     setStateData(state => ({
       ...state,
       hotelId: hotelId,
@@ -61,7 +61,7 @@ export default function Login({route, navigation}) {
       });
     }
   };
-  const renderItem = ({item}) => {
+  const renderItem = ({ item }) => {
     return (
       <TouchableOpacity onPress={() => serviceDetails(item.menuRouteName)}>
         <View style={styles.servicesListStyle}>
@@ -75,7 +75,7 @@ export default function Login({route, navigation}) {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={commonStyle.safeAreaViewStyle}>
         <View style={commonStyle.header}>
-          <Text style={commonStyle.heading}>Guest Dashoboard</Text>
+          <Text style={commonStyle.heading}>Guest Dashboard</Text>
           <Logout navigation={navigation} />
         </View>
         <View style={commonStyle.content}>
