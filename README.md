@@ -99,13 +99,13 @@ For android:
 ```
 Admin credentials:
 ```bash
- emailID: harsha@gmail.com
- password: harsha@123
+ emailID: hoteladmin@abc.com
+ password: hoteladmin@123
  ```
 Guest credentials:
 ```bash
- emailID: piyalee@gmail.com
- password: piyali@123
+ emailID: hotelguest@abc.com
+ password: hotelguest@123
  ```
 ## Running the tests
 
