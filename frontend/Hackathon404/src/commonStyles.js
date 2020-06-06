@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center',
     backgroundColor: 'yellow',
-    height: 150,
     marginBottom: 10,
+    padding: 5
   },
   backButton: {
     fontSize: 20,
