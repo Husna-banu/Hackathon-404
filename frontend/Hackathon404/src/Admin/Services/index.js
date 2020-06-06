@@ -45,16 +45,8 @@ export default function Login({route, navigation}) {
           onPress={() => serviceDetails(item.serviceId, item.serviceName)}>
           <Text style={styles.serviceNameStyle}>{item.serviceName}</Text>
         </TouchableOpacity>
-        <FontAwesome
-          name="pencil-square"
-          size={25}
-          style={{position: 'absolute', right: 40}}
-        />
-        <AntDesign
-          name="delete"
-          size={20}
-          style={{position: 'absolute', right: 10}}
-        />
+        <FontAwesome name="pencil-square" size={25} style={styles.editIcon} />
+        <AntDesign name="delete" size={20} style={styles.deleteIcon} />
       </View>
     );
   };

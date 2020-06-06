@@ -1,13 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {
-  View,
-  Text,
-  StatusBar,
-  SafeAreaView,
-  FlatList,
-  TouchableOpacity,
-  Button,
-} from 'react-native';
+import React from 'react';
+import {View, Text, StatusBar, SafeAreaView, FlatList} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -56,16 +48,8 @@ export default function AdminServiceOwnerDetails({route, navigation}) {
         </Text>
         <Text style={commonStyle.fnSize_12}>{item.serviceOwnerName}</Text>
         <Text style={commonStyle.fnSize_12}>{item.contactNo}</Text>
-        <FontAwesome
-          name="pencil-square"
-          size={25}
-          style={{position: 'absolute', right: 40, top: 20}}
-        />
-        <AntDesign
-          name="delete"
-          size={20}
-          style={{position: 'absolute', right: 10, top: 20}}
-        />
+        <FontAwesome name="pencil-square" size={25} style={styles.editIcon} />
+        <AntDesign name="delete" size={20} style={styles.deleteIcon} />
       </View>
     );
   };

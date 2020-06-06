@@ -1,7 +1,7 @@
 import React from 'react';
 import 'react-native';
 import renderer from 'react-test-renderer';
-import Login from '../../src/Login';
+import Dashboard from '../../src/Dashboard';
 import {AccessProvider} from '../../src/utils/AppContext/loginContext';
 
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
@@ -16,7 +16,7 @@ const props = {
 it('renders correctly', async () => {
   const container = renderer.create(
     <AccessProvider>
-      <Login {...props} />
+      <Dashboard {...props} />
     </AccessProvider>,
   );
   expect(container).toMatchSnapshot();

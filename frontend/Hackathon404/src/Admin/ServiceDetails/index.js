@@ -1,13 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {
-  View,
-  Text,
-  StatusBar,
-  SafeAreaView,
-  FlatList,
-  TouchableOpacity,
-  Button,
-} from 'react-native';
+import {View, Text, StatusBar, SafeAreaView, FlatList} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import styles from './style';
@@ -44,21 +36,21 @@ export default function Login({route, navigation}) {
             size={20}
           />
           <View style={styles.listItemContentStyle}>
-            <Text style={{width: 240}}>{i}</Text>
-            <Text style={{width: 80, fontWeight: '700'}}>Rs {item[i]}</Text>
+            <Text style={styles.serviceNameStyle}>{i}</Text>
+            <Text style={styles.servicePriceStyle}>Rs {item[i]}</Text>
           </View>
         </View>
       );
     }
   };
 
-  const renderItem = ({item, index}) => {
-    const itemName = Object.keys(item)[0];
+  const renderItem = ({item: mainItem}) => {
+    const itemName = Object.keys(mainItem)[0];
     return (
       <View style={styles.servicesListStyle}>
         <Text style={styles.itemNameStyle}>{itemName}</Text>
         <FlatList
-          data={item[itemName]}
+          data={mainItem[itemName]}
           renderItem={renderItemList}
           keyExtractor={(item, index) => index.toString()}
         />
@@ -77,13 +69,13 @@ export default function Login({route, navigation}) {
             onPress={backToPage}
           />
           <Text style={commonStyle.heading}>
-            {stateData.serviceDetails.serviceName} Services
+            {stateData?.serviceDetails?.serviceName} Services
           </Text>
           <Logout navigation={navigation} />
         </View>
         <View style={commonStyle.content}>
           <FlatList
-            data={stateData.serviceDetails.subMenu}
+            data={stateData?.serviceDetails?.subMenu ?? []}
             renderItem={renderItem}
             keyExtractor={(item, index) => index.toString()}
           />

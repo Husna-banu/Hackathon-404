@@ -130,7 +130,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.hackathon404"
+        applicationId "com.safescapes"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

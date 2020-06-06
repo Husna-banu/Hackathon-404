@@ -6,12 +6,10 @@ import {
   SafeAreaView,
   FlatList,
   TouchableOpacity,
-  ScrollView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
 import commonStyle from '../commonStyles';
-import orderStyle from '../Order/style';
 import Logout from '../components/Logout';
 
 export default function Covid9Info({route, navigation}) {
@@ -66,7 +64,7 @@ export default function Covid9Info({route, navigation}) {
       <SafeAreaView style={commonStyle.safeAreaViewStyle}>
         <View style={commonStyle.covidhHeader}>
           <Text style={commonStyle.heading}>
-            <Text style={{fontSize: 12, height: 80}}>
+            <Text style={styles.subtitle}>
               {' '}
               The safety and wellbeing of our guests and associates is of
               paramount importance to Raj Hotel. Associates at Raj Hotel are

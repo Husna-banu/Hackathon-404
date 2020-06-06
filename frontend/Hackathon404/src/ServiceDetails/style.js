@@ -56,6 +56,13 @@ const styles = StyleSheet.create({
     top: -10,
     borderColor: 'red',
   },
+  serviceNameStyle: {
+    width: 120,
+  },
+  servicePrice: {
+    width: 80,
+    fontWeight: '700',
+  },
 });
 
 export default styles;

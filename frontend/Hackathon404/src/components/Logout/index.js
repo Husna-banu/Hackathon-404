@@ -4,6 +4,7 @@ import {
   useAccessState,
   useAccessDispatch,
 } from '../../utils/AppContext/loginContext';
+import styles from '../../Login/style';
 
 const Logout = ({navigation}) => {
   const {loginName} = useAccessState();
@@ -15,7 +16,7 @@ const Logout = ({navigation}) => {
   };
   return (
     <AntDesign
-      style={{position: 'absolute', right: 10}}
+      style={styles.logoutIcon}
       name="logout"
       size={20}
       onPress={logout}

@@ -1,4 +1,3 @@
-import React from 'react';
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
@@ -50,6 +49,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     right: -20,
     top: -10,
+  },
+  serviceNameStyle: {
+    width: 240,
+  },
+  servicePriceStyle: {
+    width: 80,
+    fontWeight: '700',
   },
 });
 

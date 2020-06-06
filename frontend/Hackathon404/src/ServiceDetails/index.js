@@ -34,12 +34,12 @@ export default function ServiceDetails({route, navigation}) {
     let newTheArray = [...theArray];
     const newItem = {...cartitem};
     let match = 0;
-    newItem.cartCount = parseInt(newItem?.cartCount ?? 0) + 1;
+    newItem.cartCount = parseInt(newItem?.cartCount, 0) + 1;
     if (newTheArray && newTheArray.length > 0) {
       newTheArray.forEach((item, index) => {
         if (Object.keys(item)[0] === Object.keys(cartitem)[0]) {
           newTheArray[index].cartCount =
-            parseInt(newTheArray[index].cartCount ?? 0) + 1;
+            parseInt(newTheArray[index].cartCount, 0) + 1;
           match = match + 1;
         }
       });
@@ -71,8 +71,8 @@ export default function ServiceDetails({route, navigation}) {
             size={20}
           />
           <View style={styles.listItemContentStyle}>
-            <Text style={{width: 120}}>{i}</Text>
-            <Text style={{width: 80, fontWeight: '700'}}>Rs {item[i]}</Text>
+            <Text style={styles.serviceNameStyle}>{i}</Text>
+            <Text style={styles.servicePrice}>Rs {item[i]}</Text>
             <Text
               style={styles.addCartButton}
               onPress={event => addToCart(event, item)}>
@@ -83,13 +83,13 @@ export default function ServiceDetails({route, navigation}) {
       );
     }
   };
-  const renderItem = ({item, index}) => {
-    const itemName = Object.keys(item)[0];
+  const renderItem = ({item: mainItem}) => {
+    const itemName = Object.keys(mainItem)[0];
     return (
       <View style={styles.servicesListStyle}>
         <Text style={styles.itemNameStyle}>{itemName}</Text>
         <FlatList
-          data={item[itemName]}
+          data={mainItem[itemName]}
           renderItem={renderItemList}
           keyExtractor={(item, index) => index.toString()}
         />
@@ -108,7 +108,7 @@ export default function ServiceDetails({route, navigation}) {
             onPress={backToPage}
           />
           <Text style={commonStyle.heading}>
-            {stateData.serviceDetails.serviceName} Services
+            {stateData?.serviceDetails?.serviceName} Services
           </Text>
           <View style={styles.cartIconView}>
             <Icon
@@ -123,7 +123,7 @@ export default function ServiceDetails({route, navigation}) {
         </View>
         <View style={commonStyle.flatListContainerStyle}>
           <FlatList
-            data={stateData.serviceDetails.subMenu}
+            data={stateData?.serviceDetails?.subMenu ?? []}
             renderItem={renderItem}
             keyExtractor={(item, index) => index.toString()}
           />

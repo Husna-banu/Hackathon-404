@@ -7,7 +7,6 @@ import {
   SafeAreaView,
   Button,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
 import commonStyle from '../commonStyles';
 
@@ -17,7 +16,6 @@ const LoginComponent = props => {
     emailIdError,
     passwordError,
     loginError,
-    backToPage,
     emailId,
     password,
     _login,
@@ -64,7 +62,7 @@ const LoginComponent = props => {
           <Button
             title="Login"
             onPress={() => _login()}
-            style={{paddingTop: 10}}
+            style={styles.loginButtonStyle}
           />
         </View>
       </SafeAreaView>

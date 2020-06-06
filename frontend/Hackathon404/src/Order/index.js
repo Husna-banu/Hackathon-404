@@ -36,7 +36,7 @@ export default function Order({route, navigation}) {
     const newitemArray = volatile.itemArray;
     const newItem = newitemArray[i];
     newItem.cartCount =
-      newItem.cartCount >= 0 ? parseInt(newItem.cartCount ?? 0) + 1 : 0;
+      newItem.cartCount >= 0 ? parseInt(newItem.cartCount, 0) + 1 : 0;
     setVolatile(state => ({
       ...state,
       itemArray: newitemArray,
@@ -46,7 +46,7 @@ export default function Order({route, navigation}) {
     const newitemArray = volatile.itemArray;
     const newItem = newitemArray[i];
     newItem.cartCount =
-      newItem.cartCount > 0 ? parseInt(newItem.cartCount ?? 0) - 1 : 0;
+      newItem.cartCount > 0 ? parseInt(newItem.cartCount, 0) - 1 : 0;
     setVolatile(state => ({
       ...state,
       itemArray: newitemArray,
@@ -79,8 +79,8 @@ export default function Order({route, navigation}) {
       <View style={commonStyle.cartBody}>
         <View style={commonStyle.cartBody}>
           <Text style={styles.cartWidth}> {itemName}</Text>
-          <Text style={{color: 'blue', marginRight: 20, marginTop: 10}}>
-            Rs.{item[cartCount] * parseInt(item[itemName])}
+          <Text style={styles.cartItemPrice}>
+            Rs.{item[cartCount] * parseInt(item[itemName], 0)}
           </Text>
           <View style={commonStyle.cartBody}>
             <Text
@@ -88,7 +88,7 @@ export default function Order({route, navigation}) {
               onPress={event => decrementCart(index)}>
               -
             </Text>
-            <Text style={{padding: 5}}>{item[cartCount]}</Text>
+            <Text style={styles.cartCountStyle}>{item[cartCount]}</Text>
             <Text
               style={styles.cartButton}
               onPress={event => incrementCart(index)}>
@@ -96,7 +96,7 @@ export default function Order({route, navigation}) {
             </Text>
           </View>
           <AntIcon
-            style={{marginLeft: 10, marginTop: 10}}
+            style={styles.deleteIcon}
             name="delete"
             size={20}
             onPress={event => deleteCart(event, index)}
@@ -123,7 +123,7 @@ export default function Order({route, navigation}) {
           <View
             style={[
               commonStyle.flatListContainerStyle,
-              {marginBottom: 40, justifyContent: 'center'},
+              styles.orderContentStyle,
             ]}>
             <TouchableOpacity>
               <Text style={styles.textInput} onPress={orderStatus}>

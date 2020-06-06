@@ -1,4 +1,4 @@
-package com.hackathon404;
+package com.safescapes;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "Hackathon404";
+    return "safEscapes";
   }
 }

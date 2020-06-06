@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface Hackathon404Tests : XCTestCase
+@interface safEscapesTests : XCTestCase
 
 @end
 
-@implementation Hackathon404Tests
+@implementation safEscapesTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {
