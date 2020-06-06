@@ -12,8 +12,12 @@ import java.util.stream.Collectors;
 @Service
 public class AdminServiceImpl implements AdminService {
 
-    @Autowired
     AdminDAO adminDAO;
+
+    @Autowired
+    public AdminServiceImpl(AdminDAO adminDAO){
+        this.adminDAO = adminDAO;
+    }
 
     @Override
     public List<Admin> fetchAllAdminDetails() {

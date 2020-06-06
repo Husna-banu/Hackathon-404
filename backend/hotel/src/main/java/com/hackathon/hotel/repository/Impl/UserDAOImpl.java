@@ -22,10 +22,12 @@ public class UserDAOImpl implements UserDAO {
         //USER
         userDTOList.add(new UserDTO("piyalee@gmail.com","piyali@123","GUEST",70000L));
         userDTOList.add(new UserDTO("niharika@gmail.com","niharika@123","GUEST",70000L));
+        userDTOList.add(new UserDTO("hotelguest@abc.com","hotelguest@123","GUEST",70000L));
 
         //ADMIN
         userDTOList.add(new UserDTO("husna@gmail.com","husna@123","HOTEL_ADMIN",70000L));
         userDTOList.add(new UserDTO("snehanjana@gmail.com","snehanjana@123","HOTEL_ADMIN",70000L));
+        userDTOList.add(new UserDTO("hoteladmin@abc.com","hoteladmin@123","HOTEL_ADMIN",70000L));
 
 
         //SUPER ADMIN
