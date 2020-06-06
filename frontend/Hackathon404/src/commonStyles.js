@@ -43,9 +43,10 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontSize: 18,
     marginBottom: 5,
-    marginTop: 20,
+    marginTop: 5,
   },
   content: {
+    flex: 1,
     padding: 20,
   },
   successMessage: {
@@ -76,7 +77,14 @@ const styles = StyleSheet.create({
   bgColor: {
     height: '100 %',
     backgroundColor: '#CDE6FA'
-  }
+  },
+  safeAreaViewStyle: {
+    flex: 1,
+  },
+  flatListContainerStyle: {
+    flex: 1,
+    marginBottom: 20,
+  },
 });
 
 export default styles;

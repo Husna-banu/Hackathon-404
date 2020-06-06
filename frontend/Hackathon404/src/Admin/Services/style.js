@@ -3,7 +3,8 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   servicesListStyle: {
     flex: 1,
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     borderColor: 'gray',
     borderWidth: 1,
@@ -13,6 +14,11 @@ const styles = StyleSheet.create({
   },
   serviceNameStyle: {
     fontSize: 20,
+    marginRight: 20,
+  },
+  addIconStyle: {
+    position: 'absolute',
+    right: 60,
   },
 });
 

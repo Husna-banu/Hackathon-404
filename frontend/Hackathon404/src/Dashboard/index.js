@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -11,38 +11,47 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
 import commonStyle from '../commonStyles';
 import Logout from '../components/Logout';
+import { useAccessState } from '../utils/AppContext/loginContext';
 
-export default function Login({route, navigation}) {
+export default function Login({ route, navigation }) {
+  const { loginName } = useAccessState();
+  const indexOfAt = loginName.indexOf('@');
+  const guestName = loginName.substring(0, indexOfAt);
   const [stateData, setStateData] = useState({
     hotelId: 0,
     menuList: [
       {
-        menuName: 'RoomArmour/HotelArmour',
-        menuRouteName: '',
-      },
-      {
-        menuName: 'SafeRooms / safEscapes',
-        menuRouteName: '',
-      },
-      {
-        menuName: 'HotelCierge',
-        menuRouteName: '',
-      },
-      {
-        menuName: 'SafeBliss',
-        menuRouteName: '',
-      },
-      {
-        menuName: 'Services',
+        menuName: 'Hotel Services',
         menuRouteName: 'ServiceLists',
+      },
+      {
+        menuName: 'Housekeeping & Laundry Request',
+        menuRouteName: '',
+      },
+      {
+        menuName: 'Arogya Setu',
+        menuRouteName: '',
+      },
+      {
+        menuName: 'Maintenance Request',
+        menuRouteName: '',
+      },
+      {
+        menuName: 'Make Reservation',
+        menuRouteName: 'Covid9Info',
+      },
+      {
+        menuName: 'Payment details',
+        menuRouteName: '',
       },
     ],
   });
   useEffect(() => {
-    const {hotelId} = route.params;
+    const { hotelId, listOfServices } = route.params;
     setStateData(state => ({
       ...state,
       hotelId: hotelId,
+      listOfServices: listOfServices,
     }));
   }, [route.params]);
   const backToPage = () => {
@@ -50,10 +59,10 @@ export default function Login({route, navigation}) {
   };
   const serviceDetails = menuRouteName => {
     if (menuRouteName) {
-      navigation.navigate(menuRouteName, {hotelId: stateData.hotelId});
+      navigation.navigate(menuRouteName, { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
     }
   };
-  const renderItem = ({item}) => {
+  const renderItem = ({ item }) => {
     return (
       <TouchableOpacity onPress={() => serviceDetails(item.menuRouteName)}>
         <View style={styles.servicesListStyle}>
@@ -65,7 +74,7 @@ export default function Login({route, navigation}) {
   return (
     <View style={commonStyle.container}>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={commonStyle.safeAreaViewStyle}>
         <View style={commonStyle.header}>
           <Icon
             name="arrow-left"
@@ -73,15 +82,15 @@ export default function Login({route, navigation}) {
             size={20}
             onPress={backToPage}
           />
-          <Text style={commonStyle.heading}>Services List</Text>
+          <Text style={commonStyle.heading}>Guest Dashoboard</Text>
           <Logout navigation={navigation} />
         </View>
         <View style={commonStyle.content}>
+          <Text style={commonStyle.heading}>{`Welcome ${guestName} Room No: 404`}</Text>
           <FlatList
             data={stateData.menuList}
             renderItem={renderItem}
             keyExtractor={(item, index) => index.toString()}
-            // horizontal={true}
             numColumns="2"
           />
         </View>

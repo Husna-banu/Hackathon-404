@@ -21,24 +21,25 @@ export default function Dashboard({ route, navigation }) {
         menuRouteName: '',
       },
       {
-        menuName: 'Services',
+        menuName: 'Services List',
         menuRouteName: 'AdminService',
       },
       {
-        menuName: 'Services Owner',
+        menuName: 'Service Manager',
         menuRouteName: 'AdminServiceOwnerDetails',
       },
       {
-        menuName: 'Order',
+        menuName: 'Guest Request',
         menuRouteName: '',
       },
     ],
   });
   useEffect(() => {
-    const { hotelId } = route.params;
+    const { hotelId, listOfServices } = route.params;
     setStateData(state => ({
       ...state,
       hotelId: hotelId,
+      listOfServices: listOfServices,
     }));
   }, [route.params]);
   const backToPage = () => {
@@ -46,7 +47,7 @@ export default function Dashboard({ route, navigation }) {
   };
   const serviceDetails = menuRouteName => {
     if (menuRouteName) {
-      navigation.navigate(menuRouteName, { hotelId: stateData.hotelId });
+      navigation.navigate(menuRouteName, { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
     }
   };
   const renderItem = ({ item }) => {
@@ -61,7 +62,7 @@ export default function Dashboard({ route, navigation }) {
   return (
     <View style={commonStyle.container}>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={commonStyle.safeAreaViewStyle}>
         <View style={commonStyle.header}>
           <Icon
             name="arrow-left"

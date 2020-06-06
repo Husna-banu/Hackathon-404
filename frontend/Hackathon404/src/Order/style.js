@@ -35,8 +35,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'grey',
     borderWidth: 1,
     padding: 10,
-    marginLeft: 80,
-    marginTop: 30,
+    margin: 10,
     textAlign: 'center',
     fontWeight: '600',
     width: 120,
@@ -44,6 +43,11 @@ const styles = StyleSheet.create({
   errorMsg: {
     color: 'red',
   },
+  deleteSaveButtonContainerStyle: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignContent: 'center',
+  }
 });
 
 export default styles;

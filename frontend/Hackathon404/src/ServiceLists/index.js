@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -12,30 +12,22 @@ import styles from './style';
 import commonStyle from '../commonStyles';
 import Logout from '../components/Logout';
 
-export default function ServiceLists({route, navigation}) {
+export default function ServiceLists({ route, navigation }) {
   const [stateData, setStateData] = useState({
     hotelName: '',
     hotelId: '',
     listOfServices: '',
   });
+
   useEffect(() => {
-    const {hotelId} = route.params;
-    fetch('https://backendproject5.herokuapp.com/fetchHotelDetails')
-      .then(result => result.json())
-      .then(lists => {
-        lists.forEach(list => {
-          if (list.hotelId === hotelId) {
-            setStateData(state => ({
-              ...state,
-              hotelName: list.hotemName,
-              hotelId: list.hotelId,
-              listOfServices: list.listOfServices,
-            }));
-          }
-        });
-      })
-      .catch(err => console.log(err));
-  }, [route.params]);
+    const { hotelId, listOfServices } = route.params;
+    setStateData(state => ({
+      ...state,
+      hotelId: hotelId,
+      listOfServices: listOfServices,
+    }));
+  }, []);
+
   const backToPage = () => {
     navigation.goBack();
   };
@@ -47,7 +39,7 @@ export default function ServiceLists({route, navigation}) {
       });
     }
   };
-  const renderItem = ({item}) => {
+  const renderItem = ({ item }) => {
     return (
       <TouchableOpacity
         onPress={() => serviceDetails(item.serviceId, item.serviceName)}>
@@ -57,10 +49,11 @@ export default function ServiceLists({route, navigation}) {
       </TouchableOpacity>
     );
   };
+
   return (
     <View style={commonStyle.container}>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={commonStyle.safeAreaViewStyle}>
         <View style={commonStyle.header}>
           <Icon
             name="arrow-left"

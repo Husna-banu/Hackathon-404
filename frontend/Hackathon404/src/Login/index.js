@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getFetch, postFetch } from '../utils/fetchAPI';
 import LoginComponent from './loginComponent';
+import { useAccessDispatch } from '../utils/AppContext/loginContext';
 
 export default function Login({ navigation }) {
   const [stateData, setStateData] = useState({
@@ -13,9 +14,10 @@ export default function Login({ navigation }) {
     emailIdError: false,
     loginError: false,
   });
+  const dispatch = useAccessDispatch();
 
   useEffect(() => {
-    getFetch('http://backendproject5.herokuapp.com/fetchHotelDetails')
+    getFetch('fetchHotelDetails')
       .then(lists => {
         lists.forEach(list => {
           if (list.hotelId === 1234) {
@@ -65,16 +67,19 @@ export default function Login({ navigation }) {
       };
 
       postFetch(
-        'http://backendproject5.herokuapp.com/fetchUserDetailsById',
+        'fetchUserDetailsById',
         body,
       ).then(response => {
         if (response.status === 'Failed') {
+          dispatch({ type: 'logout', payload: '' });
           setStateData((state) => ({
             ...state,
             loginError: true,
           }));
         }
         else {
+          dispatch({ type: 'login', payload: response.userId });
+          console.log('response', response);
           setStateData((state) => ({
             ...state,
             emailId: '',
@@ -84,7 +89,7 @@ export default function Login({ navigation }) {
           switch (response.userType) {
             case 'HOTEL_ADMIN': navigation.navigate('AdminDashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
-            case 'GUEST': navigation.navigate('Covid9Info', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+            case 'GUEST': navigation.navigate('Dashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
             case 'SUPER_ADMIN': navigation.navigate('Dashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
@@ -96,6 +101,7 @@ export default function Login({ navigation }) {
   const backToPage = () => {
     navigation.goBack();
   };
+
   return (
     <LoginComponent
       onChangeText={onChangeText}
