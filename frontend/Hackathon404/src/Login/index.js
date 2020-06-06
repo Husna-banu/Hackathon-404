@@ -17,7 +17,7 @@ export default function Login({ navigation }) {
   const dispatch = useAccessDispatch();
 
   useEffect(() => {
-    getFetch('http://hoteltel.mybluemix.net/fetchHotelDetails')
+    getFetch('fetchHotelDetails')
       .then(lists => {
         lists.forEach(list => {
           if (list.hotelId === 1234) {
@@ -67,7 +67,7 @@ export default function Login({ navigation }) {
       };
 
       postFetch(
-        'http://hoteltel.mybluemix.net/fetchUserDetailsById',
+        'fetchUserDetailsById',
         body,
       ).then(response => {
         if (response.status === 'Failed') {
@@ -79,6 +79,7 @@ export default function Login({ navigation }) {
         }
         else {
           dispatch({ type: 'login', payload: response.userId });
+          console.log('response', response);
           setStateData((state) => ({
             ...state,
             emailId: '',
@@ -88,7 +89,7 @@ export default function Login({ navigation }) {
           switch (response.userType) {
             case 'HOTEL_ADMIN': navigation.navigate('AdminDashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
-            case 'GUEST': navigation.navigate('Covid9Info', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+            case 'GUEST': navigation.navigate('Dashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;
             case 'SUPER_ADMIN': navigation.navigate('Dashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
               break;

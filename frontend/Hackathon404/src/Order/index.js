@@ -5,6 +5,7 @@ import {
   Text,
   SafeAreaView,
   TouchableOpacity,
+  FlatList,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import AntIcon from 'react-native-vector-icons/AntDesign';
@@ -32,15 +33,21 @@ export default function Order({route, navigation}) {
   }, [route.params]);
 
   const incrementCart = i => {
+    const newitemArray = volatile.itemArray;
+    const newItem = newitemArray[i];
+    newItem.cartCount = newItem.cartCount >= 0 ? parseInt(newItem.cartCount ?? 0) + 1 : 0;
     setVolatile(state => ({
       ...state,
-      cartCount: volatile && volatile.cartCount + 1,
+      itemArray: newitemArray,
     }));
   };
   const decrementCart = i => {
+    const newitemArray = volatile.itemArray;
+    const newItem = newitemArray[i];
+    newItem.cartCount = newItem.cartCount > 0 ? parseInt(newItem.cartCount ?? 0) - 1 : 0;
     setVolatile(state => ({
       ...state,
-      cartCount: volatile && volatile.cartCount > 0 && volatile.cartCount - 1,
+      itemArray: newitemArray,
     }));
   };
   const orderStatus = () => {
@@ -63,43 +70,43 @@ export default function Order({route, navigation}) {
       itemArray: data,
     }));
   };
-  const renderItem = (item, index) => {
+  const renderItem = ({item, index}) => {
+    const itemName = Object.keys(item)[0];
+    const cartCount = Object.keys(item)[1];
     return (
       <View style={commonStyle.cartBody}>
-        {Object.keys(item).map((key, i) => (
+        <View style={commonStyle.cartBody}>
+          <Text style={styles.cartWidth}> {itemName}</Text>
+          <Text style={{color: 'blue', marginRight: 20, marginTop: 10}}>
+            Rs.{item[cartCount] * parseInt(item[itemName])}
+          </Text>
           <View style={commonStyle.cartBody}>
-            <Text style={styles.cartWidth}> {key}</Text>
-            <Text style={{color: 'blue', marginRight: 20, marginTop: 10}}>
-              Rs.{volatile.cartCount * parseInt(item[key])}
+            <Text
+              style={styles.cartButton}
+              onPress={event => decrementCart(index)}>
+              -
             </Text>
-            <View style={commonStyle.cartBody}>
-              <Text
-                style={styles.cartButton}
-                onPress={event => decrementCart(index)}>
-                -
-              </Text>
-              <Text style={{padding: 5}}>{volatile.cartCount}</Text>
-              <Text
-                style={styles.cartButton}
-                onPress={event => incrementCart(index)}>
-                +
-              </Text>
-            </View>
-            <AntIcon
-              style={{marginLeft: 10, marginTop: 10}}
-              name="delete"
-              size={20}
-              onPress={event => deleteCart(event, index)}
-            />
+            <Text style={{padding: 5}}>{item[cartCount]}</Text>
+            <Text
+              style={styles.cartButton}
+              onPress={event => incrementCart(index)}>
+              +
+            </Text>
           </View>
-        ))}
+          <AntIcon
+            style={{marginLeft: 10, marginTop: 10}}
+            name="delete"
+            size={20}
+            onPress={event => deleteCart(event, index)}
+          />
+        </View>
       </View>
     );
   };
   return (
     <View style={commonStyle.container}>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={commonStyle.safeAreaViewStyle}>
         <View style={commonStyle.header}>
           <Icon
             name="arrow-left"
@@ -111,15 +118,19 @@ export default function Order({route, navigation}) {
           <Logout navigation={navigation} />
         </View>
         {volatile.hideCart ? (
-          <View>
+          <View style={[commonStyle.flatListContainerStyle, {marginBottom: 40, justifyContent: 'center'}]}>
             <TouchableOpacity>
               <Text style={styles.textInput} onPress={orderStatus}>
                 Proceed to Order
               </Text>
             </TouchableOpacity>
-            {volatile.itemArray.map((item, index) => renderItem(item, index))}
+            <FlatList
+              data={volatile.itemArray}
+              renderItem={renderItem}
+              keyExtractor={(item, index) => index.toString()}
+            />
             <TouchableOpacity>
-              <View style={{flexDirection: 'row'}}>
+              <View style={styles.deleteSaveButtonContainerStyle}>
                 <Text style={styles.deleteWidth} onPress={deleteAll}>
                   Delete
                 </Text>

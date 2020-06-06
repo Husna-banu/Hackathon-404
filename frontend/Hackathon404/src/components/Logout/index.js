@@ -12,7 +12,7 @@ export default Logout = ({ navigation }) => {
   };
   return (
     <AntDesign
-      style={{ marginLeft: '45%' }}
+      style={{ position: 'absolute', right: 10 }}
       name="logout"
       size={20}
       onPress={logout}

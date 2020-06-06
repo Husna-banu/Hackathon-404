@@ -22,7 +22,7 @@ export default function Login({ route, navigation }) {
   });
   useEffect(() => {
     const { serviceName } = route.params;
-    getFetch(`http://hoteltel.mybluemix.net/fetchServiceDetails?serviceName=${serviceName}`)
+    getFetch(`fetchServiceDetails?serviceName=${serviceName}`)
       .then(lists => {
         setStateData(state => ({
           ...state,
@@ -68,7 +68,7 @@ export default function Login({ route, navigation }) {
   return (
     <View style={commonStyle.container}>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={commonStyle.safeAreaViewStyle}>
         <View style={commonStyle.header}>
           <Icon
             name="arrow-left"

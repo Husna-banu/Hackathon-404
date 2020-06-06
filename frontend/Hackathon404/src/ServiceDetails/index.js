@@ -23,7 +23,7 @@ export default function ServiceDetails({ route, navigation }) {
   const [theArray, setTheArray] = useState([]);
   useEffect(() => {
     const { serviceName } = route.params;
-    getFetch(`http://hoteltel.mybluemix.net/fetchServiceDetails?serviceName=${serviceName}`)
+    getFetch(`fetchServiceDetails?serviceName=${serviceName}`)
       .then(lists => {
         setStateData(state => ({
           ...state,
@@ -36,15 +36,36 @@ export default function ServiceDetails({ route, navigation }) {
   const backToPage = () => {
     navigation.goBack();
   };
-  const addToCart = (event, item) => {
+  const addToCart = (event, cartitem) => {
+    let newTheArray = [...theArray];
+    const newItem = {...cartitem};
+    let match = 0;
+    newItem.cartCount = parseInt(newItem?.cartCount ?? 0) + 1;
+    if (newTheArray && newTheArray.length > 0) {
+      newTheArray.forEach((item, index) => {
+        if(Object.keys(item)[0] === Object.keys(cartitem)[0]) {
+          newTheArray[index].cartCount = parseInt(newTheArray[index].cartCount ?? 0) + 1;
+          match = match + 1;
+        }
+      });
+    }
+    if(match === 0) {
+      newTheArray = [...newTheArray, newItem];
+    }
+    console.log('newTheArray', newTheArray);
     event.preventDefault();
-    setTheArray([...theArray, item]);
+    setTheArray(newTheArray);
     setStateData(state => ({
       ...state,
       cartCount: stateData.cartCount + 1,
     }));
   };
-
+  const goToCart = () => {
+    navigation.navigate('Order', {
+      itemArray: theArray,
+      itemCount: stateData.cartCount,
+    });
+  };
   const renderItemList = ({ item }) => {
     for (var i in item) {
       return (
@@ -80,19 +101,10 @@ export default function ServiceDetails({ route, navigation }) {
       </View>
     );
   };
-  const goToCart = () => {
-    navigation.navigate('Order', {
-      itemArray: theArray,
-      itemCount: stateData.cartCount,
-    });
-  };
-  const logout = () => {
-    navigation.navigate('Login');
-  };
   return (
     <View style={commonStyle.container}>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={commonStyle.safeAreaViewStyle}>
         <View style={commonStyle.header}>
           <Icon
             name="arrow-left"
@@ -114,7 +126,7 @@ export default function ServiceDetails({ route, navigation }) {
           </View>
           <Logout navigation={navigation} />
         </View>
-        <View style={commonStyle.content}>
+        <View style={commonStyle.flatListContainerStyle}>
           <FlatList
             data={stateData.serviceDetails.subMenu}
             renderItem={renderItem}
