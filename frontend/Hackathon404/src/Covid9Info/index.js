@@ -6,6 +6,7 @@ import {
     SafeAreaView,
     FlatList,
     TouchableOpacity,
+    ScrollView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
@@ -39,31 +40,28 @@ export default function Covid9Info({ route, navigation }) {
         }
     };
     const renderItem = ({ item }) => {
-        return (
-            <TouchableOpacity
-                onPress={() => serviceDetails(item.serviceId, item.serviceName)}>
-                <View style={styles.servicesListStyle}>
-                    <Text style={styles.serviceNameStyle, commonStyle.fnBold}>{item.serviceName}</Text>
-                    <Text style={styles.serviceNameStyle}>Capacity in {item.serviceName} are {item.capacity}</Text>
-                    <Text style={styles.serviceNameStyle}>Current Availability of seats  in {item.serviceName} are {item.availableSpace}</Text>
-                </View>
-            </TouchableOpacity>
-        );
+        if (item.serviceName === 'Restaurant' || item.serviceName === 'Spa') {
+            return (
+                <TouchableOpacity
+                    onPress={() => serviceDetails(item.serviceId, item.serviceName)}>
+                    <View style={styles.servicesListStyle}>
+                        <Text style={styles.serviceNameStyle, commonStyle.fnBold}>{item.serviceName}</Text>
+                        <Text style={styles.serviceNameStyle}>Capacity in {item.serviceName} are {item.capacity}</Text>
+                        <Text style={styles.serviceNameStyle}>Current Availability of seats  in {item.serviceName} are {item.availableSpace}</Text>
+                    </View>
+                </TouchableOpacity>
+            );
+        }
     };
-    const goToService = () => {
-        navigation.navigate('Dashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
-    }
     return (
         <View style={commonStyle.container, commonStyle.bgColor}>
             <StatusBar barStyle="dark-content" />
-
-            <SafeAreaView>
+            <SafeAreaView style={commonStyle.safeAreaViewStyle}>
                 <View style={commonStyle.covidhHeader}>
                     <Text style={commonStyle.heading}>
                         <Text style={{ fontSize: 12, height: 80 }} > The safety and wellbeing of our guests and associates is of paramount importance to Raj Hotel.
                         Associates at Raj Hotel are extensively trained on safety, hygiene and physical distancing norms to ensure guests' wellbeing and delight, every time.
                         Technology is used for seamless, yet personalized check-ins, check-outs and dining experiences. With digital payments and non-invasive thermal screening, the touch of care replaces the physical one. </Text></Text>
-                    <Logout navigation={navigation} />
                 </View>
                 <View style={commonStyle.header}>
                     <Icon
@@ -76,19 +74,12 @@ export default function Covid9Info({ route, navigation }) {
                     <Text style={commonStyle.heading}>Welcome to Raj Hotel</Text>
                     <Logout navigation={navigation} />
                 </View>
-                <View style={commonStyle.content}>
+                <View style={commonStyle.flatListContainerStyle}>
                     <FlatList
                         data={stateData.listOfServices}
                         renderItem={renderItem}
                         keyExtractor={item => item.serviceId.toString()}
                     />
-                </View>
-                <View>
-                    <TouchableOpacity>
-                        <Text style={orderStyle.textInput} onPress={goToService}>
-                            Go to Service List
-              </Text>
-                    </TouchableOpacity>
                 </View>
             </SafeAreaView>
         </View>

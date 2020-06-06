@@ -16,7 +16,7 @@ export default function OrderStatus({route, navigation}) {
   return (
     <View style={commonStyle.container}>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={commonStyle.safeAreaViewStyle}>
         <View style={commonStyle.header}>
           <Icon
             name="arrow-left"

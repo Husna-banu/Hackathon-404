@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: '#CDE6FA',
     height: 100,
-    width: 120,
+    width: 130,
     margin: 30,
   },
   serviceNameStyle: {
