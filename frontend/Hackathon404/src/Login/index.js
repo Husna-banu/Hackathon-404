@@ -75,7 +75,6 @@ export default function Login({navigation}) {
           }));
         } else {
           dispatch({type: 'login', payload: response.userId});
-          console.log('response', response);
           setStateData(state => ({
             ...state,
             emailId: '',

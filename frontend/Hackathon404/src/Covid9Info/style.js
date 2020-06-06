@@ -51,8 +51,7 @@ const styles = StyleSheet.create({
     top: -10,
   },
   subTitle: {
-    fontSize: 12,
-    height: 80,
+    fontSize: 10,
   },
 });
 

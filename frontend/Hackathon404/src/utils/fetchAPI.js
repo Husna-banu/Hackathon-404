@@ -1,4 +1,4 @@
-const domainURL = 'http://hoteltel.mybluemix.net/';
+const domainURL = 'http://safEscapesBackend.mybluemix.net/';
 
 const getFetch = url =>
   fetch(`${domainURL}${url}`, {
