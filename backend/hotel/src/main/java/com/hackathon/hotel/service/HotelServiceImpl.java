@@ -16,8 +16,12 @@ import java.util.stream.Collectors;
 @Service
 public class HotelServiceImpl implements HotelService {
 
-    @Autowired
     HotelDAO hotelDAO;
+
+    @Autowired
+    public HotelServiceImpl(HotelDAO hotelDAO){
+        this.hotelDAO = hotelDAO;
+    }
 
     @Override
     public List<Hotel> fetchHotelDetails(){
