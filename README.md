@@ -5,17 +5,11 @@
 1. [Short description](#short-description)
 1. [Demo video](#demo-video)
 1. [The architecture](#the-architecture)
-1. [Long description](#long-description)
 1. [Project roadmap](#project-roadmap)
 1. [Getting started](#getting-started)
 1. [Running the tests](#running-the-tests)
-1. [Live demo](#live-demo)
 1. [Built with](#built-with)
-1. [Contributing](#contributing)
-1. [Versioning](#versioning)
 1. [Authors](#authors)
-1. [License](#license)
-1. [Acknowledgments](#acknowledgments)
 
 ## Short Description
 
@@ -66,7 +60,7 @@ For Android:
 ```bash
 brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 ```
-1. ![Android Studio](https://developer.android.com/studio/index.html)
+1. [Android Studio](https://developer.android.com/studio/index.html)
 1. Install the Android SDK
 1. Configure the ANDROID_HOME environment variable
     Add the following lines to your ```bash $HOME/.bash_profile ``` or ```bash $HOME/.bashrc``` config file:
@@ -77,7 +71,7 @@ brew cask install adoptopenjdk/openjdk/adoptopenjdk8
           export PATH=$PATH:$ANDROID_HOME/tools/bin
           export PATH=$PATH:$ANDROID_HOME/platform-tools
       ```
-   For more details on installation ![click here](https://reactnative.dev/docs/environment-setup) and select the tab `React Native CLI Quickstart`
+   For more details on installation [click here](https://reactnative.dev/docs/environment-setup) and select the tab `React Native CLI Quickstart`
 
 ### Installing
 
@@ -104,59 +98,28 @@ For android:
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+As this application is more of user interface, snapshot testing is done which capture each and every bit of UI.
+Linting is done to avoid unnecessary warnings and developer errors and for code cleanup. 
+Run test case using the below command:
 
-### Break down into end to end tests
-
-Explain what these tests test and why, if you were using something like `mocha` for instnance
-
-```bash
-npm install mocha --save-dev
-vi test/test.js
-./node_modules/mocha/bin/mocha
+```bash 
+  npm t 
 ```
-
-### And coding style tests
-
-Explain what these tests test and why, if you chose `eslint` for example
-
-```bash
-npm install eslint --save-dev
-npx eslint --init
-npx eslint sample-file.js
-```
-
-## Live demo
-
-You can find a running system to test at [callforcode.mybluemix.net](http://callforcode.mybluemix.net/)
 
 ## Built with
 
-* [IBM Cloudant](https://cloud.ibm.com/catalog?search=cloudant#search_results) - The NoSQL database used
-* [IBM Cloud Functions](https://cloud.ibm.com/catalog?search=cloud%20functions#search_results) - The compute platform for handing logic
-* [IBM API Connect](https://cloud.ibm.com/catalog?search=api%20connect#search_results) - The web framework used
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Java spring boot](https://spring.io/guides/gs/spring-boot/) - Backend
 * [Maven](https://maven.apache.org/) - Dependency management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [IBM Cloud Foundry Orgs](https://cloud.ibm.com/catalog?search=cloud%20foundary#search_results) - The web framework used
+* [React Native](https://reactnative.dev/) - Frontend
+* [React Hook](https://reactjs.org/docs/hooks-intro.html) - Application state management
 
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Harsha Mulani** - *Commander* - [hmulani](https://github.com/hmulani)
+* **Snehanjana Ray** - *Backend Developer* - [SnehanjanaRay](https://github.com/SnehanjanaRay)
+* **Husna Banu** - *Frontend Developer* - [Husna-banu](https://github.com/Husna-banu)
+* **Niharika Sinha** - *Frontend Developer* - [Niharika123](https://github.com/Niharika123)
+* **Piyalee Maiti** - *Frontend Developer* - [piyaleemaiti](https://github.com/piyaleemaiti)
 
-See also the list of [contributors](https://github.com/Code-and-Response/Project-Sample/graphs/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details
-
-## Acknowledgments
-
-* Based on [Billie Thompson's README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
