@@ -94,8 +94,19 @@ For android:
 ```bash
   npm start (in one terminal)
   npm run android (in another terminal)
+  
+  
 ```
-
+Admin credentials:
+```bash
+ emailID: harsha@gmail.com
+ password: harsha@123
+ ```
+Guest credentials:
+```bash
+ emailID: piyalee@gmail.com
+ password: piyali@123
+ ```
 ## Running the tests
 
 As this application is more of user interface, snapshot testing is done which capture each and every bit of UI.
