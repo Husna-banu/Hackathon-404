@@ -14,8 +14,12 @@ import java.util.stream.Collectors;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
     UserDAO userDAO;
+
+    @Autowired
+    public UserServiceImpl(UserDAO userDAO){
+        this.userDAO = userDAO;
+    }
 
     @Override
     public List<User> fetchUserDetails(){
