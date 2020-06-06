@@ -4,7 +4,7 @@ import {
   useAccessState,
   useAccessDispatch,
 } from '../../utils/AppContext/loginContext';
-import styles from '../../Login/style';
+import styles from './style';
 
 const Logout = ({navigation}) => {
   const {loginName} = useAccessState();

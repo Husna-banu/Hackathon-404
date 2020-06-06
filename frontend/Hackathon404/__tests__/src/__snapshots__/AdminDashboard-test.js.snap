@@ -32,33 +32,6 @@ exports[`renders correctly 1`] = `
       }
     >
       <Text
-        allowFontScaling={false}
-        onPress={[Function]}
-        style={
-          Array [
-            Object {
-              "color": undefined,
-              "fontSize": 20,
-            },
-            Object {
-              "fontSize": 20,
-              "paddingLeft": 10,
-              "paddingRight": 20,
-            },
-            Object {
-              "fontFamily": "FontAwesome5Free-Solid",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-            },
-            Object {
-              "fontWeight": "900",
-            },
-          ]
-        }
-      >
-        
-      </Text>
-      <Text
         style={
           Object {
             "alignItems": "center",
@@ -81,7 +54,10 @@ exports[`renders correctly 1`] = `
               "color": undefined,
               "fontSize": 20,
             },
-            undefined,
+            Object {
+              "position": "absolute",
+              "right": 15,
+            },
             Object {
               "fontFamily": "anticon",
               "fontStyle": "normal",

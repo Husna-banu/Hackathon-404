@@ -10,7 +10,7 @@ import {getFetch} from '../../utils/fetchAPI';
 export default function Login({route, navigation}) {
   const [stateData, setStateData] = useState({
     cartCount: 0,
-    serviceDetails: {},
+    serviceDetails: [],
   });
   useEffect(() => {
     const {serviceName} = route.params;
@@ -45,7 +45,10 @@ export default function Login({route, navigation}) {
   };
 
   const renderItem = ({item: mainItem}) => {
-    const itemName = Object.keys(mainItem)[0];
+    const itemName =
+      mainItem && Object.keys(mainItem).length > 0
+        ? Object.keys(mainItem)[0]
+        : '';
     return (
       <View style={styles.servicesListStyle}>
         <Text style={styles.itemNameStyle}>{itemName}</Text>
