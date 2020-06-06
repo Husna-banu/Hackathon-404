@@ -35,7 +35,8 @@ export default function Order({route, navigation}) {
   const incrementCart = i => {
     const newitemArray = volatile.itemArray;
     const newItem = newitemArray[i];
-    newItem.cartCount = newItem.cartCount >= 0 ? parseInt(newItem.cartCount ?? 0) + 1 : 0;
+    newItem.cartCount =
+      newItem.cartCount >= 0 ? parseInt(newItem.cartCount ?? 0) + 1 : 0;
     setVolatile(state => ({
       ...state,
       itemArray: newitemArray,
@@ -44,7 +45,8 @@ export default function Order({route, navigation}) {
   const decrementCart = i => {
     const newitemArray = volatile.itemArray;
     const newItem = newitemArray[i];
-    newItem.cartCount = newItem.cartCount > 0 ? parseInt(newItem.cartCount ?? 0) - 1 : 0;
+    newItem.cartCount =
+      newItem.cartCount > 0 ? parseInt(newItem.cartCount ?? 0) - 1 : 0;
     setVolatile(state => ({
       ...state,
       itemArray: newitemArray,
@@ -118,7 +120,11 @@ export default function Order({route, navigation}) {
           <Logout navigation={navigation} />
         </View>
         {volatile.hideCart ? (
-          <View style={[commonStyle.flatListContainerStyle, {marginBottom: 40, justifyContent: 'center'}]}>
+          <View
+            style={[
+              commonStyle.flatListContainerStyle,
+              {marginBottom: 40, justifyContent: 'center'},
+            ]}>
             <TouchableOpacity>
               <Text style={styles.textInput} onPress={orderStatus}>
                 Proceed to Order

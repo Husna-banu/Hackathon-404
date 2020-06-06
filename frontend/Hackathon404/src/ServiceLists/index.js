@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -12,7 +12,7 @@ import styles from './style';
 import commonStyle from '../commonStyles';
 import Logout from '../components/Logout';
 
-export default function ServiceLists({ route, navigation }) {
+export default function ServiceLists({route, navigation}) {
   const [stateData, setStateData] = useState({
     hotelName: '',
     hotelId: '',
@@ -20,13 +20,13 @@ export default function ServiceLists({ route, navigation }) {
   });
 
   useEffect(() => {
-    const { hotelId, listOfServices } = route.params;
+    const {hotelId, listOfServices} = route.params;
     setStateData(state => ({
       ...state,
       hotelId: hotelId,
       listOfServices: listOfServices,
     }));
-  }, []);
+  }, [route.params]);
 
   const backToPage = () => {
     navigation.goBack();
@@ -39,7 +39,7 @@ export default function ServiceLists({ route, navigation }) {
       });
     }
   };
-  const renderItem = ({ item }) => {
+  const renderItem = ({item}) => {
     return (
       <TouchableOpacity
         onPress={() => serviceDetails(item.serviceId, item.serviceName)}>

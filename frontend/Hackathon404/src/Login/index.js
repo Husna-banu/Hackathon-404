@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { getFetch, postFetch } from '../utils/fetchAPI';
+import React, {useState, useEffect} from 'react';
+import {getFetch, postFetch} from '../utils/fetchAPI';
 import LoginComponent from './loginComponent';
-import { useAccessDispatch } from '../utils/AppContext/loginContext';
+import {useAccessDispatch} from '../utils/AppContext/loginContext';
 
-export default function Login({ navigation }) {
+export default function Login({navigation}) {
   const [stateData, setStateData] = useState({
     emailId: '',
     password: '',
@@ -19,7 +19,7 @@ export default function Login({ navigation }) {
   useEffect(() => {
     getFetch('fetchHotelDetails')
       .then(lists => {
-        lists.forEach(list => {
+        lists?.forEach(list => {
           if (list.hotelId === 1234) {
             setStateData(state => ({
               ...state,
@@ -46,7 +46,7 @@ export default function Login({ navigation }) {
         [nameField]: false,
       }));
     }
-    setStateData(state => ({ ...state, [name]: text }));
+    setStateData(state => ({...state, [name]: text}));
   };
 
   const _login = () => {
@@ -66,32 +66,40 @@ export default function Login({ navigation }) {
         password: stateData.password,
       };
 
-      postFetch(
-        'fetchUserDetailsById',
-        body,
-      ).then(response => {
+      postFetch('fetchUserDetailsById', body).then(response => {
         if (response.status === 'Failed') {
-          dispatch({ type: 'logout', payload: '' });
-          setStateData((state) => ({
+          dispatch({type: 'logout', payload: ''});
+          setStateData(state => ({
             ...state,
             loginError: true,
           }));
-        }
-        else {
-          dispatch({ type: 'login', payload: response.userId });
+        } else {
+          dispatch({type: 'login', payload: response.userId});
           console.log('response', response);
-          setStateData((state) => ({
+          setStateData(state => ({
             ...state,
             emailId: '',
             password: '',
             loginError: false,
           }));
           switch (response.userType) {
-            case 'HOTEL_ADMIN': navigation.navigate('AdminDashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+            case 'HOTEL_ADMIN':
+              navigation.navigate('AdminDashboard', {
+                hotelId: stateData.hotelId,
+                listOfServices: stateData.listOfServices,
+              });
               break;
-            case 'GUEST': navigation.navigate('Dashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+            case 'GUEST':
+              navigation.navigate('Dashboard', {
+                hotelId: stateData.hotelId,
+                listOfServices: stateData.listOfServices,
+              });
               break;
-            case 'SUPER_ADMIN': navigation.navigate('Dashboard', { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+            case 'SUPER_ADMIN':
+              navigation.navigate('Dashboard', {
+                hotelId: stateData.hotelId,
+                listOfServices: stateData.listOfServices,
+              });
               break;
           }
         }

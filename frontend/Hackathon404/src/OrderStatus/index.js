@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  View,
-  StatusBar,
-  Text,
-  SafeAreaView,
-} from 'react-native';
+import {View, StatusBar, Text, SafeAreaView} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import commonStyle from '../commonStyles';
 import Logout from '../components/Logout';

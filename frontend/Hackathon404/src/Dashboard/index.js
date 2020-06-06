@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -11,10 +11,10 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
 import commonStyle from '../commonStyles';
 import Logout from '../components/Logout';
-import { useAccessState } from '../utils/AppContext/loginContext';
+import {useAccessState} from '../utils/AppContext/loginContext';
 
-export default function Login({ route, navigation }) {
-  const { loginName } = useAccessState();
+export default function Login({route, navigation}) {
+  const {loginName} = useAccessState();
   const indexOfAt = loginName.indexOf('@');
   const guestName = loginName.substring(0, indexOfAt);
   const [stateData, setStateData] = useState({
@@ -47,7 +47,7 @@ export default function Login({ route, navigation }) {
     ],
   });
   useEffect(() => {
-    const { hotelId, listOfServices } = route.params;
+    const {hotelId, listOfServices} = route.params;
     setStateData(state => ({
       ...state,
       hotelId: hotelId,
@@ -59,10 +59,13 @@ export default function Login({ route, navigation }) {
   };
   const serviceDetails = menuRouteName => {
     if (menuRouteName) {
-      navigation.navigate(menuRouteName, { hotelId: stateData.hotelId, listOfServices: stateData.listOfServices });
+      navigation.navigate(menuRouteName, {
+        hotelId: stateData.hotelId,
+        listOfServices: stateData.listOfServices,
+      });
     }
   };
-  const renderItem = ({ item }) => {
+  const renderItem = ({item}) => {
     return (
       <TouchableOpacity onPress={() => serviceDetails(item.menuRouteName)}>
         <View style={styles.servicesListStyle}>
@@ -86,7 +89,10 @@ export default function Login({ route, navigation }) {
           <Logout navigation={navigation} />
         </View>
         <View style={commonStyle.content}>
-          <Text style={commonStyle.heading}>{`Welcome ${guestName} Room No: 404`}</Text>
+          <Text
+            style={
+              commonStyle.heading
+            }>{`Welcome ${guestName} Room No: 404`}</Text>
           <FlatList
             data={stateData.menuList}
             renderItem={renderItem}

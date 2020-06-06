@@ -2,12 +2,13 @@ const domainURL = 'http://hoteltel.mybluemix.net/';
 
 const getFetch = url =>
   fetch(`${domainURL}${url}`, {
-    method: 'GET', headers: {
+    method: 'GET',
+    headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
   })
-    .then(response => response.json())
+    .then(response => response?.json())
     .then(response => response)
     .catch(err => console.log(err));
 
@@ -24,4 +25,4 @@ const postFetch = (url, body) =>
     .then(response => response)
     .catch(err => console.log(err));
 
-export { getFetch, postFetch };
+export {getFetch, postFetch};

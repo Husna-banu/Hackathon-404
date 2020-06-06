@@ -1,19 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import {
-  View,
-  Text,
-  StatusBar,
-  SafeAreaView,
-  FlatList,
-} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {View, Text, StatusBar, SafeAreaView, FlatList} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import styles from './style';
 import commonStyle from '../commonStyles';
-import { getFetch } from '../utils/fetchAPI';
+import {getFetch} from '../utils/fetchAPI';
 import Logout from '../components/Logout';
 
-export default function ServiceDetails({ route, navigation }) {
+export default function ServiceDetails({route, navigation}) {
   const [stateData, setStateData] = useState({
     cartCount: 0,
     serviceDetails: {},
@@ -22,7 +16,7 @@ export default function ServiceDetails({ route, navigation }) {
   });
   const [theArray, setTheArray] = useState([]);
   useEffect(() => {
-    const { serviceName } = route.params;
+    const {serviceName} = route.params;
     getFetch(`fetchServiceDetails?serviceName=${serviceName}`)
       .then(lists => {
         setStateData(state => ({
@@ -43,13 +37,14 @@ export default function ServiceDetails({ route, navigation }) {
     newItem.cartCount = parseInt(newItem?.cartCount ?? 0) + 1;
     if (newTheArray && newTheArray.length > 0) {
       newTheArray.forEach((item, index) => {
-        if(Object.keys(item)[0] === Object.keys(cartitem)[0]) {
-          newTheArray[index].cartCount = parseInt(newTheArray[index].cartCount ?? 0) + 1;
+        if (Object.keys(item)[0] === Object.keys(cartitem)[0]) {
+          newTheArray[index].cartCount =
+            parseInt(newTheArray[index].cartCount ?? 0) + 1;
           match = match + 1;
         }
       });
     }
-    if(match === 0) {
+    if (match === 0) {
       newTheArray = [...newTheArray, newItem];
     }
     console.log('newTheArray', newTheArray);
@@ -66,7 +61,7 @@ export default function ServiceDetails({ route, navigation }) {
       itemCount: stateData.cartCount,
     });
   };
-  const renderItemList = ({ item }) => {
+  const renderItemList = ({item}) => {
     for (var i in item) {
       return (
         <View style={styles.listItemStyle}>
@@ -76,8 +71,8 @@ export default function ServiceDetails({ route, navigation }) {
             size={20}
           />
           <View style={styles.listItemContentStyle}>
-            <Text style={{ width: 120 }}>{i}</Text>
-            <Text style={{ width: 80, fontWeight: '700' }}>Rs {item[i]}</Text>
+            <Text style={{width: 120}}>{i}</Text>
+            <Text style={{width: 80, fontWeight: '700'}}>Rs {item[i]}</Text>
             <Text
               style={styles.addCartButton}
               onPress={event => addToCart(event, item)}>
@@ -88,7 +83,7 @@ export default function ServiceDetails({ route, navigation }) {
       );
     }
   };
-  const renderItem = ({ item, index }) => {
+  const renderItem = ({item, index}) => {
     const itemName = Object.keys(item)[0];
     return (
       <View style={styles.servicesListStyle}>
