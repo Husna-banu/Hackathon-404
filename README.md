@@ -15,7 +15,9 @@
 
 ### What's the problem?
 
-Life for the hospitality industry has changed drastically due to the coronavirus pandemic and the future of hotels will look drastically different in a post COVID world. With new guidelines coming in from the tourism ministry, hotels and accommodation units have to ensure  social distancing and adequate safety & hygiene measures. 
+COVID 19 epidemic has introduced many variables that are currently fogging up the prospects of the hospitality industry. During the epidemic, measures to avoid cross contamination through food, containers or human touch, have suspended the “culture of sharing”. Moreover, due to restricted motion during the epidemic, the hotel industry will have to prepare for a significant increase in tourism demand after the epidemic. How hotels co-ordinate their resources and adapt to this sudden increase while guaranteeing service quality is crucial to their survival. 
+Due to the uncertainty of the changes in customer needs after the epidemic and new guidelines coming in from the tourism ministry, hotels need to review their existing service offerings so as to adapt to the changes in customer experience.
+
 
 ### How can technology help?
 
