@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "Hackathon404.app"
-               BlueprintName = "Hackathon404"
-               ReferencedContainer = "container:Hackathon404.xcodeproj">
+               BuildableName = "safEscapes.app"
+               BlueprintName = "safEscapes"
+               ReferencedContainer = "container:safEscapes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "Hackathon404Tests.xctest"
-               BlueprintName = "Hackathon404Tests"
-               ReferencedContainer = "container:Hackathon404.xcodeproj">
+               BuildableName = "safEscapesTests.xctest"
+               BlueprintName = "safEscapesTests"
+               ReferencedContainer = "container:safEscapes.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Hackathon404.app"
-            BlueprintName = "Hackathon404"
-            ReferencedContainer = "container:Hackathon404.xcodeproj">
+            BuildableName = "safEscapes.app"
+            BlueprintName = "safEscapes"
+            ReferencedContainer = "container:safEscapes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Hackathon404.app"
-            BlueprintName = "Hackathon404"
-            ReferencedContainer = "container:Hackathon404.xcodeproj">
+            BuildableName = "safEscapes.app"
+            BlueprintName = "safEscapes"
+            ReferencedContainer = "container:safEscapes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

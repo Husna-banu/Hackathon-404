@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#CDE6FA",
+      "height": "100 %",
+    }
+  }
+>
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignContent": "center",
+          "alignItems": "center",
+          "backgroundColor": "yellow",
+          "flexDirection": "row",
+          "height": 150,
+          "marginBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignItems": "center",
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "paddingLeft": 10,
+            "textAlign": "center",
+          }
+        }
+      >
+        <Text>
+           
+          The safety and wellbeing of our guests and associates is of paramount importance to Raj Hotel. Associates at Raj Hotel are extensively trained on safety, hygiene and physical distancing norms to ensure guests' wellbeing and delight, every time. Technology is used for seamless, yet personalized check-ins, check-outs and dining experiences. With digital payments and non-invasive thermal screening, the touch of care replaces the physical one.
+           
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignContent": "center",
+          "alignItems": "center",
+          "backgroundColor": "skyblue",
+          "flexDirection": "row",
+          "height": 50,
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 20,
+            },
+            Object {
+              "fontSize": 20,
+              "paddingLeft": 10,
+              "paddingRight": 20,
+            },
+            Object {
+              "fontFamily": "FontAwesome5Free-Solid",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {
+              "fontWeight": "900",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+      <Text
+        style={
+          Object {
+            "alignItems": "center",
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "paddingLeft": 10,
+            "textAlign": "center",
+          }
+        }
+      >
+        Welcome to Raj Hotel
+      </Text>
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 20,
+            },
+            undefined,
+            Object {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginBottom": 20,
+        }
+      }
+    >
+      <RCTScrollView
+        data=""
+        disableVirtualization={false}
+        getItem={[Function]}
+        getItemCount={[Function]}
+        horizontal={false}
+        initialNumToRender={10}
+        keyExtractor={[Function]}
+        maxToRenderPerBatch={10}
+        onContentSizeChange={[Function]}
+        onEndReachedThreshold={2}
+        onLayout={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        stickyHeaderIndices={Array []}
+        updateCellsBatchingPeriod={50}
+        viewabilityConfigCallbackPairs={Array []}
+        windowSize={21}
+      >
+        <View />
+      </RCTScrollView>
+    </View>
+  </RCTSafeAreaView>
+</View>
+`;

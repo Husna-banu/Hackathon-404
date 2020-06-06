@@ -44,8 +44,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'Hackathon404' do
-  # Pods for Hackathon404
+target 'safEscapes' do
+  # Pods for safEscapes
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -79,7 +79,7 @@ target 'Hackathon404' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  target 'Hackathon404Tests' do
+  target 'safEscapesTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -96,10 +96,10 @@ target 'Hackathon404' do
   end
 end
 
-target 'Hackathon404-tvOS' do
-  # Pods for Hackathon404-tvOS
+target 'safEscapes-tvOS' do
+  # Pods for safEscapes-tvOS
 
-  target 'Hackathon404-tvOSTests' do
+  target 'safEscapes-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

@@ -1,4 +1,4 @@
-import { StyleSheet, Platform } from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     backgroundColor: 'yellow',
     height: 150,
-    marginBottom: 10
+    marginBottom: 10,
   },
   backButton: {
     fontSize: 20,
@@ -68,15 +68,15 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   fnSize_12: {
-    fontSize: 12
+    fontSize: 12,
   },
   fnSizePadding: {
     fontSize: 18,
-    padding: 5
+    padding: 5,
   },
   bgColor: {
     height: '100 %',
-    backgroundColor: '#CDE6FA'
+    backgroundColor: '#CDE6FA',
   },
   safeAreaViewStyle: {
     flex: 1,

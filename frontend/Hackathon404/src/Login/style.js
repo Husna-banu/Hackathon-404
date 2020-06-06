@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
   errorMsg: {
     color: 'red',
   },
+  loginButtonStyle: {
+    paddingTop: 10,
+  },
 });
 
 export default styles;

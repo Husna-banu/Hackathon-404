@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* Hackathon404Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Hackathon404Tests.m */; };
+		00E356F31AD99517003FC87E /* safEscapesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* safEscapesTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		26B6137AEE4ACFDA3EDDC2DB /* libPods-Hackathon404-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F5B1E503A1B1A2187F747A /* libPods-Hackathon404-tvOSTests.a */; };
+		26B6137AEE4ACFDA3EDDC2DB /* libPods-safEscapes-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F5B1E503A1B1A2187F747A /* libPods-safEscapes-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* Hackathon404Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Hackathon404Tests.m */; };
-		2F1C677BBFBD9FFC2EC710C9 /* libPods-Hackathon404-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A51B708280C3E666CFF708 /* libPods-Hackathon404-tvOS.a */; };
-		96CB2EB7225D96B8358134C0 /* libPods-Hackathon404.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8745811D461D3D2808DA248A /* libPods-Hackathon404.a */; };
-		EF59DE78945371BD759FF963 /* libPods-Hackathon404-Hackathon404Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3665906DF2FF47997C39F9FB /* libPods-Hackathon404-Hackathon404Tests.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* safEscapesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* safEscapesTests.m */; };
+		2F1C677BBFBD9FFC2EC710C9 /* libPods-safEscapes-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A51B708280C3E666CFF708 /* libPods-safEscapes-tvOS.a */; };
+		96CB2EB7225D96B8358134C0 /* libPods-safEscapes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8745811D461D3D2808DA248A /* libPods-safEscapes.a */; };
+		EF59DE78945371BD759FF963 /* libPods-safEscapes-safEscapesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3665906DF2FF47997C39F9FB /* libPods-safEscapes-safEscapesTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,50 +27,50 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = Hackathon404;
+			remoteInfo = safEscapes;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "Hackathon404-tvOS";
+			remoteInfo = "safEscapes-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* Hackathon404Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hackathon404Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* safEscapesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = safEscapesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* Hackathon404Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hackathon404Tests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* safEscapesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = safEscapesTests.m; sourceTree = "<group>"; };
 		021B485B4490413D8A2241BC /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
-		08CC63023681EF07D261E545 /* Pods-Hackathon404-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon404-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon404-tvOS/Pods-Hackathon404-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		08CC63023681EF07D261E545 /* Pods-safEscapes-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-safEscapes-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-safEscapes-tvOS/Pods-safEscapes-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		0976CC1E8D044B4F82A201EF /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
-		10A03506D6DFC942BC15D1C7 /* Pods-Hackathon404-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon404-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Hackathon404-tvOS/Pods-Hackathon404-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Hackathon404.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon404.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Hackathon404/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Hackathon404/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Hackathon404/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Hackathon404/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Hackathon404/main.m; sourceTree = "<group>"; };
+		10A03506D6DFC942BC15D1C7 /* Pods-safEscapes-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-safEscapes-tvOS.release.xcconfig"; path = "Target Support Files/Pods-safEscapes-tvOS/Pods-safEscapes-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* safEscapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = safEscapes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = safEscapes/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = safEscapes/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = safEscapes/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = safEscapes/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = safEscapes/main.m; sourceTree = "<group>"; };
 		172CB63FFC364E9EAFA445ED /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		1F84CBDC3D6C4811842A02F5 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
-		24692BCCBA34F44BD80F941B /* Pods-Hackathon404.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon404.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon404/Pods-Hackathon404.debug.xcconfig"; sourceTree = "<group>"; };
-		2A332494FE9F17FDC6CC4D04 /* Pods-Hackathon404-Hackathon404Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon404-Hackathon404Tests.release.xcconfig"; path = "Target Support Files/Pods-Hackathon404-Hackathon404Tests/Pods-Hackathon404-Hackathon404Tests.release.xcconfig"; sourceTree = "<group>"; };
+		24692BCCBA34F44BD80F941B /* Pods-safEscapes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-safEscapes.debug.xcconfig"; path = "Target Support Files/Pods-safEscapes/Pods-safEscapes.debug.xcconfig"; sourceTree = "<group>"; };
+		2A332494FE9F17FDC6CC4D04 /* Pods-safEscapes-safEscapesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-safEscapes-safEscapesTests.release.xcconfig"; path = "Target Support Files/Pods-safEscapes-safEscapesTests/Pods-safEscapes-safEscapesTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C7B6A9FF5324C5F83F4DDB1 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* Hackathon404-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hackathon404-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* Hackathon404-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hackathon404-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3665906DF2FF47997C39F9FB /* libPods-Hackathon404-Hackathon404Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hackathon404-Hackathon404Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4766A3F01850DA9E2BB4C2A6 /* Pods-Hackathon404-Hackathon404Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon404-Hackathon404Tests.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon404-Hackathon404Tests/Pods-Hackathon404-Hackathon404Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		6375F75E144BCE953EA1C7A8 /* Pods-Hackathon404-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon404-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon404-tvOSTests/Pods-Hackathon404-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* safEscapes-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "safEscapes-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* safEscapes-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "safEscapes-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3665906DF2FF47997C39F9FB /* libPods-safEscapes-safEscapesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-safEscapes-safEscapesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4766A3F01850DA9E2BB4C2A6 /* Pods-safEscapes-safEscapesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-safEscapes-safEscapesTests.debug.xcconfig"; path = "Target Support Files/Pods-safEscapes-safEscapesTests/Pods-safEscapes-safEscapesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6375F75E144BCE953EA1C7A8 /* Pods-safEscapes-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-safEscapes-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-safEscapes-tvOSTests/Pods-safEscapes-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E66682DC8BC4129B74B491E /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		6F71A793428E461DBDFECC6C /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
-		7AEF783E95BEF4C5C4AC98F8 /* Pods-Hackathon404-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon404-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Hackathon404-tvOSTests/Pods-Hackathon404-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		7AEF783E95BEF4C5C4AC98F8 /* Pods-safEscapes-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-safEscapes-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-safEscapes-tvOSTests/Pods-safEscapes-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		847EA8DDA84C482EBABEDB05 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
-		8745811D461D3D2808DA248A /* libPods-Hackathon404.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hackathon404.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8745811D461D3D2808DA248A /* libPods-safEscapes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-safEscapes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2B30B6980C4A3D9781D373 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
-		96F5B1E503A1B1A2187F747A /* libPods-Hackathon404-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hackathon404-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		97A51B708280C3E666CFF708 /* libPods-Hackathon404-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hackathon404-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F5B1E503A1B1A2187F747A /* libPods-safEscapes-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-safEscapes-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A51B708280C3E666CFF708 /* libPods-safEscapes-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-safEscapes-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A79CD4C02DB4B9BB6773552 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		9AD7835D8A1D4AFCBB1E6D53 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		9E312F3D96714D86A9F10F31 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		ABF3C4D62488EDA800171840 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EA9D410DD841C59CF31274 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		D4AFB547DE8E4EC7B2C203F5 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		DDC5144D6684C91F19525AD3 /* Pods-Hackathon404.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon404.release.xcconfig"; path = "Target Support Files/Pods-Hackathon404/Pods-Hackathon404.release.xcconfig"; sourceTree = "<group>"; };
+		DDC5144D6684C91F19525AD3 /* Pods-safEscapes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-safEscapes.release.xcconfig"; path = "Target Support Files/Pods-safEscapes/Pods-safEscapes.release.xcconfig"; sourceTree = "<group>"; };
 		E0417B945D1A40B3B623FDA0 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -89,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF59DE78945371BD759FF963 /* libPods-Hackathon404-Hackathon404Tests.a in Frameworks */,
+				EF59DE78945371BD759FF963 /* libPods-safEscapes-safEscapesTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96CB2EB7225D96B8358134C0 /* libPods-Hackathon404.a in Frameworks */,
+				96CB2EB7225D96B8358134C0 /* libPods-safEscapes.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F1C677BBFBD9FFC2EC710C9 /* libPods-Hackathon404-tvOS.a in Frameworks */,
+				2F1C677BBFBD9FFC2EC710C9 /* libPods-safEscapes-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,20 +113,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26B6137AEE4ACFDA3EDDC2DB /* libPods-Hackathon404-tvOSTests.a in Frameworks */,
+				26B6137AEE4ACFDA3EDDC2DB /* libPods-safEscapes-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* Hackathon404Tests */ = {
+		00E356EF1AD99517003FC87E /* safEscapesTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* Hackathon404Tests.m */,
+				00E356F21AD99517003FC87E /* safEscapesTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = Hackathon404Tests;
+			path = safEscapesTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -137,7 +137,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* Hackathon404 */ = {
+		13B07FAE1A68108700A75B9A /* safEscapes */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -147,7 +147,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = Hackathon404;
+			name = safEscapes;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -156,10 +156,10 @@
 				ABF3C4D62488EDA800171840 /* libRNGestureHandler.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				8745811D461D3D2808DA248A /* libPods-Hackathon404.a */,
-				3665906DF2FF47997C39F9FB /* libPods-Hackathon404-Hackathon404Tests.a */,
-				97A51B708280C3E666CFF708 /* libPods-Hackathon404-tvOS.a */,
-				96F5B1E503A1B1A2187F747A /* libPods-Hackathon404-tvOSTests.a */,
+				8745811D461D3D2808DA248A /* libPods-safEscapes.a */,
+				3665906DF2FF47997C39F9FB /* libPods-safEscapes-safEscapesTests.a */,
+				97A51B708280C3E666CFF708 /* libPods-safEscapes-tvOS.a */,
+				96F5B1E503A1B1A2187F747A /* libPods-safEscapes-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,14 +167,14 @@
 		6EFA48B4F51F3796AE0C1669 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				24692BCCBA34F44BD80F941B /* Pods-Hackathon404.debug.xcconfig */,
-				DDC5144D6684C91F19525AD3 /* Pods-Hackathon404.release.xcconfig */,
-				4766A3F01850DA9E2BB4C2A6 /* Pods-Hackathon404-Hackathon404Tests.debug.xcconfig */,
-				2A332494FE9F17FDC6CC4D04 /* Pods-Hackathon404-Hackathon404Tests.release.xcconfig */,
-				08CC63023681EF07D261E545 /* Pods-Hackathon404-tvOS.debug.xcconfig */,
-				10A03506D6DFC942BC15D1C7 /* Pods-Hackathon404-tvOS.release.xcconfig */,
-				6375F75E144BCE953EA1C7A8 /* Pods-Hackathon404-tvOSTests.debug.xcconfig */,
-				7AEF783E95BEF4C5C4AC98F8 /* Pods-Hackathon404-tvOSTests.release.xcconfig */,
+				24692BCCBA34F44BD80F941B /* Pods-safEscapes.debug.xcconfig */,
+				DDC5144D6684C91F19525AD3 /* Pods-safEscapes.release.xcconfig */,
+				4766A3F01850DA9E2BB4C2A6 /* Pods-safEscapes-safEscapesTests.debug.xcconfig */,
+				2A332494FE9F17FDC6CC4D04 /* Pods-safEscapes-safEscapesTests.release.xcconfig */,
+				08CC63023681EF07D261E545 /* Pods-safEscapes-tvOS.debug.xcconfig */,
+				10A03506D6DFC942BC15D1C7 /* Pods-safEscapes-tvOS.release.xcconfig */,
+				6375F75E144BCE953EA1C7A8 /* Pods-safEscapes-tvOSTests.debug.xcconfig */,
+				7AEF783E95BEF4C5C4AC98F8 /* Pods-safEscapes-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -189,9 +189,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* Hackathon404 */,
+				13B07FAE1A68108700A75B9A /* safEscapes */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* Hackathon404Tests */,
+				00E356EF1AD99517003FC87E /* safEscapesTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				6EFA48B4F51F3796AE0C1669 /* Pods */,
@@ -205,10 +205,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Hackathon404.app */,
-				00E356EE1AD99517003FC87E /* Hackathon404Tests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* Hackathon404-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* Hackathon404-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* safEscapes.app */,
+				00E356EE1AD99517003FC87E /* safEscapesTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* safEscapes-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* safEscapes-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,9 +239,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* Hackathon404Tests */ = {
+		00E356ED1AD99517003FC87E /* safEscapesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Hackathon404Tests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "safEscapesTests" */;
 			buildPhases = (
 				811497E74DFEEAB3B1A6A761 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -255,14 +255,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = Hackathon404Tests;
-			productName = Hackathon404Tests;
-			productReference = 00E356EE1AD99517003FC87E /* Hackathon404Tests.xctest */;
+			name = safEscapesTests;
+			productName = safEscapesTests;
+			productReference = 00E356EE1AD99517003FC87E /* safEscapesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* Hackathon404 */ = {
+		13B07F861A680F5B00A75B9A /* safEscapes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Hackathon404" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "safEscapes" */;
 			buildPhases = (
 				AE82230882DAECA02147D2AA /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -277,14 +277,14 @@
 			);
 			dependencies = (
 			);
-			name = Hackathon404;
-			productName = Hackathon404;
-			productReference = 13B07F961A680F5B00A75B9A /* Hackathon404.app */;
+			name = safEscapes;
+			productName = safEscapes;
+			productReference = 13B07F961A680F5B00A75B9A /* safEscapes.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* Hackathon404-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* safEscapes-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Hackathon404-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "safEscapes-tvOS" */;
 			buildPhases = (
 				DFBAD37A0F6DFBA8729E6F88 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -297,14 +297,14 @@
 			);
 			dependencies = (
 			);
-			name = "Hackathon404-tvOS";
-			productName = "Hackathon404-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* Hackathon404-tvOS.app */;
+			name = "safEscapes-tvOS";
+			productName = "safEscapes-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* safEscapes-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* Hackathon404-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* safEscapes-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Hackathon404-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "safEscapes-tvOSTests" */;
 			buildPhases = (
 				7FDBC706376CB1EAF327DCA6 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -316,9 +316,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "Hackathon404-tvOSTests";
-			productName = "Hackathon404-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* Hackathon404-tvOSTests.xctest */;
+			name = "safEscapes-tvOSTests";
+			productName = "safEscapes-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* safEscapes-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -347,7 +347,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Hackathon404" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "safEscapes" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -360,10 +360,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* Hackathon404 */,
-				00E356ED1AD99517003FC87E /* Hackathon404Tests */,
-				2D02E47A1E0B4A5D006451C7 /* Hackathon404-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* Hackathon404-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* safEscapes */,
+				00E356ED1AD99517003FC87E /* safEscapesTests */,
+				2D02E47A1E0B4A5D006451C7 /* safEscapes-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* safEscapes-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -436,7 +436,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hackathon404-Hackathon404Tests/Pods-Hackathon404-Hackathon404Tests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-safEscapes-safEscapesTests/Pods-safEscapes-safEscapesTests-resources.sh",
 				"${PODS_ROOT}/IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation/Resources/Localizations.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
@@ -481,7 +481,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hackathon404-Hackathon404Tests/Pods-Hackathon404-Hackathon404Tests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-safEscapes-safEscapesTests/Pods-safEscapes-safEscapesTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4B5722D44F2F23C679AF772D /* [CP] Copy Pods Resources */ = {
@@ -490,7 +490,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hackathon404/Pods-Hackathon404-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-safEscapes/Pods-safEscapes-resources.sh",
 				"${PODS_ROOT}/IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation/Resources/Localizations.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
@@ -535,7 +535,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hackathon404/Pods-Hackathon404-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-safEscapes/Pods-safEscapes-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7FDBC706376CB1EAF327DCA6 /* [CP] Check Pods Manifest.lock */ = {
@@ -553,7 +553,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Hackathon404-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-safEscapes-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -575,7 +575,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Hackathon404-Hackathon404Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-safEscapes-safEscapesTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -597,7 +597,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Hackathon404-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-safEscapes-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -610,7 +610,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hackathon404/Pods-Hackathon404-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-safEscapes/Pods-safEscapes-frameworks.sh",
 				"${PODS_ROOT}/IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation/Frameworks/IBMMobileFirstPlatformFoundation.framework",
 				"${PODS_ROOT}/IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation/Frameworks/IBMMobileFoundationSwift.framework",
 			);
@@ -621,7 +621,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hackathon404/Pods-Hackathon404-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-safEscapes/Pods-safEscapes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DFBAD37A0F6DFBA8729E6F88 /* [CP] Check Pods Manifest.lock */ = {
@@ -639,7 +639,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Hackathon404-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-safEscapes-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -652,7 +652,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hackathon404-Hackathon404Tests/Pods-Hackathon404-Hackathon404Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-safEscapes-safEscapesTests/Pods-safEscapes-safEscapesTests-frameworks.sh",
 				"${PODS_ROOT}/IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation/Frameworks/IBMMobileFirstPlatformFoundation.framework",
 				"${PODS_ROOT}/IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation/Frameworks/IBMMobileFoundationSwift.framework",
 			);
@@ -663,7 +663,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hackathon404-Hackathon404Tests/Pods-Hackathon404-Hackathon404Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-safEscapes-safEscapesTests/Pods-safEscapes-safEscapesTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -711,7 +711,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* Hackathon404Tests.m in Sources */,
+				00E356F31AD99517003FC87E /* safEscapesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,7 +737,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* Hackathon404Tests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* safEscapesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,12 +746,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Hackathon404 */;
+			target = 13B07F861A680F5B00A75B9A /* safEscapes */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* Hackathon404-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* safEscapes-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -759,14 +759,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4766A3F01850DA9E2BB4C2A6 /* Pods-Hackathon404-Hackathon404Tests.debug.xcconfig */;
+			baseConfigurationReference = 4766A3F01850DA9E2BB4C2A6 /* Pods-safEscapes-safEscapesTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Hackathon404Tests/Info.plist;
+				INFOPLIST_FILE = safEscapesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -776,17 +776,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hackathon404.app/Hackathon404";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/safEscapes.app/safEscapes";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A332494FE9F17FDC6CC4D04 /* Pods-Hackathon404-Hackathon404Tests.release.xcconfig */;
+			baseConfigurationReference = 2A332494FE9F17FDC6CC4D04 /* Pods-safEscapes-safEscapesTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = Hackathon404Tests/Info.plist;
+				INFOPLIST_FILE = safEscapesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -796,13 +796,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hackathon404.app/Hackathon404";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/safEscapes.app/safEscapes";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24692BCCBA34F44BD80F941B /* Pods-Hackathon404.debug.xcconfig */;
+			baseConfigurationReference = 24692BCCBA34F44BD80F941B /* Pods-safEscapes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -812,7 +812,7 @@
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = Hackathon404/Info.plist;
+				INFOPLIST_FILE = safEscapes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -820,7 +820,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Hackathon404;
+				PRODUCT_NAME = safEscapes;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -829,12 +829,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDC5144D6684C91F19525AD3 /* Pods-Hackathon404.release.xcconfig */;
+			baseConfigurationReference = DDC5144D6684C91F19525AD3 /* Pods-safEscapes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = Hackathon404/Info.plist;
+				INFOPLIST_FILE = safEscapes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -842,7 +842,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Hackathon404;
+				PRODUCT_NAME = safEscapes;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -850,7 +850,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08CC63023681EF07D261E545 /* Pods-Hackathon404-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 08CC63023681EF07D261E545 /* Pods-safEscapes-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -861,14 +861,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Hackathon404-tvOS/Info.plist";
+				INFOPLIST_FILE = "safEscapes-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Hackathon404-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.safEscapes-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -878,7 +878,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10A03506D6DFC942BC15D1C7 /* Pods-Hackathon404-tvOS.release.xcconfig */;
+			baseConfigurationReference = 10A03506D6DFC942BC15D1C7 /* Pods-safEscapes-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -889,14 +889,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Hackathon404-tvOS/Info.plist";
+				INFOPLIST_FILE = "safEscapes-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Hackathon404-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.safEscapes-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -906,7 +906,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6375F75E144BCE953EA1C7A8 /* Pods-Hackathon404-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 6375F75E144BCE953EA1C7A8 /* Pods-safEscapes-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -916,24 +916,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Hackathon404-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "safEscapes-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Hackathon404-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.safEscapes-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hackathon404-tvOS.app/Hackathon404-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/safEscapes-tvOS.app/safEscapes-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AEF783E95BEF4C5C4AC98F8 /* Pods-Hackathon404-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 7AEF783E95BEF4C5C4AC98F8 /* Pods-safEscapes-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -943,17 +943,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Hackathon404-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "safEscapes-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Hackathon404-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.safEscapes-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hackathon404-tvOS.app/Hackathon404-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/safEscapes-tvOS.app/safEscapes-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1074,7 +1074,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Hackathon404Tests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "safEscapesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1083,7 +1083,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Hackathon404" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "safEscapes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1092,7 +1092,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Hackathon404-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "safEscapes-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1101,7 +1101,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Hackathon404-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "safEscapes-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1110,7 +1110,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Hackathon404" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "safEscapes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

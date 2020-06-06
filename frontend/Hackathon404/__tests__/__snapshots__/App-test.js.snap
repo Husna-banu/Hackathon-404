@@ -174,6 +174,11 @@ exports[`renders correctly 1`] = `
                     >
                       <RCTSafeAreaView
                         emulateUnlessSupported={true}
+                        style={
+                          Object {
+                            "flex": 1,
+                          }
+                        }
                       >
                         <View
                           style={
@@ -186,33 +191,6 @@ exports[`renders correctly 1`] = `
                             }
                           }
                         >
-                          <Text
-                            allowFontScaling={false}
-                            onPress={[Function]}
-                            style={
-                              Array [
-                                Object {
-                                  "color": undefined,
-                                  "fontSize": 20,
-                                },
-                                Object {
-                                  "fontSize": 20,
-                                  "paddingLeft": 10,
-                                  "paddingRight": 20,
-                                },
-                                Object {
-                                  "fontFamily": "FontAwesome5Free-Solid",
-                                  "fontStyle": "normal",
-                                  "fontWeight": "normal",
-                                },
-                                Object {
-                                  "fontWeight": "900",
-                                },
-                              ]
-                            }
-                          >
-                            
-                          </Text>
                           <Text
                             style={
                               Object {
@@ -231,6 +209,7 @@ exports[`renders correctly 1`] = `
                         <View
                           style={
                             Object {
+                              "flex": 1,
                               "padding": 20,
                             }
                           }
@@ -266,6 +245,7 @@ exports[`renders correctly 1`] = `
                                 }
                               }
                               underlineColorAndroid="transparent"
+                              value=""
                             />
                           </View>
                           <View

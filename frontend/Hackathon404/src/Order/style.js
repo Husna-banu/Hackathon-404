@@ -47,7 +47,23 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignContent: 'center',
-  }
+  },
+  cartItemPrice: {
+    color: 'blue',
+    marginRight: 20,
+    marginTop: 10,
+  },
+  cartCountStyle: {
+    padding: 5,
+  },
+  deleteIcon: {
+    marginLeft: 10,
+    marginTop: 10,
+  },
+  orderContentStyle: {
+    marginBottom: 40,
+    justifyContent: 'center',
+  },
 });
 
 export default styles;

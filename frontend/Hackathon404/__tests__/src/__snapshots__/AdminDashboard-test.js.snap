@@ -1,0 +1,364 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignContent": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "flex-start",
+      "top": 40,
+    }
+  }
+>
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignContent": "center",
+          "alignItems": "center",
+          "backgroundColor": "skyblue",
+          "flexDirection": "row",
+          "height": 50,
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 20,
+            },
+            Object {
+              "fontSize": 20,
+              "paddingLeft": 10,
+              "paddingRight": 20,
+            },
+            Object {
+              "fontFamily": "FontAwesome5Free-Solid",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {
+              "fontWeight": "900",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+      <Text
+        style={
+          Object {
+            "alignItems": "center",
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "paddingLeft": 10,
+            "textAlign": "center",
+          }
+        }
+      >
+        Services List
+      </Text>
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 20,
+            },
+            undefined,
+            Object {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "padding": 20,
+        }
+      }
+    >
+      <RCTScrollView
+        data={
+          Array [
+            Object {
+              "menuName": "Guest",
+              "menuRouteName": "",
+            },
+            Object {
+              "menuName": "Services List",
+              "menuRouteName": "AdminService",
+            },
+            Object {
+              "menuName": "Service Manager",
+              "menuRouteName": "AdminServiceOwnerDetails",
+            },
+            Object {
+              "menuName": "Guest Request",
+              "menuRouteName": "",
+            },
+          ]
+        }
+        disableVirtualization={false}
+        getItem={[Function]}
+        getItemCount={[Function]}
+        horizontal={false}
+        initialNumToRender={10}
+        keyExtractor={[Function]}
+        maxToRenderPerBatch={10}
+        onContentSizeChange={[Function]}
+        onEndReachedThreshold={2}
+        onLayout={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        stickyHeaderIndices={Array []}
+        updateCellsBatchingPeriod={50}
+        viewabilityConfigCallbackPairs={Array []}
+        windowSize={21}
+      >
+        <View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#CDE6FA",
+                      "borderColor": "gray",
+                      "borderRadius": 10,
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "height": 100,
+                      "justifyContent": "center",
+                      "margin": 30,
+                      "marginBottom": 10,
+                      "padding": 10,
+                      "textAlign": "center",
+                      "width": 120,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 20,
+                      }
+                    }
+                  >
+                    Guest
+                  </Text>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#CDE6FA",
+                      "borderColor": "gray",
+                      "borderRadius": 10,
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "height": 100,
+                      "justifyContent": "center",
+                      "margin": 30,
+                      "marginBottom": 10,
+                      "padding": 10,
+                      "textAlign": "center",
+                      "width": 120,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 20,
+                      }
+                    }
+                  >
+                    Services List
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#CDE6FA",
+                      "borderColor": "gray",
+                      "borderRadius": 10,
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "height": 100,
+                      "justifyContent": "center",
+                      "margin": 30,
+                      "marginBottom": 10,
+                      "padding": 10,
+                      "textAlign": "center",
+                      "width": 120,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 20,
+                      }
+                    }
+                  >
+                    Service Manager
+                  </Text>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#CDE6FA",
+                      "borderColor": "gray",
+                      "borderRadius": 10,
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "height": 100,
+                      "justifyContent": "center",
+                      "margin": 30,
+                      "marginBottom": 10,
+                      "padding": 10,
+                      "textAlign": "center",
+                      "width": 120,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 20,
+                      }
+                    }
+                  >
+                    Guest Request
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </RCTSafeAreaView>
+</View>
+`;

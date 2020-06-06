@@ -20,6 +20,14 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 60,
   },
+  editIcon: {
+    position: 'absolute',
+    right: 40,
+  },
+  deleteIcon: {
+    position: 'absolute',
+    right: 10,
+  },
 });
 
 export default styles;

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "Hackathon404-tvOS.app"
-               BlueprintName = "Hackathon404-tvOS"
-               ReferencedContainer = "container:Hackathon404.xcodeproj">
+               BuildableName = "safEscapes-tvOS.app"
+               BlueprintName = "safEscapes-tvOS"
+               ReferencedContainer = "container:safEscapes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "Hackathon404-tvOSTests.xctest"
-               BlueprintName = "Hackathon404-tvOSTests"
-               ReferencedContainer = "container:Hackathon404.xcodeproj">
+               BuildableName = "safEscapes-tvOSTests.xctest"
+               BlueprintName = "safEscapes-tvOSTests"
+               ReferencedContainer = "container:safEscapes.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Hackathon404-tvOS.app"
-            BlueprintName = "Hackathon404-tvOS"
-            ReferencedContainer = "container:Hackathon404.xcodeproj">
+            BuildableName = "safEscapes-tvOS.app"
+            BlueprintName = "safEscapes-tvOS"
+            ReferencedContainer = "container:safEscapes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Hackathon404-tvOS.app"
-            BlueprintName = "Hackathon404-tvOS"
-            ReferencedContainer = "container:Hackathon404.xcodeproj">
+            BuildableName = "safEscapes-tvOS.app"
+            BlueprintName = "safEscapes-tvOS"
+            ReferencedContainer = "container:safEscapes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
