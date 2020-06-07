@@ -88,7 +88,7 @@ git clone https://github.com/Husna-banu/Hackathon-404.git
 ```
 Step 2:
 ```bash
-  cd Hackathon404/frontend/Hackathon404/
+  cd Hackathon-404/frontend/Hackathon404/
   npm install
 ```
 Step 3:
