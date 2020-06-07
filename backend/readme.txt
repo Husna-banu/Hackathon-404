@@ -1,12 +1,12 @@
-http://localhost:8080/applicationisupandrunning
-http://localhost:8080/fetchHotelDetails
-http://localhost:8080/fetchAllAdminDetails
-http://localhost:8080/fetchUserDetails
+https://safEscapesBackend.mybluemix.net/applicationisupandrunning
+https://safEscapesBackend.mybluemix.net/fetchHotelDetails
+https://safEscapesBackend.mybluemix.net/fetchAllAdminDetails
+https://safEscapesBackend.mybluemix.net/fetchUserDetails
 
 
-http://localhost:8080/fetchServiceDetails?serviceName=Retaurent
-http://localhost:8080/fetchServiceDetails?serviceName=Spa
-http://localhost:8080/fetchServiceDetails?serviceName=Laundry
-http://localhost:8080/fetchServiceDetails?serviceName=Room Cleaning
-http://localhost:8080/fetchServiceDetails?serviceName=Emergency Service
-http://localhost:8080/fetchServiceDetails?serviceName=Room Maintenance
+https://safEscapesBackend.mybluemix.net/fetchServiceDetails?serviceName=Retaurent
+https://safEscapesBackend.mybluemix.net/fetchServiceDetails?serviceName=Spa
+https://safEscapesBackend.mybluemix.net/fetchServiceDetails?serviceName=Laundry
+https://safEscapesBackend.mybluemix.net/fetchServiceDetails?serviceName=Room Cleaning
+https://safEscapesBackend.mybluemix.net/fetchServiceDetails?serviceName=Emergency Service
+https://safEscapesBackend.mybluemix.net/fetchServiceDetails?serviceName=Room Maintenance
