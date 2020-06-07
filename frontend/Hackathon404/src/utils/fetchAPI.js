@@ -1,5 +1,5 @@
 const domainURL = 'http://safEscapesBackend.mybluemix.net/';
-
+// for get url request
 const getFetch = url =>
   fetch(`${domainURL}${url}`, {
     method: 'GET',
