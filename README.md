@@ -94,6 +94,9 @@ Step 2:
 Step 3:
 For ios:
 ```bash
+  cd ios
+  pod install
+  cd ..
   npm run ios
 ```
 For android:
